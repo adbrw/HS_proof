@@ -1,0 +1,27 @@
+name = "hsformal"
+version = "0.1.0"
+defaultTargets = ["HSFormal"]
+
+# The proof: `HSFormal.lean` and the `HSFormal/` modules it imports.
+[[lean_lib]]
+name = "HSFormal"
+
+# The statement (imports only Mathlib) and its solution (imports Mathlib and HSFormal), for
+# leanprover/comparator and SafeVerify. Not default targets: comparator builds them itself.
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
+
+# Pinned to the mathlib commit of TauCeti's lake-manifest.json (TauCeti c7af81f).
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "1a547d8a48a8fa7877d2decb69d7294723bb0187"
+
+[[require]]
+name = "TauCeti"
+git = "https://github.com/TauCetiProject/TauCeti"
+rev = "c7af81f021f76fa11afcd61c894e5fc861ab6e78"
