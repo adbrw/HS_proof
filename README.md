@@ -1,4 +1,34 @@
-# Hilbert–Smith conjecture: Lean 4 formalization
+# Integral tail signatures and the Hilbert–Smith conjecture
+
+**[`HS_proof.pdf`](HS_proof.pdf)**: *Integral tail signatures and the Hilbert–Smith conjecture*,
+A. Dabrowski's AI agents, 27 pp. It proves the Hilbert–Smith conjecture for second-countable
+locally compact groups.
+
+> **Theorem 1.1** (p-adic exclusion). For every prime p, a jointly continuous action of ℤ_p on a
+> connected Hausdorff, second-countable, finite-dimensional manifold, with or without boundary,
+> has nontrivial kernel.
+>
+> **Corollary 1.2** (Hilbert–Smith). A second-countable locally compact Hausdorff group acting
+> jointly continuously and effectively on such a manifold is a Lie group with its given topology.
+
+The obstruction is an integer signature in a category of asymptotically controlled rational
+equivariant modules. The proof has two parts:
+
+- **Algebraic** (§§2–6). For finite cyclic p-groups acting through a fixed free C_p-space T,
+  Mayer–Vietoris over a finite closed cover makes ν = p·id − τ ⊗ (−) nilpotent on the controlled
+  L-groups over T. So every four-dimensional class has integer signatures divisible by p at all
+  sufficiently large indices (Theorem 4.3).
+- **Geometric** (§§7–13). An effective ℤ_p-action produces a class of signature 1
+  (Proposition 13.1). Coordinate averaging gives an invariant control map of degree one to Sⁿ, and
+  finite-quotient representatives give a homotopy idempotent compatible with Poincaré duality in
+  a fixed exterior quotient. An explicit homotopy isometry identifies its normalized summand with
+  the local Poincaré complex of Sⁿ × CP², and successive localization boundaries leave one
+  positively oriented copy of CP². Hence 1 ∈ pℤ, a contradiction.
+
+## Lean 4 formalization
+
+The rest of the repository is a Lean 4 / Mathlib formalization of Corollary 1.2, together with
+the scripts that check it.
 
 `Challenge.lean` states the Hilbert–Smith conjecture as the theorem `hilbert_smith` (imports only
 Mathlib, proof `sorry`). `Solution.lean` proves the same statement as `HSFormal.hilbertSmith n M G`.
@@ -6,10 +36,11 @@ Mathlib, proof `sorry`). `Solution.lean` proves the same statement as `HSFormal.
 `HSFormal/HilbertSmithNegK.lean`, where `HSFormal.hilbertSmith` is proved; `HSFormal.lean` is the
 library root importing it. Axioms used: `propext`, `Classical.choice`, `Quot.sound`.
 
-## Contents
+### Contents
 
 | Path | |
 |---|---|
+| `HS_proof.pdf` | the paper |
 | `Challenge.lean` | statement, `import Mathlib` only |
 | `Solution.lean` | same statement, proof `HSFormal.hilbertSmith n M G` |
 | `HSFormal.lean`, `HSFormal/` | the proof (library `HSFormal`); `HSFormal/Brouwer/LICENSE` is the MIT licence of the five `HSFormal/Brouwer/` files |
@@ -19,7 +50,7 @@ library root importing it. Axioms used: `propext`, `Classical.choice`, `Quot.sou
 | `verify/safeverify-v435.patch` | ports SafeVerify (Lean v4.27) to Lean v4.35.0-rc3 |
 | `verify/run_comparator.sh`, `verify/run_safeverify.sh` | run the two checkers |
 
-## Requirements
+### Requirements
 
 - Linux ≥ 5.19 with Landlock enabled (in a container, seccomp must allow the `landlock_*`
   syscalls), for landrun, comparator's sandbox. Comparator calls landrun with `--best-effort`:
@@ -32,7 +63,7 @@ library root importing it. Axioms used: `propext`, `Classical.choice`, `Quot.sou
 - About 15 GB of free disk and 16 GB of RAM.
 - Run as an unprivileged user (comparator's assumption 6).
 
-## Running
+### Running
 
 From this directory:
 
@@ -55,7 +86,7 @@ To only compile the proof: `lake build` (builds `HSFormal`), then
 `lake env lean --stdin <<< 'import HSFormal.HilbertSmithNegK
 #print axioms HSFormal.hilbertSmith'`.
 
-## What the checkers establish
+### What the checkers establish
 
 **comparator** ([leanprover/comparator](https://github.com/leanprover/comparator) `fd5d5bcf14177b187f66d4502071268d877887c3`,
 unmodified; lean4export `66f1fb4bc256072069767fce52d39480e4524869`; landrun `811cfff51ceaf3d9843708aa6d22e9b84ccac8b4`;
