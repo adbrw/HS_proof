@@ -1,29 +1,36 @@
 # Integral tail signatures and the Hilbert–Smith conjecture
 
-**[`HS_proof.pdf`](HS_proof.pdf)**: *Integral tail signatures and the Hilbert–Smith conjecture*,
-A. Dabrowski's AI agents, 27 pp. It proves the Hilbert–Smith conjecture for second-countable
-locally compact groups.
+**[`HSproof.pdf`](HSproof.pdf)**: *Integral tail signatures and the Hilbert–Smith conjecture*,
+A. Dabrowski's AI agents, October 8, 2026, 17 pp.
 
-> **Theorem 1.1** (p-adic exclusion). For every prime p, a jointly continuous action of ℤ_p on a
-> connected Hausdorff, second-countable, finite-dimensional manifold, with or without boundary,
-> has nontrivial kernel.
+> **Theorem 1.1** (p-adic exclusion). For every prime p, a continuous action of ℤ_p on a connected
+> finite-dimensional manifold has nontrivial kernel.
 >
 > **Corollary 1.2** (Hilbert–Smith). A second-countable locally compact Hausdorff group acting
-> jointly continuously and effectively on such a manifold is a Lie group with its given topology.
+> continuously and effectively on such a manifold is a Lie group with its given topology.
 
-The obstruction is an integer signature in a category of asymptotically controlled rational
-equivariant modules. The proof has two parts:
+Manifolds are Hausdorff and second countable, and may have boundary. All actions are jointly
+continuous. Corollary 1.2 follows from Theorem 1.1 by the standard reduction to p-adic exclusion,
+using locally compact group structure and Newman's theorem [Pa19].
 
-- **Algebraic** (§§2–6). For finite cyclic p-groups acting through a fixed free C_p-space T,
-  Mayer–Vietoris over a finite closed cover makes ν = p·id − τ ⊗ (−) nilpotent on the controlled
-  L-groups over T. So every four-dimensional class has integer signatures divisible by p at all
-  sufficiently large indices (Theorem 4.3).
-- **Geometric** (§§7–13). An effective ℤ_p-action produces a class of signature 1
-  (Proposition 13.1). Coordinate averaging gives an invariant control map of degree one to Sⁿ, and
-  finite-quotient representatives give a homotopy idempotent compatible with Poincaré duality in
-  a fixed exterior quotient. An explicit homotopy isometry identifies its normalized summand with
-  the local Poincaré complex of Sⁿ × CP², and successive localization boundaries leave one
-  positively oriented copy of CP². Hence 1 ∈ pℤ, a contradiction.
+The obstruction is an integer signature tail. The proof has two parts:
+
+- **Divisibility** (§§2–6, Theorem 4.3). Take cyclic groups G_i = C_{p^{a_i}} with index-p
+  subgroups P_i, and a fixed compact free C_p-space T. Tensoring with the positive permutation
+  form τ_i = ℚ[G_i/P_i] is locally p copies of the identity. Controlled Mayer–Vietoris over a
+  finite cover makes p − τ ⊗ (−) nilpotent. Equivariant signature characters then show that
+  every class in L_4(A_G(T)) has ordinary signatures eventually divisible by p.
+- **Realization** (§§7–13, Proposition 13.1). An effective ℤ_p-action gives a class with
+  signature tail 1. Coordinate averaging gives an invariant degree-one sphere control map. Fine
+  local chain models turn finite quotient representatives into a homotopy action. Free sheets
+  cancel the detector displacement, and averaging gives a duality-compatible homotopy idempotent.
+  Its normalized Poincaré corner forgets to the scalar manifold germ of Sⁿ × CP². Successive
+  localization boundaries recover one copy of CP², up to sign.
+
+The two parts together give 1 ∈ pℤ, a contradiction. The paper uses the following controlled
+machinery from the literature: Karoubi localization [CP95], controlled Poincaré–Lefschetz duality
+[Ran99], algebraic Poincaré pairs and unions [Ran80I, Ran80II], and idempotent splitting [BS01].
+It works out the local carrier and normalization calculations this setting needs.
 
 ## Lean 4 formalization
 
@@ -40,7 +47,7 @@ library root importing it. Axioms used: `propext`, `Classical.choice`, `Quot.sou
 
 | Path | |
 |---|---|
-| `HS_proof.pdf` | the paper |
+| `HSproof.pdf` | the paper |
 | `Challenge.lean` | statement, `import Mathlib` only |
 | `Solution.lean` | same statement, proof `HSFormal.hilbertSmith n M G` |
 | `HSFormal.lean`, `HSFormal/` | the proof (library `HSFormal`); `HSFormal/Brouwer/LICENSE` is the MIT licence of the five `HSFormal/Brouwer/` files |
