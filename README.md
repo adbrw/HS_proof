@@ -39,9 +39,12 @@ the scripts that check it.
 
 `Challenge.lean` states the Hilbert–Smith conjecture as the theorem `hilbert_smith` (imports only
 Mathlib, proof `sorry`). `Solution.lean` proves the same statement as `HSFormal.hilbertSmith n M G`.
-`HSFormal/` (238 modules) is the proof: exactly the import closure of
-`HSFormal/HilbertSmithNegK.lean`, where `HSFormal.hilbertSmith` is proved; `HSFormal.lean` is the
-library root importing it. Axioms used: `propext`, `Classical.choice`, `Quot.sound`.
+`HSFormal/` (239 modules) is the proof: the import closure of `HSFormal/HilbertSmithNegK.lean`,
+where `HSFormal.hilbertSmith` is proved, plus `HSFormal/Universe.lean`; `HSFormal.lean` is the
+library root importing both. `HSFormal/Universe.lean` proves the statement for `M : Type u`,
+`G : Type v` (`HSFormal.Universe.hilbertSmith_univ`) and boundaryless p-adic exclusion
+(`HSFormal.padicExclusion`, and `HSFormal.Universe.padicExclusion_univ` for `M : Type u`), by
+transfer through `Shrink`. Axioms used: `propext`, `Classical.choice`, `Quot.sound`.
 
 ### Contents
 
