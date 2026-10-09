@@ -1,2 +1,3 @@
 .lake/
 verify/_tools/
+safeverify_report*.json

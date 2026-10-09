@@ -25,3 +25,11 @@ rev = "1a547d8a48a8fa7877d2decb69d7294723bb0187"
 name = "TauCeti"
 git = "https://github.com/TauCetiProject/TauCeti"
 rev = "c7af81f021f76fa11afcd61c894e5fc861ab6e78"
+
+# The Formal Conjectures variants (`FCChallenge` imports only Mathlib) and their solution, for the
+# same checkers (`comparator_fc.json`). Not default targets.
+[[lean_lib]]
+name = "FCChallenge"
+
+[[lean_lib]]
+name = "FCSolution"

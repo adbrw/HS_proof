@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # Runs leanprover/comparator on Challenge.lean / Solution.lean with comparator.json
 # (theorem hilbert_smith; axioms propext, Quot.sound, Classical.choice; Lean kernel + nanoda).
+# `verify/run_comparator.sh comparator_fc.json` runs it on FCChallenge.lean / FCSolution.lean
+# (the Formal Conjectures variants) instead.
 # Prerequisites: `lake exe cache get` in the project root, then verify/build_tools.sh.
 # Comparator builds Challenge and Solution itself, in its landrun sandbox; any earlier build
 # outputs of these two modules are deleted first. HSFormal and TauCeti are built inside the
@@ -18,6 +20,9 @@ for t in comparator landrun lean4export nanoda_bin; do
   command -v "$t" > /dev/null || { echo "error: $t not found; run verify/build_tools.sh" >&2; exit 1; }
 done
 cd "$ROOT"
+CONFIG=${1:-comparator.json}
+read -r CHALLENGE SOLUTION < <(python3 -c 'import json,sys; c=json.load(open(sys.argv[1]));
+print(c["challenge_module"], c["solution_module"])' "$CONFIG")
 # Landlock probe, with the landrun options comparator uses for its builds (`--best-effort`, read-only
 # `/`, writable `.lake`): a write outside `.lake` must be denied. On kernels without Landlock ABI v2
 # (Linux < 5.19), without Landlock enabled, or where seccomp blocks it, `--best-effort` silently
@@ -40,11 +45,11 @@ if [[ -e $probe ]]; then
   exit 1
 fi
 echo "Landlock probe: writes outside .lake are denied in landrun's sandbox."
-rm -f .lake/build/lib/lean/Challenge.* .lake/build/lib/lean/Solution.* \
-      .lake/build/ir/Challenge.* .lake/build/ir/Solution.*
+rm -f .lake/build/lib/lean/"$CHALLENGE".* .lake/build/lib/lean/"$SOLUTION".* \
+      .lake/build/ir/"$CHALLENGE".* .lake/build/ir/"$SOLUTION".*
 if [[ ${COMPARATOR_SYSTEMD:-0} == 1 ]]; then
   exec systemd-run --property=RestrictAddressFamilies=~AF_UNIX --user --pty -E PATH="$PATH" \
-    --working-directory "$(pwd)" -- bash -c 'lake env comparator comparator.json'
+    --working-directory "$(pwd)" -- lake env comparator "$CONFIG"
 else
-  exec lake env comparator comparator.json
+  exec lake env comparator "$CONFIG"
 fi

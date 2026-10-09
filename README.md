@@ -46,6 +46,15 @@ library root importing both. `HSFormal/Universe.lean` proves the statement for `
 (`HSFormal.padicExclusion`, and `HSFormal.Universe.padicExclusion_univ` for `M : Type u`), by
 transfer through `Shrink`. Axioms used: `propext`, `Classical.choice`, `Quot.sound`.
 
+`FCChallenge.lean` and `FCSolution.lean` are the same kind of pair for two variants proposed for
+[Formal Conjectures](https://github.com/google-deepmind/formal-conjectures)
+(`FormalConjectures/HilbertProblems/5.lean`, issue 6914), stated exactly as proposed there:
+`Hilbert5.hilbert_smith_conjecture.variants.second_countable_smooth` (second-countable `X` and `G`,
+`C^∞` conclusion, `X : Type*`, `G : Type*`) and
+`Hilbert5.hilbert_smith_padic_formulation.variants.second_countable` (second-countable `X`).
+`FCSolution.lean` proves them by `HSFormal.Universe.hilbertSmith_univ` and
+`HSFormal.Universe.padicExclusion_univ`.
+
 ### Contents
 
 | Path | |
@@ -55,7 +64,8 @@ transfer through `Shrink`. Axioms used: `propext`, `Classical.choice`, `Quot.sou
 | `Solution.lean` | same statement, proof `HSFormal.hilbertSmith n M G` |
 | `HSFormal.lean`, `HSFormal/` | the proof (library `HSFormal`); `HSFormal/Brouwer/LICENSE` is the MIT licence of the five `HSFormal/Brouwer/` files |
 | `lakefile.toml`, `lake-manifest.json`, `lean-toolchain` | Lean `v4.35.0-rc3`; mathlib `1a547d8a48a8fa7877d2decb69d7294723bb0187`; TauCeti `c7af81f021f76fa11afcd61c894e5fc861ab6e78` |
-| `comparator.json` | comparator configuration |
+| `FCChallenge.lean`, `FCSolution.lean` | the Formal Conjectures variants (`import Mathlib` only), and their proofs |
+| `comparator.json`, `comparator_fc.json` | comparator configurations for the two pairs |
 | `verify/build_tools.sh` | builds comparator, lean4export, landrun and SafeVerify at pinned commits |
 | `verify/safeverify-v435.patch` | ports SafeVerify (Lean v4.27) to Lean v4.35.0-rc3 |
 | `verify/run_comparator.sh`, `verify/run_safeverify.sh` | run the two checkers |
@@ -82,6 +92,8 @@ lake exe cache get              # Mathlib and its dependencies, prebuilt
 verify/build_tools.sh           # tools, into verify/_tools/
 verify/run_comparator.sh        # expected last line: Your solution is okay!
 verify/run_safeverify.sh        # expected last line: SafeVerify check passed.
+verify/run_comparator.sh comparator_fc.json      # the Formal Conjectures variants
+verify/run_safeverify.sh FCChallenge FCSolution  # report: safeverify_report_FCSolution.json
 ```
 
 Run comparator before anything compiles `Solution.lean` or `HSFormal` (comparator's assumption 2):

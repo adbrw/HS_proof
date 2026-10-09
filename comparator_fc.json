@@ -1,0 +1,10 @@
+{
+  "challenge_module": "FCChallenge",
+  "solution_module": "FCSolution",
+  "theorem_names": [
+    "Hilbert5.hilbert_smith_conjecture.variants.second_countable_smooth",
+    "Hilbert5.hilbert_smith_padic_formulation.variants.second_countable"
+  ],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}
