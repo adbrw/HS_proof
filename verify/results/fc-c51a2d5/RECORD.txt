@@ -1,0 +1,45 @@
+# Provenance
+repository: https://github.com/adbrw/HS_proof
+commit: c51a2d5da2d2264372908b1284bb6b655948a38f
+run as: uid=30033(verifier) gid=30033(verifier) groups=30033(verifier)
+kernel: Linux 6.18.44-fc-v114
+lean: Lean (version 4.35.0-rc3, x86_64-unknown-linux-gnu, commit 470d5ce1400764999581fd26d5d72b00d990b0f4, Release)
+comparator: fd5d5bcf14177b187f66d4502071268d877887c3 (leanprover/comparator, unmodified)
+lean4export: 66f1fb4bc256072069767fce52d39480e4524869
+landrun: 811cfff51ceaf3d9843708aa6d22e9b84ccac8b4
+nanoda_bin: /home/verifier/.elan/toolchains/leanprover--lean4---v4.35.0-rc3/bin/nanoda_bin
+safe_verify: b291b588a53999a7e837dda61c7dbfe8c550c814 + verify/safeverify-v435.patch
+mathlib: 1a547d8a48a8fa7877d2decb69d7294723bb0187
+
+# comparator_fc.json (permitted-axiom policy)
+{
+  "challenge_module": "FCChallenge",
+  "solution_module": "FCSolution",
+  "theorem_names": [
+    "Hilbert5.hilbert_smith_conjecture.variants.second_countable_smooth",
+    "Hilbert5.hilbert_smith_padic_formulation.variants.second_countable"
+  ],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}
+
+# Input digests (sha256)
+733184bf0666b0970301fd5fa0503459c251da17df198ccc7f2cad5ff14c5728  FCChallenge.lean
+74037ccbc80d9dfddaabbb84e0d9c633b09c5a10004688703701b2cdf86aa5c0  FCSolution.lean
+b6d9db4a205d0e493adefd9c7a18a34222a92d932dd739f447ab6714223907c7  comparator_fc.json
+8328d6781ad326a09e1f0294ffdd30163049b6ef6f102a4fa0b58d844373867c  lakefile.toml
+dc58b80353efcd25df2f4bbad0c7ffc4d7446c9236080f56020bb0366fa82e40  lake-manifest.json
+bc84812c94489d1e3e191baa1dc10d5eb684382d7fe9d2a5ab085e72c1c67e47  lean-toolchain
+
+# Export digests (sha256): lean4export output for the exact declaration list comparator exported
+50310ea9723929ba6bac52d0d1c9fb40f726a160fabd97a98f1bf72e9d3665d7  FCChallenge export (164235567 bytes, 3046222 lines, deterministic across two runs)
+07cf03a6ccb1efbc48bf8e8b19566ccb13bbcc84e703c8ab739900bfb086459b  FCSolution export (1003167976 bytes, 18492321 lines, deterministic across two runs)
+declarations: Quot Quot.mk Quot.lift Quot.ind Hilbert5.hilbert_smith_conjecture.variants.second_countable_smooth Hilbert5.hilbert_smith_padic_formulation.variants.second_countable propext Quot.sound Classical.choice Nat.add Nat.sub Nat.mul Nat.pow Nat.gcd Nat.div Nat.mod Nat.beq Nat.ble Nat.land Nat.lor Nat.xor Nat.shiftLeft Nat.shiftRight String.ofList Char.ofNat List eagerReduce Nat String String.mk Char optParam autoParam semiOutParam outParam
+
+# nanoda_bin digest (sha256)
+8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8  ~/.elan/toolchains/leanprover--lean4---v4.35.0-rc3/bin/nanoda_bin
+
+# Log digests (sha256)
+9f0c6996ffc32416cc67538218b660a8f37419bea1b37d2dc160d602013b2bc5  comparator_fc.log
+837987bd02044cf33851385e3ce64d25232028b2a9b8fd24959eb3317f243a1c  safeverify_fc.log
+78fe3ccbfa54e2e0739a2917b3194a30a6d0953b7933c2cdb5eaea5f1f8e90f8  safeverify_report_FCSolution.json
