@@ -1,0 +1,1504 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{aliascnt}
+\usepackage{microtype}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\urlstyle{same}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{\nolinkurl{doi:#1}}}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\hypersetup{pdftitle={Integral tail signatures and the Hilbert--Smith conjecture},
+  pdfauthor={A. Dabrowski's AI agents},
+  pdfsubject={Integral signature obstruction to effective p-adic manifold actions},
+  pdfkeywords={Hilbert-Smith conjecture, controlled algebra, equivariant signature}}
+
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\theoremstyle{definition}
+\newaliascnt{definition}{theorem}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
+\theoremstyle{remark}
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\prop}{prop}
+\DeclareMathOperator{\Kar}{Kar}
+\DeclareMathOperator{\Free}{Free}
+\DeclareMathOperator{\Cone}{Cone}
+\DeclareMathOperator{\Sign}{Sign}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\tr}{tr}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\CP}{\mathbb {CP}}
+\newcommand{\Zp}{\mathbb Z_p}
+\newcommand{\Linf}{L^{\langle-\infty\rangle}}
+\newcommand{\Lspec}{\mathbf L^{\langle-\infty\rangle}}
+
+\title[Integral tail signatures and Hilbert--Smith]{Integral tail signatures and the Hilbert--Smith conjecture}
+% Author information: name, affiliation, and contact address.
+\author{A. Dabrowski's AI agents}
+\email{alex@dabrow.cc}
+\date{October 8, 2026}
+
+\begin{document}
+\begin{abstract}
+The obstruction to an effective $p$-adic manifold action is an integer
+signature tail. On asymptotically controlled rational modules over one
+fixed free $C_p$-space, finite-cover Mayer--Vietoris makes the difference
+between $p$ copies and quotient-permutation tensoring nilpotent. Every
+degree-four class therefore has eventually $p$-divisible signatures.
+An effective action gives a class of signature $1$: coordinate averaging
+provides degree-one sphere control, free sheets turn quotient representatives
+into a compatible homotopy idempotent, and its normalized Poincar\'e corner
+forgets to a scalar manifold germ. Successive localization boundaries
+recover one copy of $\CP^2$, up to sign. The resulting contradiction
+proves the Hilbert--Smith conjecture.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:introduction}
+
+The Hilbert--Smith conjecture extends Hilbert's fifth problem from
+locally Euclidean groups to groups acting on manifolds. The cases of
+one- and two-manifolds are classical \cite{Pa19}; Pardon proved the
+three-dimensional case \cite{Pa13}. In arbitrary dimension, the
+conjecture holds for Lipschitz actions \cite{RS97} and quasiconformal
+actions \cite{Mar99}. We prove the following.
+
+\begin{theorem}[$p$-adic exclusion]\label{thm:main}
+For every prime $p$, a continuous action of $\Zp$ on a connected
+finite-dimensional manifold has nontrivial kernel.
+\end{theorem}
+
+\begin{corollary}[Hilbert--Smith]\label{cor:HS}
+A locally compact Hausdorff group acting continuously and effectively
+on a connected finite-dimensional manifold is a Lie group with its
+given topology.
+\end{corollary}
+
+Manifolds are topological and Hausdorff, and may have boundary.
+Lie groups are allowed arbitrarily many connected components. The
+construction takes place in one coordinate chart; it requires no global
+orientation or triangulation of the acted-on manifold.
+The standard reduction to $p$-adic exclusion uses locally compact group
+structure and Newman's theorem \cite{Pa19}.
+
+The obstruction is an integer signature tail. For cyclic groups
+$G_i=C_{p^{a_i}}$ with index-$p$ subgroups $P_i$, and a fixed compact
+free $C_p$-space $T$, tensoring with the positive permutation form
+$\tau_i=\Q[G_i/P_i]$ is locally $p$ copies of the identity.
+Controlled Mayer--Vietoris therefore makes $p\,\mathrm{id}-\tau\otimes(-)$
+nilpotent, and equivariant signature characters force every class in
+$L_4(\mathcal A_{\mathbf G}(T))$ to have eventually $p$-divisible
+ordinary signatures.
+
+An effective $\Zp$-action, however, would supply a class with signature $1$.
+Coordinate averaging gives an invariant degree-one sphere control map.
+With this control, fine local chain models turn finite quotient
+representatives into a homotopy action. Adding free sheets cancels the
+detector displacement, allowing averaging to produce a duality-compatible
+homotopy idempotent. Its normalized corner forgets to the scalar manifold
+germ of $S^n\times\CP^2$. Successive localization boundaries then recover
+one copy of $\CP^2$, up to sign. The resulting signature contradicts the
+divisibility above and proves the theorem.
+
+The construction and boundary evaluation use Karoubi localization
+\cite{CP95}, controlled Poincar\'e--Lefschetz duality \cite{Ran99},
+and algebraic Poincar\'e pairs and unions \cite{Ran80I,Ran80II}.
+Idempotent splitting uses \cite{BS01}; the local carrier and normalization
+calculations are given below.
+
+\subsection*{Conventions}
+All actions are jointly continuous. Chain coefficients are rational,
+but the $L$-groups and signature targets are not rationalized.
+Complexes have a single finite degree range, independent of the sequence
+index; ranks and coefficient sizes are unrestricted.
+
+In the asymptotic categories below, equality means eventual equality of
+matrices, so finite initial segments of sequences may be discarded.
+In an exterior quotient, equality means that the defect factors through
+an exterior-supported object by asymptotically small maps. We use maximum
+product metrics and take empty suprema to be zero.
+
+We use ultimate lower quadratic $L$-theory,
+$L_k(\mathcal A)=\pi_k\Lspec(\mathcal A)$
+\cite[Definition 4.16]{CP95}, \cite[\S17]{Ran92}.
+The properties used below are functoriality and additivity,
+Karoubi localization with natural connecting maps
+\cite[Theorem 4.2]{CP95}, projective-to-ultimate decoration maps,
+and invariance under idempotent completion
+\cite[Theorem 17.2 and Definition 17.7]{Ran92}.
+For localization boundaries we use the pair description in
+\cite[proof of Theorem 4.1]{CP95}. Small skeletons (one representative per
+isomorphism class) avoid set-theoretic size issues in $K$- and $L$-theory.
+
+\section{Asymptotic categories and support}\label{alg:categories}
+
+Fix $G_i=C_{p^{a_i}}$, $a_i\ge1$, index-$p$ subgroups $P_i$, and
+$G_i/P_i=C_p$. Let $X$ be a compact metric $C_p$-space with isometric
+action; each $G_i$ acts through $G_i/P_i$.
+\begin{definition}\label{alg:category}
+An object of $\mathcal A_{\mathbf G}(X)$ is a sequence of finite free
+based modules $M_i=\Q[B_i]$, with $B_i$ a free $G_i$-set and equivariant
+labels $\ell_i:B_i\to X$. Morphisms are sequences of equivariant rational
+matrices, modulo eventual equality, satisfying
+\begin{equation}\label{alg:propagation}
+ \prop(u_i)=\sup_{(u_i)_{b'b}\ne0}d(\ell_i'(b'),\ell_i(b))\longrightarrow0.
+\end{equation}
+Duality fixes labeled bases and transposes matrices. Trivial groups give
+$\mathcal A_{\mathbf1}(X)$. Ranks and coefficients are unrestricted.
+\end{definition}
+
+The propagation bounds
+\begin{equation}\label{alg:propbounds}
+ \prop(vu)\le\prop(v)+\prop(u),\qquad
+ \prop(u+v)\le\max\{\prop(u),\prop(v)\}
+\end{equation}
+show that composition and addition are well defined. Forgetting
+equivariance and pushing labels through uniformly continuous equivariant
+maps give duality-preserving functors.
+For a closed invariant $S\subset X$, let
+$\mathcal A_S=\mathcal A_{\mathbf G,S}(X)$ consist of objects
+whose labels approach $S$ uniformly, with $\mathcal A_\varnothing=0$.
+Write $I_S$ for the ideal of maps factoring through $\mathcal A_S$.
+For a closed invariant exterior $Z\subset X$, put
+\begin{equation}\label{alg:exterior}
+ \mathcal B_{\mathbf G,Z}(X)=\mathcal A_{\mathbf G}(X)/\mathcal A_Z.
+\end{equation}
+A map belongs to $I_S$ exactly when both endpoints of every nonzero
+entry approach $S$ uniformly: necessity follows from propagation, and
+sufficiency by restricting the source to its nonzero columns.
+
+\begin{lemma}[Support calculus]\label{alg:filtration}\label{alg:excision}
+\label{alg:relabel}\label{alg:separation}
+The inclusion $\mathcal A_S\subset\mathcal A_{\mathbf G}(X)$ is a
+duality-invariant Karoubi filtration
+\cite[Definition 1.27]{CP95}. For a closed invariant cover $X=A\cup B$,
+with $Y=A\cap B$, there are involution-preserving equivalences
+\begin{equation}\label{alg:excision-equivalence}
+ \mathcal A_A\cap\mathcal A_B=\mathcal A_Y,\qquad
+ \mathcal A_A/\mathcal A_Y\simeq\mathcal A_{\mathbf G}(X)/\mathcal A_B.
+\end{equation}
+For nonempty closed invariant $S$,
+$\mathcal A_{\mathbf G}(S)\simeq\mathcal A_S$.
+If $d(S,Z)>0$, $\mathcal A_S\to\mathcal B_{\mathbf G,Z}(X)$ is fully
+faithful.
+\end{lemma}
+\begin{proof}
+For a null sequence $r_i\ge0$, split each basis at distance $r_i$ from
+$S$. These equivariant orthogonal splits are filtered by maxima and
+compatible with sums. A map to or from an object supported within
+distance $a_i$ of $S$, with propagation $\epsilon_i$, factors through
+the near summand for $r=a+\epsilon$. This verifies the filtration axioms.
+
+By compactness, points approaching both $A$ and $B$ approach $Y$.
+Splitting labels into $A$ and $B\setminus A$ gives essential
+surjectivity of the quotient equivalence. For a factorization between
+$A$-supported objects through a $B$-supported object, retain the
+intermediate rows reached by the first factor. They approach both sets,
+so the factorization is through $\mathcal A_Y$. This proves full
+faithfulness, including $Y=\varnothing$ by compact separation.
+
+Relabel each free orbit using a nearest point of $S$ and extend
+equivariantly. The identity matrices are natural orthogonal
+isomorphisms with propagation tending to zero; relabeling changes a
+map's propagation by at most its two labeling errors. Finally, the
+endpoint description of $I_Z$ makes every map between $S$-supported
+objects in that ideal eventually zero when $d(S,Z)>0$.
+\end{proof}
+
+Splits precede idempotent completion, denoted $\Kar$; an object $(M,e)$
+carries the support of $M$.
+
+\section{Integer signatures and tails}\label{alg:tails}
+
+For a finite group $G$, the correspondence between invariant rational
+forms $b$ and group-ring forms uses the unnormalized trace:
+\begin{equation}\label{alg:trace}
+ \lambda(v,w)=\sum_{g\in G}b(v,gw)g,\qquad \tr_1\lambda(v,w)=b(v,w).
+\end{equation}
+Thus the coefficient-of-identity trace $\tr_1$ makes forgetting
+equivariance duality-preserving, including on projective summands. The half-unit comparison and \cite[Theorem 5.2]{Ran89}
+identify the projectively decorated group $L_4^p(\Q[G])$ with the Witt group
+of nonsingular invariant symmetric rational forms. Such a form has
+signature representation
+\begin{equation}\label{alg:signature}
+ \Sign_G(V,b)=[V^+_{\C}]-[V^-_{\C}]\in R_{\C}(G),
+\end{equation}
+where $R_\C(G)$ is the complex representation ring and $V^\pm$ are the
+positive and negative spectral subspaces on $V\otimes_\Q\R$ for an
+invariant positive inner product. The representation is independent of
+this choice: projection along one negative subspace identifies any two
+positive subspaces, by inertia, and similarly for negative ones.
+
+To see that it descends to the Witt group, let $L$ be an invariant
+Lagrangian and choose an invariant complement $K$ by averaging.
+Replacing $u\in K$ by $u-c(u)/2$, where $c:K\to L$ satisfies
+$b(cu,v)=b(u,v)$ for $u,v\in K$, makes $K$ Lagrangian. Hence metabolic
+forms have zero signature representation. The character of $\Sign_G(V,b)$
+at the identity is the ordinary integer signature $\sigma(V,b)$; tensoring
+with a positive form multiplies characters.
+
+\begin{lemma}[Cyclic arithmetic]\label{alg:cyclotomic}
+For $G=C_{p^a}=\langle g\rangle$, if $\Sign_G(V,b)(g)=0$, then
+$p\mid\sigma(V,b)$.
+\end{lemma}
+\begin{proof}
+Write the signature character as $\sum_{j=0}^{p^a-1}m_j\chi_j$,
+$m_j\in\Z$, with $\chi_j(g)=\zeta_{p^a}^j$, where $\zeta_{p^a}$ is a
+primitive $p^a$-th root of unity. Then $F(t)=\sum_jm_jt^j$ is divisible
+in $\Z[t]$ by the $p^a$-th cyclotomic polynomial $\Phi_{p^a}(t)$, so
+$F(1)=\sigma(V,b)$ is divisible by $\Phi_{p^a}(1)=p$.
+\end{proof}
+
+Write $\Free(R)$ for the category of finite free based $R$-modules.
+Put $\mathcal P=\prod_i\Free(\Q[G_i])$ and let $\mathcal S$ be its
+finite-support subcategory. Forgetting labels gives a functor to
+\begin{equation}\label{alg:Vcategory}
+ \mathcal V_{\mathbf G}=\mathcal P/\mathcal S,
+\end{equation}
+whose morphisms are sequences modulo eventual equality.
+
+\begin{proposition}[Tail extraction]\label{alg:extraction}
+There is a natural homomorphism
+\begin{equation}\label{alg:tail-isomorphism}
+ L_4(\mathcal V_{\mathbf G})\longrightarrow
+ \prod_iL_4^p(\Q[G_i])/\bigoplus_iL_4^p(\Q[G_i]),
+\end{equation}
+given by the coordinate classes of any lift to $L_4(\mathcal P)$.
+It commutes with forgetting equivariance and positive permutation
+tensor functors.
+\end{proposition}
+\begin{proof}
+The semisimple rings $\Q[G_i]$ have vanishing negative $K$-groups
+\cite[III, \S4]{Wei13}, also as free-module categories
+\cite[\S11, p.~101]{Ran92}. Bass's polynomial definition commutes with
+$\mathcal S=\bigcup_{F\text{ finite}}\prod_{i\in F}\Free(\Q[G_i])$:
+every finite list of objects, idempotents, polynomial matrices and
+relations lies in one finite block. Consequently $K_{-k}(\mathcal S)=0$
+for $k\ge1$. Rothenberg comparison then gives
+$L_j(\mathcal S)=\bigoplus_iL_j^p(\Q[G_i])$ and
+$L_j(\Free(\Q[G_i]))=L_j^p(\Q[G_i])$.
+
+Splitting at finite index sets is an invariant Karoubi filtration.
+Coordinate projections detect $L_3(\mathcal S)$, so its map to
+$L_3(\mathcal P)$ is injective. Localization therefore lifts every
+$L_4(\mathcal V_{\mathbf G})$ class to $L_4(\mathcal P)$; two lifts
+differ by the image of $L_4(\mathcal S)$. Their coordinate classes
+agree eventually. These constructions are natural for the stated
+functors.
+\end{proof}
+
+Applying ordinary signature after extraction defines
+\begin{equation}\label{alg:signature-tail}
+ \sigma_{\mathrm{tail}}:L_4(\mathcal A_{\mathbf G}(X))\longrightarrow
+ \Z^{\mathbb N}/\Z^{(\mathbb N)}.
+\end{equation}
+Here $\Z^{(\mathbb N)}$ denotes the finitely supported integer sequences.
+We use this map only after localization has removed the exterior.
+
+\section{Divisibility over a free \texorpdfstring{$C_p$}{C(p)}-space}
+\label{alg:obstruction}
+
+Let $T$ be a fixed nonempty compact free $C_p$-space with a compatible
+invariant metric.
+Tensoring by $\tau_i=\Q[G_i/P_i]$, with its orthonormal form,
+diagonal action and unchanged spatial labels, defines
+\begin{equation}\label{alg:nu}
+ \nu=p\,\mathrm{id}-\tau\otimes(-)
+ \quad\text{on }L_*(\mathcal A_{\mathbf G}(T)).
+\end{equation}
+
+\begin{lemma}[Local triviality]\label{alg:localtrivial}
+For compact $U\subset T/C_p$ contained in an open covering
+trivialization, $\nu=0$ on $L_*(\mathcal A_{\mathbf G,T_U}(T))$,
+where $T_U$ is its inverse image.
+\end{lemma}
+\begin{proof}
+Choose a closed invariant neighborhood $L$ of $T_U$ inside that
+trivialization, with sheet function $c:L\to C_p$ satisfying
+$c(hx)=\bar h c(x)$, where $\bar h$ is the image of $h$ in $C_p$.
+Labels of supported objects eventually lie in
+$L$. The orthogonal equivariant map
+\begin{equation}\label{alg:localisometry}
+ e_a\otimes e_b\longmapsto e_b
+ \quad\text{in copy }c(\ell_i(b))^{-1}a\in C_p
+\end{equation}
+has propagation zero. The sheet pieces of $L$ are compact and
+positively separated, so controlled morphisms eventually preserve
+them. Hence this is a natural isometry $\tau\otimes(-)\cong
+\mathrm{id}^{\oplus p}$, inducing equality in ultimate $L$-theory.
+\end{proof}
+
+Choose a finite compact cover $U_1,\ldots,U_s$ of $T/C_p$ inside
+trivializations, fixed independently of $i$, and put $T_a=T_{U_a}$.
+
+\begin{lemma}[Nilpotence]\label{alg:nilpotence}
+One has $\nu^s=0$ on $L_*(\mathcal A_{\mathbf G}(T))$.
+\end{lemma}
+\begin{proof}
+Induct on $s$ over all such compact free spaces. Set
+$A=T_1\cup\cdots\cup T_{s-1}$ and $B=T_s$.
+The natural support Mayer--Vietoris sequence follows from
+\cref{alg:filtration}. Since $\nu=0$ on $A\cap B$, $\partial(\nu x)=0$.
+Thus $\nu x$ comes from $L_*(\mathcal A_A)\oplus L_*(\mathcal A_B)$.
+Relabeling and induction kill the first summand by $\nu^{s-1}$;
+local triviality kills the second by $\nu$. For $s>1$, applying
+$\nu^{s-1}$ proves the claim; $s=1$ is local triviality.
+\end{proof}
+
+\begin{theorem}[Integer tail divisibility]\label{alg:divisibility}
+Every $\alpha\in L_4(\mathcal A_{\mathbf G}(T))$ has signature tail
+eventually divisible by $p$.
+\end{theorem}
+\begin{proof}
+Extract forms $(V_i,b_i)$. Naturality and nilpotence imply
+\begin{equation}\label{alg:factorannihilation}
+ (p-\tau_i)^s[V_i,b_i]=0\quad\text{in }L_4^p(\Q[G_i])
+ \quad\text{for all sufficiently large }i.
+\end{equation}
+For a generator $g_i$ of $G_i$, $\chi_{\tau_i}(g_i)=0$. Taking
+signature characters gives $p^s\Sign_{G_i}(V_i,b_i)(g_i)=0$.
+Apply \cref{alg:cyclotomic}.
+\end{proof}
+
+\section{Rational Poincar\'e corners}\label{alg:corners}
+
+\subsection{Signs and rational structures}\label{alg:qmodel}
+Complexes are homologically graded. We use
+\begin{equation}\label{alg:dualconvention}
+ (C^{N-*})_r=C_{N-r}^*,\qquad d_{C^{N-*},r}=(-1)^rd_C^*,\qquad
+ (T\phi)_r=(-1)^{r(N-r)}\phi_{N-r}^*.
+\end{equation}
+The double shifted dual has differential $(-1)^{N+1}d_C$; its
+identification with $C$ is $(-1)^{r(N-r)}=(-1)^{r(N+1)}$ in degree $r$.
+Right slant sends $x_r\otimes y_{N-r}$ to
+$\alpha\mapsto x_r\alpha(y_{N-r})$, without an extra sign.
+For a bounded complex in a rational additive category with involution put
+\[
+ M(C)_k=\bigoplus_r\operatorname{Hom}(C_{k-r}^*,C_r),\qquad
+ (\partial f)_r=d_Cf_{r+1}+(-1)^rf_rd_C^*,\qquad
+ (Tf)_r=(-1)^{r(k-r)}f_{k-r}^*.
+\]
+Thus $T^2=1$, $T\partial=\partial T$, and conjugation by chain maps
+commutes with $T$. For finite scalar complexes this is $C\otimes C$
+under right slant. Exactness of rational invariants and coinvariants gives
+\begin{equation}\label{alg:qgroups}
+ Q^N(C)=H_N(M(C)^{C_2}),\qquad Q_N(C)=H_N(M(C)_{C_2}).
+\end{equation}
+The norm $1+T$ is an isomorphism with inverse $t\mapsto[t/2]$.
+We write $\Sym=(1+T)/2$.
+Consequently a symmetric structure has a strict symmetric representative
+$\phi$, and its quadratic lift is $\psi_0=\phi/2$, $\psi_s=0$ for $s>0$.
+If symmetric cycles differ by $\partial H$, replace $H$ by $(H+TH)/2$;
+halving that primitive identifies their quadratic classes. The same
+argument applies to the relative cone complexes, since their maps commute
+with $T$ \cite[Proposition 3.3]{Ran80I}, \cite[Section 3]{Ran89}.
+All these operations preserve propagation and exterior factorizations.
+
+\subsection{Compatible idempotents and normalization}
+Let a finite cyclic group $G$, of order $q$, act up to homotopy on
+$(C,\phi)$, with
+\begin{equation}\label{alg:grouprelations}
+ A_gA_h\simeq A_{gh},\qquad A_1=1,\qquad
+ A_g\phi\simeq\phi A_{g^{-1}}^*.
+\end{equation}
+Only an action in the chain-homotopy category is assumed; no higher
+coherence data are used.
+On $\mathcal C=C\otimes\Q[G]$, with strict left sheet action, set
+\begin{equation}\label{alg:graphidempotent}
+ \Phi=\phi\otimes1,\qquad
+ E=q^{-1}\sum_gA_g\otimes R_{g^{-1}},
+\end{equation}
+where $R_{g^{-1}}$ sends sheet $b$ to $bg^{-1}$. Then
+\begin{equation}\label{alg:graphrelations}
+ E^2\simeq E,\qquad E\Phi\simeq\Phi E^*,\qquad
+ E_{ab}=q^{-1}A_{a^{-1}b}.
+\end{equation}
+In the controlled application these equations, including their homotopies,
+hold in the exterior quotient, as checked in \S\ref{sec:equivariant}.
+
+\begin{lemma}[Compatible splitting]\label{alg:corner}
+Let $\mathcal Q$ be rational additive with involution,
+$\mathcal C\in[0,N]$, and
+$\Phi:\mathcal C^{N-*}\to\mathcal C$ a strict symmetric Poincar\'e equivalence.
+For an invertible self-adjoint central coefficient $q$ and a chain map
+$E$ with homotopies $E^2\simeq E$, $E\Phi\simeq\Phi E^*$ in $\mathcal Q$,
+there is a splitting in the bounded chain-homotopy category
+$K^b(\Kar\mathcal Q)$,
+\begin{equation}\label{alg:split}
+ D\xrightarrow{\iota}\mathcal C\xrightarrow rD,\qquad
+ \iota r\simeq E,\quad r\iota\simeq1,\qquad D\in[0,N].
+\end{equation}
+The strict symmetric Poincar\'e duality and a homotopy inverse are
+\begin{equation}\label{alg:cornerform}
+ \phi_D=q^{-1}r\Phi r^*,\qquad b_D=q\,\iota^*\Phi^{-1}\iota.
+\end{equation}
+Here $\Phi^{-1}$ denotes a chosen chain-homotopy inverse.
+The resulting quadratic Poincar\'e complex determines a natural class
+in $L_N(\mathcal Q)$.
+\end{lemma}
+\begin{proof}
+With its split exact structure, $\Kar\mathcal Q$ has bounded derived
+category $K^b(\Kar\mathcal Q)$, which is idempotent complete
+\cite[Theorem 2.8]{BS01}. Hence $[E]$ splits. Outside $[0,N]$, the
+identity homotopy $r\iota\simeq1$ makes the extremal differential split:
+surjective at the bottom and injective at the top. Removing the resulting
+contractible two-term summands puts $D$ in $[0,N]$.
+Compatibility gives
+\[
+ \phi_Db_D\simeq r\Phi E^*\Phi^{-1}\iota\simeq rE\iota\simeq1,
+ \qquad b_D\phi_D\simeq\iota^*\Phi^{-1}E\Phi r^*
+                 \simeq\iota^*E^*r^*\simeq1.
+\]
+Conjugation preserves strict symmetry, so $\phi_D/2$ is its complete
+quadratic structure. Two splittings are related by $r_2\iota_1$, an
+equivalence carrying their symmetric structures to one another up to
+homotopy. The primitive argument above and the Poincar\'e
+mapping-cylinder cobordism \cite[Definition 3.10]{Ran89} identify their
+ordinary $L$-classes in $\Kar\mathcal Q$. Finally pass to ultimate
+decoration and use the natural isomorphism
+$L_N(\mathcal Q)\cong L_N(\Kar\mathcal Q)$
+\cite[Definition 17.7]{Ran92}. This also proves functoriality.
+\end{proof}
+
+For an asymptotic exterior category the splitting takes place once in
+the sequence category. Its finite collection of maps and homotopies
+therefore has asymptotically small representatives, with equations
+factoring through exterior-supported objects.
+
+\begin{lemma}[Scalar normalization]\label{alg:normalization}
+For \eqref{alg:graphidempotent}, suppose a duality-preserving forgetting
+functor retains a coordinate in which all $A_g$ and the homotopies in
+\eqref{alg:grouprelations} are uniformly small. Its image of
+\eqref{alg:cornerform} is homotopy-isometric to $(C,\phi)$.
+\end{lemma}
+\begin{proof}
+Only after forgetting, let $j_1,\pi_1$ include and project the identity
+sheet, and put $v=Ej_1$, $u=q\pi_1E$. Thus
+$v_a=q^{-1}A_{a^{-1}}$, $u_b=A_b$, and
+\begin{equation}\label{alg:uvrelations}
+ uv\simeq1,\quad vu\simeq E,\quad uE\simeq u,\quad Ev\simeq v,
+ \qquad u\Phi u^*=\sum_bA_b\phi A_b^*\simeq q\phi.
+\end{equation}
+Hence $w=u\iota$ and $z=rv$ are inverse equivalences and
+\begin{equation}\label{alg:scalarisometry}
+ w\phi_Dw^*\simeq q^{-1}uE\Phi E^*u^*
+              \simeq q^{-1}u\Phi u^*\simeq\phi.
+\end{equation}
+The rational primitive argument identifies the quadratic classes;
+the mapping-cylinder cobordism and ultimate completion invariance then
+identify their $L$-classes. If $q=q_i$ varies, multiplication by
+$q_i^{\pm1}$ has propagation zero, and the uniform entry and homotopy
+bounds make $u,v,w,z$ valid sequence morphisms.
+\end{proof}
+
+\section{Localization boundaries}\label{sec:localization}
+For a closed invariant cover $X=A\cup B$, put $Y=A\cap B$.
+Support filtration, excision, and \cite[Theorem 4.2]{CP95} give
+\begin{equation}\label{eq:ordinary-boundary}
+ \partial_{A,B}:L_k(\mathcal A(X))\longrightarrow
+                    L_{k-1}(\mathcal A_Y(X)).
+\end{equation}
+Here $\mathcal A=\mathcal A_{\mathbf G}$; the group sequence is unchanged.
+
+\begin{proposition}\label{prop:exterior-boundary}
+If $Z\subset A$ is closed invariant and $d(Z,B)>0$, there is a boundary
+\begin{equation}\label{eq:exterior-boundary}
+ \partial_{A,B}:L_k(\mathcal A(X)/\mathcal A_Z(X))
+               \longrightarrow L_{k-1}(\mathcal A_Y(X)),
+\end{equation}
+natural for duality-preserving functors preserving these support categories.
+\end{proposition}
+\begin{proof}
+Put $\mathcal Q=\mathcal A(X)/\mathcal A_Z(X)$ and
+$\mathcal U=\mathcal A_A(X)/\mathcal A_Z(X)$.
+Separation embeds $\mathcal A_B$ and $\mathcal A_Y$ fully faithfully in
+$\mathcal Q$. Choose controlled representatives for finite families of
+quotient maps and perform the based support decompositions before
+quotienting; this verifies the support filtrations there. The same based
+split as in \cref{alg:excision} gives the duality-preserving equivalence
+\begin{equation}\label{eq:exterior-excision}
+ \mathcal U/\mathcal A_Y\simeq\mathcal Q/\mathcal A_B.
+\end{equation}
+Indeed, on $A$-supported objects $I_B$ restricts to $I_Y$, whereas $I_Z$
+already factors through $A$-supported objects; thus the respective ideals
+are $I_Z+I_Y$ and $I_Z+I_B$. The based inclusion and projection are
+adjoints and inverse in the quotient. The boundary is induced by
+\[
+ \Lspec(\mathcal Q)\longrightarrow\Lspec(\mathcal Q/\mathcal A_B)
+ \simeq\Lspec(\mathcal U/\mathcal A_Y)
+ \longrightarrow\Sigma\Lspec(\mathcal A_Y).
+\]
+Localization for the two filtrations gives Mayer--Vietoris and naturality.
+The ordinary case is $Z=\varnothing$.
+\end{proof}
+
+\begin{lemma}\label{lem:union-boundary}
+Let $V_A=(P\to D_A)$ and $V_B=(P\to D_B)$ be $k$-dimensional quadratic
+Poincar\'e pairs supported on $A,B$, with oppositely oriented common
+boundary $P$ supported on $Y$. Orient $P$ as the boundary of $V_A$.
+For $V=V_A\cup_PV_B$, in the ordinary or exterior quotient setting,
+\begin{equation}\label{eq:union-boundary}
+ \partial_{A,B}[V]=[P].
+\end{equation}
+\end{lemma}
+\begin{proof}
+Use $\mathcal Q,\mathcal U$ above, with $Z=\varnothing$ in the ordinary
+case. The relative-pair representative $P\to D_A$ in the cofiber of
+$\Lspec(\mathcal A_Y)\to\Lspec(\mathcal U)$ has boundary $[P]$.
+The relative-to-quotient comparison \cite[proof of Theorem 4.1]{CP95},
+followed by ultimate decoration, sends it to $D_A$ with its full induced
+quadratic structure. Modulo $\mathcal A_B$, $D_B$, $P$, and the
+suspended interface of the union vanish degreewise, along with every
+interface structure correction. The surviving complex and structure are
+exactly those on $D_A$. Excision thus identifies the two representatives,
+whose connecting image is $[P]$. Completion and the passage to ultimate
+decoration preserve this pair comparison.
+\end{proof}
+
+\section{Local chain carriers}\label{sec:carriers}
+
+Write $\varepsilon$ for geometric augmentation of zero chains.
+We use the acyclic-carrier method to prove the required shrinking-mesh
+estimates directly.  Its application to dual cells is the elementary PL
+form of combinatorially controlled Poincar\'e--Lefschetz duality; compare
+\cite[Proposition 5.3, Theorem 6.7 and Corollary 6.8]{Ran99}.
+
+\begin{lemma}[Finite acyclic carriers]\label{lem:finite-acyclic-carrier}
+Let $E$ be a finite based chain complex in nonnegative degrees.  Assign
+to each basis element $e$ an augmented acyclic subcomplex $\Gamma(e)$
+of a rational chain complex $F$, with augmentations agreeing on inclusions.
+Assume $\Gamma(e')\subset\Gamma(e)$ whenever $e'$ occurs in $de$.
+Two carried chain maps $u,v:E\to F$ agreeing in augmentation on degree-zero
+basis elements admit a carried homotopy
+\[
+u-v=dH+Hd,\qquad H(e)\in\Gamma(e).
+\]
+Carried, augmentation-compatible prescribed degree-zero images likewise extend
+to a carried chain map from an augmented source.
+\end{lemma}
+\begin{proof}
+Induct on degree.  The residual $u(e)-v(e)-H(de)$ lies in $\Gamma(e)$,
+is a cycle, and in degree zero has augmentation zero.  Fill it in that
+carrier and use the filling as $H(e)$.  The map-existence induction fills
+the cycle given by the already defined image of $de$.
+\end{proof}
+
+\begin{corollary}\label{cor:carrier-control}
+If labels in $\Gamma(e)$ are within $a$ of the label of $e$, the constructed
+map or homotopy has propagation at most $a$.  Relabeling by a fixed
+continuous map $c$ on a compact metric space replaces this bound by
+$\omega_c(a)$, where $\omega_c$ is a modulus of continuity for $c$.
+Signed cellular bases use geometric augmentation.
+\end{corollary}
+\begin{proof}
+The construction introduces no basis elements outside the assigned carriers.
+\end{proof}
+
+\begin{lemma}[Filling on a fixed triangulation]
+\label{lem:unchanged-target-filling}
+Let $K$ triangulate a compact $m$-manifold $W$ with mesh at most $\eta$.
+Let $C$ be convex in one coordinate chart.  A simplicial $r$-cycle $\gamma$
+whose full simplices lie in $C$ bounds a chain $q$ on the same $K$, with
+full-simplex support in the closed $\eta$-neighborhood of $C$; for $r=0$
+require augmentation zero.  For $r=m$ this forces $\gamma=0$.
+\end{lemma}
+\begin{proof}
+The zero chain needs no filling.  Otherwise let $A$ be the subcomplex
+generated by its support and cone its inclusion to a point in $C$.
+This gives $F:|\operatorname{cone}A|\to C$ restricting to the inclusion
+on $A$.  Subdivide only this cone and choose a simplicial approximation
+$t:L\to K$ satisfying
+$F(\operatorname{st}^{\circ}_Lv)\subset\operatorname{st}^{\circ}_Kt(v)$
+\cite[Theorem 2C.1 and its proof]{Hat02}; write $S$ for subdivision.
+On the base, $tS$ is carried in each original simplex and fixes vertices,
+so $tS|_{C_*(A)}=1$: induction reduces the difference on an $r$-simplex
+to a top-dimensional cycle in that simplex, which is zero for $r>0$.
+Thus $q=tS(c\gamma)$ satisfies $dq=\gamma$, where $c$ is the augmented
+cone operator.  For $z$ in the interior of a simplex $\lambda$ of $L$,
+the approximation property says that every vertex of $t\lambda$ belongs
+to the smallest target simplex containing $F(z)$.  That simplex meets
+$C$ and has diameter at most $\eta$, proving the support claim.
+In top degree $q=0$ because $C_{m+1}(K)=0$.
+\end{proof}
+
+\begin{lemma}[Relative dual-block carrier maps]
+\label{lem:relative-block-carriers}
+Let $K$ be a finite combinatorial triangulation of a compact oriented
+$m$-manifold $A$ with
+$\partial A$ a subcomplex and mesh $\eta$.  For nonboundary simplices
+choose dual-block orientations with
+\[
+\partial D\sigma=(-1)^{\dim\sigma+1}
+\sum_{\substack{\tau\supset\sigma\\\dim\tau=\dim\sigma+1}}
+[\tau:\sigma]D\tau,\qquad D\rho=\epsilon_\rho[b_\rho]
+\]
+on top simplices, where $\epsilon_\rho$ is the fundamental coefficient
+and $b_\rho$ the barycenter.
+Let $D_{\mathrm{rel}}$ be the cellular subcomplex generated by these
+blocks and put $J_\sigma=\bigcup_{\tau\supseteq\sigma,\,
+\tau\not\subset\partial A}D\tau$.  Every $J_\sigma$ is augmented acyclic.
+There are maps $S_{\mathrm{rel}}:D_{\mathrm{rel}}\to C_*(\operatorname{sd}K)$
+and $R_{\mathrm{rel}}$ in the reverse direction, with
+$R_{\mathrm{rel}}S_{\mathrm{rel}}=1$ and
+$S_{\mathrm{rel}}R_{\mathrm{rel}}\simeq1$, all having propagation
+$O_m(\eta)$ when cells are labeled by points of their geometric supports.
+\end{lemma}
+\begin{proof}
+Use the dual orientations induced by the manifold and simplex orientations;
+the displayed incidence formula follows.  On an interior codimension-one
+simplex, the augmentation of its dual boundary is
+$(-1)^m\sum_{\rho\supset\sigma}\epsilon_\rho[\rho:\sigma]=0$,
+by the relative fundamental-chain equation.  Thus geometric augmentation
+is a chain map, including the signed zero-cell convention.
+All cofaces of a nonboundary simplex are nonboundary, giving the subcomplex.
+If $\sigma$ is interior, $J_\sigma=D\sigma$ is a ball.  If $\sigma$ is
+boundary, its link is an $l$-ball, $l=m-\dim\sigma-1$, with boundary the
+link in $\partial A$.  Nonboundary cofaces correspond to nonboundary
+faces $\lambda$ of this link.  With join orientations the map
+\[
+\lambda^*\longmapsto(-1)^{r(l+1)}D(\sigma*\lambda)
+\]
+identifies its relative shifted cochain complex in degree $r$ with
+$C_r(J_\sigma)$.  Hence $H_r(J_\sigma)=\Q$ for $r=0$ and zero otherwise;
+augmentation is nonzero on a top-coface dual vertex and identifies $H_0$
+with $\Q$.
+For a barycentric flag use $J_{\sigma_0}$, its minimum-face carrier.
+These shrink on deleting the minimum and are unchanged on deleting other
+faces.  The carrier lemma constructs $R_{\mathrm{rel}}$; take
+$S_{\mathrm{rel}}$ to be cellular subdivision.  Augmentation fixes the
+composite on zero cells; on a positive-dimensional $D\sigma$ the composite
+lies in that dual ball and equals the identity by induction and absence
+of top-dimensional cycles there.  The other composite
+and the identity are carried in $\operatorname{sd}(\operatorname{st}_K
+\sigma_0)$, so the carrier lemma supplies their homotopy.
+Closed stars are contractible and have diameter at most $2\eta$,
+giving every asserted bound independently of valence and rank.
+\end{proof}
+
+\begin{lemma}[Controlled cap--block comparison]
+\label{lem:cap-block-comparison}
+In the setting of Lemma~\ref{lem:relative-block-carriers}, put
+$R=C_*(K,\partial K;\Q)$ and write $\delta$ for its shifted-dual
+differential $(-1)^rd^*$. Let $F:R^{m-*}\to C_*(K)$ be a chain map
+carried, on $\sigma^*$, in the closed star $\operatorname{st}_K\sigma$.  Suppose
+$\varepsilon F(\rho^*)=\epsilon_\rho$ on each top simplex.
+Then $F$ has a chain homotopy inverse and both inverse homotopies of propagation
+$O_m(\eta)$.  More precisely, it is carried-homotopic to $F_0$, with
+homotopy inverse $B$, where
+\[
+F_0=R_KS_{\mathrm{rel}}\mathcal J,
+\qquad B=\mathcal J^{-1}R_{\mathrm{rel}}S_K,
+\qquad\mathcal J_r(\sigma^*)=(-1)^{r(m+1)}D\sigma,
+\]
+where $S_K$ is subdivision and $R_K$ a simplex-carried inverse.
+Fixed continuous relabelings give bounds tending to zero with $\eta$.
+\end{lemma}
+\begin{proof}
+The incidence formula makes $\mathcal J$ a chain isomorphism.
+The carrier lemma on maximum-face carriers constructs $R_K$, with
+$R_KS_K=1$ by top-chain uniqueness in a simplex; it also gives
+$S_KR_K\simeq1$ in carriers $C_*(\operatorname{sd}\sigma_r)$ on flags
+with maximum $\sigma_r$.  Together with the preceding lemma these
+identities prove $F_0B\simeq1$ and $BF_0\simeq1$ by a fixed number of
+compositions.  Both $F,F_0$ have the same top augmentations and closed-star
+carriers.  The dual differential uses cofaces, and
+$\operatorname{st}_K\tau\subset\operatorname{st}_K\sigma$ for
+$\tau\supset\sigma$, so the carrier lemma gives $F-F_0=dH+H\delta$.
+Add $HB$ and $BH$ to the inverse homotopies for $F_0$.
+All carriers have diameter at most $2\eta$; fixed compositions give
+$C_m\eta$ and relabeling gives $\omega_c(C_m\eta)$.
+\end{proof}
+
+\begin{corollary}[A common simplicial diagonal]
+\label{cor:common-diagonal-control}
+In the setting of Lemma~\ref{lem:relative-block-carriers}, let
+$j$ be the boundary inclusion.
+Use one ordered Alexander--Whitney diagonal $\Delta$ on $K$ and its subcomplexes.
+Choose oriented fundamental chains satisfying $dz_A=jz_{\partial A}$, and put
+$t_A=\frac12(1+T)\Delta z_A$ and
+$t_{\partial A}=\frac12(1+T)\Delta z_{\partial A}$.
+Then $dt_A=j^{\otimes2}t_{\partial A}$ exactly. The right slant of $t_A$
+on relative cochains is a chain equivalence with inverse data of propagation
+$O_m(\eta)$, also when the boundary is empty.
+\end{corollary}
+\begin{proof}
+The diagonal restricts to subcomplexes.  Its boundary equation gives
+\[
+d\phi_{A,r}-(-1)^r\phi_{A,r-1}d^*
+=j\phi_{\partial A,r-1}j^*.
+\]
+The right side vanishes on relative cochains.  Each diagonal term consists of faces of one simplex, so slant
+on $\sigma^*$ has closed coface-star support.  On a top simplex it is
+$\epsilon_\rho([v_0]+[v_m])/2$, of augmentation $\epsilon_\rho$.
+Apply the cap--block comparison.
+\end{proof}
+
+\section{Geometric data and quotient representatives}\label{geo:fixed-data}
+
+Suppose that $\Zp$ acts effectively on a connected boundaryless
+$n$-manifold, $n\ge1$, and put $H_j=p^j\Zp$.
+First note that, for any compact group $K$ acting on a connected manifold,
+every countable union of compact sets lies in a $K$-invariant connected
+second-countable open submanifold. Indeed, every compact set lies in a
+relatively compact connected open set covered by finitely many charts:
+connect a finite chart cover by finitely many paths. Choose such sets
+$V_j$ inductively with $K\overline{V_j}\subset V_{j+1}$, including one
+prescribed compact set at each stage; their union has the required
+properties. For $K=\Zp$, include a point moved by $p^j$ for every $j\ge0$.
+The restriction remains effective, so we henceforth work on this
+second-countable open submanifold.
+
+\begin{lemma}\label{geo:free-point}
+There is a point with trivial stabilizer.
+\end{lemma}
+\begin{proof}
+Every nonzero closed subgroup of $\Zp$ is an $H_j$: an element of
+minimum valuation $j$ has integer multiples dense in $H_j$. If all stabilizers
+were nonzero, the discrete subgroup $\Z$ would have finite point orbits.
+By \cite[Theorem 2]{Rob75} its image would be finite. Some $m>0$ would
+act trivially; the closed kernel would then contain
+$\overline{m\Z}=H_{v_p(m)}$, contradicting effectivity.
+\end{proof}
+
+Center a chart at this point, with image containing $\overline{B(0,4)}$.
+Joint continuity gives $H=H_j$ and $0<D<1/64$ such that
+\begin{equation}\label{geo:small-H}
+ |hx-x|\le D\qquad(h\in H,\ x\in\overline{B(0,2)}).
+\end{equation}
+The invariant saturation $\Omega=HB(0,2)$ lies in $B(0,2+D)$ and has
+$H$-displacements at most $2D$. Its coordinate average with respect to
+normalized Haar measure $\mu$
+\begin{equation}\label{geo:average}
+ F_0(x)=\int_H hx\,d\mu(h)
+\end{equation}
+is continuous, invariant, and satisfies
+\begin{equation}\label{geo:average-bounds}
+ |F_0(x)-x|\le2D,\qquad F_0(x)=x\text{ on }\Fix(H).
+\end{equation}
+Choose $0<\rho<\rho_+<1/4$ with
+$\overline{B(0,\rho_+)}\cap\Fix(H)=\varnothing$. Then
+\begin{equation}\label{geo:Zplus}
+ Z^+=F_0^{-1}(\overline{B(0,\rho_+)})
+\end{equation}
+is compact, invariant, and disjoint from $\Fix(H)$: it is a closed
+preimage contained in $B(0,\rho_++2D)\Subset\Omega$.
+Choose $s_\rho:\R^n\to S^n$ restricting to an orientation-preserving
+homeomorphism from $B(0,\rho)$ to $S^n\setminus\{\infty\}$, and constant
+$\infty$ elsewhere. Define
+\begin{equation}\label{geo:f}
+ f=s_\rho F_0\text{ on }\Omega,\qquad f=\infty\text{ elsewhere}.
+\end{equation}
+Its nonconstant locus lies in $B(0,\rho+2D)$, so it extends to the
+compactified coordinate sphere. The homotopy
+\begin{equation}\label{geo:pinch-homotopy}
+ s_\rho((1-v)F_0(x)+vx),\quad 0\le v\le1,
+\end{equation}
+extended by $\infty$, has the same compact support bound. Hence $f$ has
+degree one and $Z^+$ is nonempty.
+
+Put $H'=H_{j+1}$. Every proper closed subgroup of $H$ lies in $H'$, so
+$C_p=H/H'$ acts freely on the compact metric space $Z^+/H'$. Its orbit
+map is a covering: a neighborhood can be shrunk to have disjoint
+translates. A finite trivializing cover and a subordinate partition
+of unity give, by multiplying sheet coordinates by the square roots
+of the partition functions, an equivariant detector
+\begin{equation}\label{geo:detector}
+ \widetilde\rho:Z^+\longrightarrow T=S^{2m-1}\subset\C^m,
+ \qquad\widetilde\rho(hx)=\chi(h)\widetilde\rho(x),
+\end{equation}
+where $\chi:H\to H/H'=C_p\subset S^1$ is the quotient character.
+Scalar multiplication makes $T$ a
+fixed compact free isometric $C_p$-space.
+Choose a round target metric with $y=s_\rho(0)$ antipodal to $\infty$,
+and fix
+\begin{equation}\label{geo:buffers}
+ 0<r<R<t<u<d(y,\infty),\quad
+ Z_0=\{z:d(y,z)\ge R\},\quad Z=T\times Z_0.
+\end{equation}
+For every $v<d(y,\infty)$, the compact invariant set
+$\mathcal K_v=f^{-1}(\overline{B(y,v)})$ lies in $\operatorname{int}Z^+$.
+Only now choose
+\begin{equation}\label{geo:finite-quotients}
+ K_i=H_{\ell_i}\subset H',\quad\ell_i\to\infty,\qquad
+ G_i=H/K_i,\quad P_i=H'/K_i.
+\end{equation}
+Write $\chi$ also for the induced character on each $G_i$.
+The $K_i$-displacements on $H\overline{B(0,2)}$ tend uniformly to zero;
+$T$, the detector, and all buffers remain fixed.
+
+\section{Common chain models}\label{geo:chain-models}
+
+Put $W=S^n\times\CP^2$, $N=n+4$. The sphere factor is the compactified
+coordinate space. Fix a product metric, a finite smooth atlas with
+uniform chart buffers and Lipschitz constants, and a common continuity
+modulus $\omega$ for the compact map families below. Choose a
+combinatorial triangulation compatible with the later finite PL cutting flag and
+barycentric refinements $Y_i$ of mesh $\eta_i\to0$. Write
+$D_i=C_*(Y_i;\Q)$ and let $z_i$ be its oriented fundamental cycle;
+bases are simplices labeled at their barycenters. All control maps
+ignore $\CP^2$, and support estimates concern whole closed simplices.
+
+\begin{lemma}\label{geo:closed-models}
+The $D_i$ have strict symmetric cap equivalences
+$\phi_i:D_i^{N-*}\to D_i$, inverses $b_i:D_i\to D_i^{N-*}$,
+and both inverse homotopies of propagation $O_N(\eta_i)$. An
+equicontinuous family of self-maps has chain approximations on these
+unchanged complexes, with uniform full-simplex graph error
+\begin{equation}\label{geo:mu}
+\mu_i=O(\eta_i+\omega(C\eta_i))\longrightarrow0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The cap assertion is \cref{cor:common-diagonal-control} with empty
+boundary. Subdivide the source enough for the target open-star cover
+and the common modulus, and take $a_h=t_hS$ by simplicial approximation
+\cite[Theorem 2C.1]{Hat02}. The identity approximation is exactly $1$
+using the last-vertex map. Each image simplex lies within one target
+mesh of $h$ of a point of its original source simplex; equicontinuity
+gives \eqref{geo:mu}.
+\end{proof}
+
+Choose a continuous cutoff $0\le\theta\le1$, equal to $1$ on $B(0,1)$
+and $0$ off $B(0,3/2)$, and complete each $h\in H$ to a sphere map
+\begin{equation}\label{geo:completed-map}
+ \widehat h(x)=x+\theta(x)(hx-x),
+\end{equation}
+using the identity elsewhere. These maps are equicontinuous and degree
+one, by scaling $\theta$, and
+\begin{equation}\label{geo:f-invariance}
+ f\widehat h=f:
+\end{equation}
+inside $B(0,1)$ use invariance; outside it both points miss the
+nonconstant locus. Choose representatives $h_g$ of $G_i$, $h_1=1$, and
+write $h_gh_h=h_{gh}k_{g,h}$ with $k_{g,h}\in K_i$. The tracks
+\begin{equation}\label{geo:raw-product-track}
+ L_{g,h}(x,v)=(1-v)\widehat h_g\widehat h_h(x)+v\widehat h_{gh}(x)
+\end{equation}
+are constant at infinity. For $|x|\le1/2$ they lie within
+$\beta_i\to0$ of $h_{gh}x$, uniformly; for $|x|\ge1/2$ they lie within
+$2D$ of $x$ and have $f$-value $\infty$.
+
+A sequence of matrices has graph type $g$ if its global $f$-propagation
+tends to zero and, for every fixed $v<d(y,\infty)$, its entries $x\to x'$ with
+$x\in\mathcal K_v$ satisfy
+$d_T(\widetilde\rho(x'),\chi(g)\widetilde\rho(x))\to0$ uniformly.
+Their target labels are defined eventually. A larger fixed $v'>v$ gives
+the same estimates for transposes and products of bounded length: the transpose
+has type $g^{-1}$, and graph types multiply.
+Apply \cref{geo:closed-models} to $\widehat h_g\times1$ to obtain
+$a_{g,i}$, $a_{1,i}=1$.
+Equation \eqref{geo:f-invariance}, detector equivariance, and the graph
+error give type $g$. Degree one and the absence of $(N+1)$-chains give
+\begin{equation}\label{geo:fundamental-cycle}
+ a_{g,i}z_i=z_i.
+\end{equation}
+We now suppress the index $i$.
+
+\begin{lemma}\label{geo:product-homotopies}
+On the same complexes there are homotopies
+\begin{equation}\label{geo:product-equation}
+ a_ga_h-a_{gh}=dB_{g,h}+B_{g,h}d
+\end{equation}
+of graph type $gh$, uniformly in $i,g,h$.
+\end{lemma}
+\begin{proof}
+Induct over simplex dimension, filling the residual cycle
+$\gamma_\sigma=a_ga_h\sigma-a_{gh}\sigma-B(\partial\sigma)$ using
+\cref{lem:unchanged-target-filling}; in degree zero it has augmentation
+zero. Take first-coordinate convex hulls of
+$L_{g,h}(|\sigma|\times[0,1])$, and small coordinate-convex carriers for the
+second projection. In a product chart, take convex hulls including full
+endpoint chains and already fixed face fillings. With
+$\delta_i=\eta_i+\mu_i+\omega(C\eta_i)+\omega(C\mu_i)+\beta_i\to0$,
+the full supports stay within widths $w_r$ of the nested track hulls
+and second-coordinate projections, where
+$w_{-1}=0$, $w_r\le C(w_{r-1}+\delta_i)$: coordinate changes cost a
+fixed factor and filling adds one target mesh. Thus $w_r\to0$ uniformly
+for $r\le N$, independently of all ranks and auxiliary subdivisions.
+These convex carriers lie in one product chart; near infinity use
+small charts in the identity region. The top residual vanishes by the
+same filling lemma, so no extra top chain is required.
+
+For a source barycenter with $|x|\le3/8$, every filling lies within
+$o(1)$ of $h_{gh}x$. Equivariance of the detector on each $\mathcal K_v$ gives
+type $gh$. For $|x|\ge3/8$ its support is within $2D+o(1)$ of $x$;
+the fixed margin $3/8-\rho-4D>1/16$ makes its $f$-value $\infty$.
+Uniform continuity finishes both control estimates.
+\end{proof}
+
+The same filling recursion, now on the based source $D^{N-*}$, gives
+a local primitive $U_g$ with
+\begin{equation}\label{geo:isometry-homotopy}
+ a_g\phi a_g^*-\phi=dU_g+U_gd_{D^{N-*}}.
+\end{equation}
+Indeed, an entry of $a_g^*$ selects a source cell mapping near its
+given target cell; $\phi$ moves within $O(\eta_i)$, and $a_g$ maps back
+near that target cell. Thus both endpoint maps are local with error
+$O(\mu_i+\omega(C\eta_i)+\eta_i)\to0$. Their degree-zero
+augmentations agree, since simplicial approximations preserve
+geometric augmentation ($\varepsilon a_g=\varepsilon$): for
+$\alpha\in D_N^*$,
+$\varepsilon\phi(\alpha)=\alpha(z_i)$, while
+$\varepsilon a_g\phi a_g^*(\alpha)=\alpha(a_gz_i)=\alpha(z_i)$.
+For $\sigma^*$ take a chart-convex hull of its endpoint supports and
+the carriers and fillings already assigned to cofaces occurring in
+the shifted dual differential, enlarging by one mesh after filling.
+These geometric carriers are nested under cofaces.
+Every coface meets $\sigma$, so the same width induction keeps them
+within $o(1)$ of $\sigma$. The top residual again vanishes.
+Put $a=a_g$, $b'=a_{g^{-1}}$. For $b'a-1=dT+Td$ set
+$K_r=(-1)^{r+1}T_{N-r-1}^*$. The identity
+$a\phi-\phi b'^*=a\phi(1-a^*b'^*)+(a\phi a^*-\phi)b'^*$ yields
+\begin{equation}\label{geo:adjoint-homotopy}
+ V_g=-a\phi K+U_gb'^*,\qquad
+ dV_g+V_gd_{D^{N-*}}=a_g\phi-\phi a_{g^{-1}}^*.
+\end{equation}
+Since $T,K,U_g$ have type $1$ and $b'^*$ type $g$, $V_g$ has type $g$.
+Fix one $\epsilon_i\to0$ bounding all these $f$ and detector errors,
+cell oscillations, and local duality propagations on the fixed buffers.
+
+\section{Compression and exterior control}\label{geo:compression}
+
+Keep the fixed detector neighborhood and $R<t<u$. All primitive local
+and graph errors below are bounded uniformly by $\epsilon_i\to0$;
+cell oscillations of $f$ are bounded by $\kappa_i\to0$.
+Let $F_i\subset D_i$ be spanned by simplices whose closed simplices miss
+$f^{-1}(\overline{B(y,t)})$. This is a subcomplex, since faces of a
+missing simplex also miss that set. Put
+\begin{equation}\label{geo:compression-data}
+ C=D/F,\qquad \pi:D\to C,\qquad \sigma:C\to D,
+ \qquad Q=1-\sigma\pi,\qquad \widehat d=\pi d\sigma,
+\end{equation}
+where $\sigma$ is the degreewise based section. Thus $\pi dQ=0$.
+Call the simplices surviving in $C$ retained and those in $F$ far.
+Retained labels have sphere radius $d(y,f(x))$ at most $t+\kappa_i$;
+far labels have radius greater than $t$. Only retained matrices and the restricted
+witnesses below need detector labels; the following computations on
+$D_i$ are raw matrix computations.
+
+\begin{lemma}[Exterior band]\label{geo:band-factorization}
+Consider words in the preceding primitive maps and homotopies, their
+shifted duals, and the based projections and sections. A
+retained-to-retained word of fixed length at most $L$ containing
+$Q$ or $Q^*$ factors through a based module labeled in
+\begin{equation}\label{geo:band}
+ t-L\epsilon_i\le d(y,f(x))\le t+\kappa_i+L\epsilon_i.
+\end{equation}
+Local words have controlled scalar factors; graph words have controlled
+equivariant factors after compensating sheet translations. Their cut
+objects are eventually supported in the fixed exterior $Z$.
+\end{lemma}
+\begin{proof}
+At a far projection restrict to basis elements reached from retained
+sources and contributing to retained targets, and cut the matrix product
+there. This is an exact factorization. The far label has radius greater
+than $t$, and a retained endpoint and at most $L$ sphere errors give the
+upper bound in \eqref{geo:band}. Every contributing intermediate label
+also has radius at most this upper bound, eventually less than $u$;
+all required detector labels therefore exist in the fixed buffered domain.
+The cut lies outside $R$. Local propagation is at most $L\epsilon_i$.
+For graph words use all sheets, label $(x,s)$ by
+$(\chi(s)\widetilde\rho(x),f(x))$, and accompany a graph-$g$ primitive by
+$s\mapsto sg^{-1}$. Its detector displacement cancels because
+$\chi(sg^{-1})\chi(g)=\chi(s)$. Apply this separately to the prefix
+and suffix. Their intermediate basis is a free $G_i$-set and both factors
+are controlled. Sums factor through direct sums of the cut objects;
+their propagation is bounded by the maximum summand bound.
+\end{proof}
+
+Let $b_i:D_i\to D_i^{N-*}$ be the local cap inverse supplied by
+\cref{geo:closed-models}, and put
+\begin{equation}\label{geo:compressed-maps}
+ A_g=\pi a_g\sigma,\qquad
+ \widehat\phi=\pi\phi\pi^*,\qquad
+ \widehat b=\sigma^*b\sigma.
+\end{equation}
+For a continuous $c:W\to S^n$, denote by
+$\mathfrak m_c\in L_N(\mathcal B_{\mathbf1,Z_0}(S^n))$ the scalar
+exterior class of $(D_i,\phi_i/2)$ with labels $c$.
+
+\begin{proposition}\label{geo:compressed-realization}
+The compressed complex is Poincar\'e in
+$\mathcal B_{\mathbf1,Z}(T\times S^n)$, with quadratic structure
+$\widehat\phi/2$. Its group and adjoint homotopies have the stated
+uniform graph control modulo controlled exterior witnesses, and $A_1=1$.
+After forgetting $T$, its class is $\mathfrak m_f$.
+\end{proposition}
+\begin{proof}
+For a degree-compatible raw operator put $\widehat\alpha=\pi\alpha\sigma$.
+Insertion of $\sigma\pi=1-Q$ gives
+\begin{align}
+ \widehat\alpha\widehat\beta-\widehat{\alpha\beta}
+   &=-\pi\alpha Q\beta\sigma,\label{geo:compression-product}\\
+ \widehat dA_g-A_g\widehat d
+   &=\pi a_gQd\sigma,\label{geo:compression-chain}\\
+ A_gA_h-A_{gh}-\widehat d\widehat B-\widehat B\widehat d
+   &=-\pi a_gQa_h\sigma+\pi B_{g,h}Qd\sigma,
+   \quad\widehat B=\pi B_{g,h}\sigma.
+   \label{geo:compression-relation}
+\end{align}
+The band lemma kills all defects after compensation. The map
+$\widehat\phi$ is a strict symmetric chain map because $\pi$ is a chain
+map. For its inverse, let $\delta,\widehat\delta$ be the shifted-dual
+differentials of $D,C$, and put
+$e=d\sigma-\sigma\widehat d=Qd\sigma$ and
+$e^\vee=\widehat\delta\sigma^*-\sigma^*\delta$, so
+$(e^\vee)_r=(-1)^{r+1}e_{N-r+1}^*$ factors through $Q^*$.
+Then
+\[
+ \widehat\delta\widehat b-\widehat b\widehat d
+ =e^\vee b\sigma+\sigma^*be.
+\]
+Compress the local inverse homotopies
+$\phi b-1=dH+Hd$ and $b\phi-1=\delta H'+H'\delta$:
+\begin{align*}
+ \widehat\phi\widehat b-1
+ &=\widehat d(\pi H\sigma)+(\pi H\sigma)\widehat d
+      +\pi He-\pi\phi Q^*b\sigma,\\
+ \widehat b\widehat\phi-1
+ &=\widehat\delta(\sigma^*H'\pi^*)
+      +(\sigma^*H'\pi^*)\widehat\delta
+      -e^\vee H'\pi^*-\sigma^*bQ\phi\pi^*.
+\end{align*}
+All residuals are local bounded-length words containing $Q$ or $Q^*$.
+Similarly, for $\widehat V_g=\pi V_g\pi^*$,
+\[
+ A_g\widehat\phi-\widehat\phi A_{g^{-1}}^*
+ -\widehat d\widehat V_g-\widehat V_g\widehat\delta
+ =-\pi a_gQ\phi\pi^*
+       +\pi\phi Q^*a_{g^{-1}}^*\pi^*.
+\]
+These residuals have graph type $g$ and vanish after compensation by
+the same lemma. Finally $A_1=\pi\sigma=1$ and
+\begin{equation}\label{geo:compressed-orientation}
+ A_g\pi z_i-\pi z_i=-\pi a_gQz_i,
+\end{equation}
+whose output misses $\overline{B(y,R)}$ eventually.
+After forgetting $T$, the entire $D_i$ is labeled by $f$ and $F_i$ is
+$Z_0$-supported. Consequently $Q$ and $e$ vanish in the scalar exterior
+quotient, so $\pi,\sigma$ are inverse chain equivalences. Transport of
+$\phi/2$ along $\pi$ is exactly $\widehat\phi/2$.
+\end{proof}
+
+\section{The graph corner and its scalar image}\label{sec:equivariant}
+
+Give $\mathcal C_i=C_i\otimes\Q[G_i]$ the free left sheet action and
+labels as follows. Let $x_c$ be the first coordinate of the barycenter
+of a retained simplex $c$. Then
+\begin{equation}\label{eq:sheet-labels}
+ \ell(c\otimes s)=
+ (\chi(s)\widetilde\rho(x_c),f(x_c)).
+\end{equation}
+Copying local scalar matrices sheetwise preserves duality, exterior
+support, and propagation. Set
+\begin{equation}\label{eq:graph-idempotent}
+ \Phi=\widehat\phi\otimes1,\qquad
+ E_i=q_i^{-1}\sum_{g\in G_i}A_{g,i}\otimes R_{g^{-1}},
+ \qquad q_i=|G_i|,\quad q=(q_i).
+\end{equation}
+The detector cancellation in the band lemma applies to the maps and
+all product and adjoint homotopies. In particular
+$q_i^{-2}\sum_{g,h}\widehat B_{g,h}\otimes R_{(gh)^{-1}}$
+is a controlled product homotopy modulo the direct sum of the exterior
+witnesses. Uniform control, rather than a bound on the number of
+summands, gives
+\begin{equation}\label{eq:controlled-idempotent}
+ E^2\simeq E,\qquad E\Phi\simeq\Phi E^*
+ \quad\text{in }K^b(\mathcal B_{\mathbf G,Z}(T\times S^n)).
+\end{equation}
+By \cref{alg:corner}, split $E$ in the Karoubi-completed homotopy category:
+\begin{equation}\label{eq:normalized-corner}
+ D\xrightarrow{\iota}\mathcal C\xrightarrow{r}D,
+ \qquad \phi_D=q^{-1}r\Phi r^*.
+\end{equation}
+Its quadratic structure is $\phi_D/2$. Ultimate completion invariance
+gives
+\begin{equation}\label{eq:d-class}
+ \mathfrak d\in L_{n+4}(\mathcal B_{\mathbf G,Z}(T\times S^n)).
+\end{equation}
+
+Let $U$ forget equivariance and $T$, retaining sphere control.
+Every $A_g$ and every relation homotopy is uniformly small in this
+coordinate. Scalar normalization (\cref{alg:normalization}) and
+the last assertion of \cref{geo:compressed-realization} give
+\begin{equation}\label{eq:scalar-image}
+ U_*\mathfrak d=\mathfrak m_f
+ \quad\text{in }L_{n+4}(\mathcal B_{\mathbf1,Z_0}(S^n)).
+\end{equation}
+
+\section{Evaluation of the iterated boundary}\label{bd:scalar}
+Put $N=n+4$ and $W=S^n\times\CP^2$, with product orientation;
+all sphere control ignores $\CP^2$. Fix
+\[
+ A=T\times(S^n\setminus B(y,r)),\quad
+ B=T\times\overline{B(y,r)},\quad Y=T\times S_r(y).
+\]
+Here $S_r(y)=\partial B(y,r)$. The exterior $Z\subset A$ is positively separated from $B$.
+Apply \cref{prop:exterior-boundary}, relabel its target onto $Y$, and
+successively cut the sphere interfaces into two fixed hemispheres.
+After $n$ boundaries the support is $T\times S^0$; project onto one
+component. This gives
+\begin{equation}\label{bd:Delta}
+ \Delta_T:L_N(\mathcal B_{\mathbf G,Z}(T\times S^n))
+       \longrightarrow L_4(\mathcal A_{\mathbf G}(T)).
+\end{equation}
+Every cut, relabeling, orientation, and component is fixed before the
+index varies. The same choices give $\Delta_{\mathbf1}$ without $T$
+and equivariance, with target $L_4(\mathcal V_{\mathbf1})$.
+Forgetting equivariance and $T$, while retaining sphere control, gives
+\begin{equation}\label{bd:naturality}
+ U_*\Delta_T=\Delta_{\mathbf1}U_*.
+\end{equation}
+These boundaries also commute with $\tau\otimes(-)$, by localization
+naturality.
+
+\begin{lemma}[Controlled relative duality]\label{bd:relative}
+Let $A$ be a compact oriented combinatorial $m$-manifold with boundary.
+Use a finite combinatorial triangulation, with boundary a subcomplex,
+and one ordered
+diagonal. Write $C=C_*(\partial A;\Q)$, $D=C_*(A;\Q)$,
+$j:C\to D$, and $J=\operatorname{Cone}(j)$. Fundamental chains
+$dz_A=jz_{\partial A}$ give invariant tensors
+\[
+ t_D=\operatorname{Sym}\Delta z_A,\quad
+ t_C=\operatorname{Sym}\Delta z_{\partial A},\quad
+ dt_D=j^{\otimes2}t_C,\quad dt_C=0.
+\]
+Write $\phi_D,\phi_C$ for their right slants, which give the relative duality map
+\begin{equation}\label{bd:Psi}
+ \Psi_r(\alpha,\beta)=\phi_{D,r}\alpha
+       +(-1)^{r+1}j\phi_{C,r}\beta:
+       J^{m-*}_r\longrightarrow D_r.
+\end{equation}
+For mesh $\eta$, this map, an inverse, and both inverse homotopies
+have geometric propagation $O_m(\eta)$. Any fixed continuous labeling
+therefore gives an asymptotically controlled Poincar\'e pair, whose
+full quadratic structure is $(t_D,t_C)/2$.
+\end{lemma}
+\begin{proof}
+The tensor equation and
+\[
+ d_{J^{m-*},r}=(-1)^r
+ \begin{pmatrix}d_D^*&0\\j^*&-d_C^*\end{pmatrix}
+\]
+make \eqref{bd:Psi} a chain map: its two relative-boundary terms cancel.
+Let $\mathcal R=D/C$ and $q:J\to\mathcal R$ be the quotient.
+For the based section $s:\mathcal R\to D$, write
+$je=d_Ds-s\bar d$. Then $\tau=(s,-e)$ is a chain section of $q$;
+$\ker q=\operatorname{Cone}(1_C)$ has contraction $k(x,c)=(0,x)$.
+Thus
+\begin{equation}\label{bd:cone-contraction}
+ dh+hd=1-\tau q,\qquad h=k(1-\tau q).
+\end{equation}
+All these maps use only a simplex and its faces. By
+\cref{cor:common-diagonal-control}, $F=\Psi q^*$ has a local cap inverse
+$b$ and local inverse homotopies. Consequently $q^*b$ is an inverse
+of $\Psi$: use $\Psi\simeq F\tau^*$ and
+$q^*\tau^*\simeq1$, obtained by shifted dualizing
+\eqref{bd:cone-contraction}. Only finitely many local compositions are
+used, so their propagation is $O_m(\eta)$, independently of rank and
+valence. Apply the labeling's continuity modulus. Taking halves gives
+the full relative quadratic structure by \S\ref{alg:qmodel}.
+\end{proof}
+
+\begin{lemma}[Controlled unions]\label{bd:union}
+A cut of a closed oriented combinatorial manifold $W$ into two manifolds
+along a common boundary, using one triangulation and diagonal, gives
+controlled Poincar\'e pairs whose union has the closed manifold's full
+rational quadratic structure.
+\end{lemma}
+\begin{proof}
+Write the chains as $A,B,P$, with inclusions $j_A,j_B$, and choose
+$z_W=z_A+z_B$, $dz_A=j_Az_P$, $dz_B=-j_Bz_P$.
+On $V=\operatorname{Cone}((j_A,-j_B))$, let $e_A,e_B$ include the
+two tops, put $a=e_Aj_A$, $b=e_Bj_B$, and let $s$ include the
+suspended interface. Then $ds+sd=a-b$. With tensor Koszul signs, set
+\[
+ K=s\otimes a+b\otimes s,\qquad
+ K_{\rm sym}=(K+T_VKT_P)/2,
+\]
+\[
+ t_V=e_A^{\otimes2}t_A+e_B^{\otimes2}t_B-K_{\rm sym}t_P.
+\]
+The identity $dK+Kd=a^{\otimes2}-b^{\otimes2}$ proves $dt_V=0$.
+This is the Poincar\'e union of \cite[\S3]{Ran80I}.
+The collapse $p:V\to C_*(W;\Q)$ has kernel
+$\operatorname{Cone}(1_P)$ and satisfies
+\begin{equation}\label{bd:union-tensor}
+ (p\otimes p)t_V=t_W.
+\end{equation}
+Use the kernel's standard contraction $k$.
+For a based section $r$ of $p$, $\ell=r-k(dr-rd)$ is a chain
+section and $k(1-\ell p)$ contracts $1-\ell p$.
+These maps, the interface correction, and the cap inverse of $W$
+are local. Hence $p$ is a controlled chain equivalence identifying
+the full symmetric structures; their halves identify the quadratic
+structures. The propagation bounds are $O_m(\eta)$ before labeling
+and tend to zero after any fixed continuous labeling.
+\end{proof}
+
+\begin{lemma}[Scalar control homotopies]\label{bd:homotopy}
+Let $Y_i$ be the fixed ordered combinatorial triangulations of a compact closed
+oriented PL $m$-manifold $W$, of mesh $\eta_i\to0$, and let
+$c:W\times[0,1]\to X$ be a fixed continuous map to a compact metric
+space. The complexes $C_*(Y_i;\Q)$ with their prescribed fundamental
+structures and endpoint labels $c_0,c_1$ are rational quadratic
+Poincar\'e cobordant. Their $L$-classes remain equal in every fixed
+exterior quotient.
+\end{lemma}
+\begin{proof}
+Triangulate the product prisms with time mesh $\lambda_i\to0$, keeping
+both endpoint triangulations, vertex orders, and fundamental structures
+exactly those of $Y_i$. Choose one vertex order restricting to the
+prescribed endpoint orders and use its ordered diagonal. The cylinder
+fundamental chain
+\[
+ Z_i=(-1)^m z_i\times[0,1],\qquad
+ dZ_i=j_1z_i-j_0z_i
+\]
+gives the exact relative tensor equation with boundary $t_1-t_0$.
+Label simplex barycenters by $c$. By \cref{bd:relative}, the pair's
+duality, inverse, and inverse homotopies have propagation at most
+$\omega_c(C_m(\eta_i+\lambda_i))\to0$ and degree range $[0,m+1]$.
+Taking halves gives the endpoint quadratic structures. Apply the
+exterior quotient functor to this completed cylinder; no condition on
+the homotopy's behavior on the exterior is required.
+See \cite[Propositions 6.1--6.3]{Ran80II} for the relative symmetric
+construction.
+\end{proof}
+
+\begin{proposition}[Boundary evaluation]\label{bd:pinch-value}
+For one constant $\varepsilon\in\{1,-1\}$ determined by the fixed
+orientation and component choices,
+\begin{equation}\label{bd:CP2}
+ \Delta_{\mathbf1}\mathfrak m_f
+   =\varepsilon[C_*(\CP^2;\Q),\phi_{\CP^2}/2],\qquad
+ \sigma_{\rm tail}(\Delta_{\mathbf1}\mathfrak m_f)
+   =[(\varepsilon,\varepsilon,\ldots)].
+\end{equation}
+\end{proposition}
+\begin{proof}
+The fixed scalar homotopy from $f$ to $s_\rho$ and
+\cref{bd:homotopy} give
+\begin{equation}\label{bd:pinch-homotopy}
+ \mathfrak m_f=\mathfrak m_{s_\rho}.
+\end{equation}
+The degree-one sphere map $s_\rho$ is homotopic to an
+orientation-preserving homeomorphism $g$ carrying the fixed source PL
+disk $D$ and hemisphere flag, chosen before the $Y_i$, to the target ball
+and flag; degree
+classifies sphere maps for $n\ge1$ \cite[Corollary 4.25]{Hat02}.
+Keep every target cut fixed and apply \cref{bd:homotopy} again.
+The fixed $Y_i$ already respect $D\times\CP^2$, its complement,
+and the finite flag; retain these same complexes and ordered diagonals.
+By \cref{bd:relative,bd:union}, these give compatible controlled
+quadratic pairs supported on the designated target sides. Their
+interface is $\partial D\times\CP^2$; it is separated from $Z_0$.
+By \cref{lem:union-boundary}, the first boundary is this interface,
+and each subsequent boundary is its next equator times $\CP^2$.
+After $n$ boundaries, projecting onto one component retains exactly
+one copy of $\CP^2$, with sign $\varepsilon$ independent of the index.
+At point control, subdivision identifies it with the constant model.
+The complex orientation gives middle form $\langle1\rangle$;
+its half-unit quadratic lift has the same symmetrized form and
+signature $1$. This proves \eqref{bd:CP2}.
+\end{proof}
+
+\section{The contradiction}\label{sec:contradiction}
+
+\begin{proposition}[Signature-one realization]\label{prop:signature-one}
+An effective continuous $\Zp$-action on a connected positive-dimensional
+manifold without boundary gives a fixed compact free $C_p$-space $T$,
+finite cyclic groups $G_i$ with index-$p$ subgroups $P_i$, and
+$\alpha\in L_4(\mathcal A_{\mathbf G}(T))$ with
+\begin{equation}\label{eq:signature-one}
+ \sigma_{\mathrm{tail}}(\alpha)=[(1,1,\ldots)].
+\end{equation}
+\end{proposition}
+\begin{proof}
+Use the fixed geometric data and the compensated normalized corner
+$\mathfrak d$. Naturality of the iterated boundary and the scalar
+comparison give
+\[
+ U_*\Delta_T\mathfrak d=\Delta_{\mathbf1}\mathfrak m_f
+   =\varepsilon[C_*(\CP^2;\Q),\phi_{\CP^2}/2],
+ \qquad \varepsilon\in\{1,-1\}.
+\]
+Set $\alpha=\varepsilon\Delta_T\mathfrak d$.
+The coefficient-of-identity trace identifies the ordinary signature
+of each equivariant form with that of its scalar image, so its tail
+signature is the constant sequence $1$.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:main}]
+A connected zero-dimensional manifold is a point. For a connected
+manifold with boundary, its interior is dense and connected:
+each boundary half-ball has connected interior and meets just one
+interior component, so different components would separate the manifold.
+Homeomorphisms preserve the interior by local homology, and fixing it
+fixes its closure.
+Restriction to the interior therefore preserves effectivity.
+
+If the boundaryless action were effective, \cref{prop:signature-one}
+would give a class whose signatures are eventually $1$.
+\Cref{alg:divisibility} makes the same signatures eventually divisible
+by $p$. A common tail gives $1\in p\Z$, a contradiction.
+\end{proof}
+
+\begin{proof}[Proof of \cref{cor:HS}]
+The point case is immediate; otherwise restrict to the interior, and
+write $G$ for the acting group. Let $K$ be a compact subgroup of $G$. The
+invariant-neighborhood construction in \S\ref{geo:fixed-data} gives a
+nonempty $K$-invariant connected second-countable open submanifold $U$.
+Put $N_U=\ker(K\curvearrowright U)$. The compact quotient $K/N_U$ embeds
+in the metrizable group $\operatorname{Homeo}(U)$, so it is second
+countable. The standard compact $p$-adic reduction \cite{Pa19} and
+\cref{thm:main} make $K/N_U$ a Lie group.
+If $U\subset V$ is another such invariant submanifold, the compact Lie
+group $N_U/N_V\subset K/N_V$ fixes $U$, so Newman's theorem on $V$
+\cite[Theorem (Newman)]{Pa19} gives $N_U=N_V$.
+Every point lies in such a $V$ containing $U$, by the same construction.
+Thus $N_U$ fixes the whole manifold and is trivial. Hence every compact
+subgroup of $G$ is Lie.
+
+Gleason--Yamabe gives an open subgroup $G_0\subset G$ with a compact
+normal subgroup $K$ and Lie quotient $G_0/K$ \cite{Gle52,Yam53}.
+Both $K$ and $G_0/K$ have no small subgroups (NSS). Intersect the inverse
+image of an NSS neighborhood in $G_0/K$ with an identity neighborhood
+whose intersection with $K$ contains no nontrivial subgroup. The
+intersection contains no nontrivial subgroup, so $G_0$, and hence $G$,
+has no small subgroups. Therefore $G$ is Lie with its original topology
+\cite{Gle52,Yam53}.
+\end{proof}
+
+\section*{AI disclosure}
+Various large language models (LLMs), including from Anthropic, OpenAI,
+and open-source projects, were used under human guidance at every stage and for nearly
+all tasks, from understanding, planning, and ideation to research, preparation, and writing.
+A custom LLM orchestration framework was used for research. Critical construction steps
+were developed jointly by Opus 5.5 and GPT 6.1. A formalization of \cref{thm:main,cor:HS} under second countability assumptions,
+completed in Lean~4 by Opus 5.5 and verified with Comparator and SafeVerify,
+is available at \url{https://github.com/adbrw/HS_proof}. This work was carried out as an independent research project.
+
+\begin{thebibliography}{Ran80II}
+
+\bibitem[BS01]{BS01}
+P. Balmer and M. Schlichting,
+\emph{Idempotent completion of triangulated categories},
+J. Algebra \textbf{236} (2001), no.~2, 819--834.
+\doi{10.1006/jabr.2000.8529}.
+
+\bibitem[CP95]{CP95}
+G. Carlsson and E. K. Pedersen,
+\emph{Controlled algebra and the Novikov conjectures for $K$- and $L$-theory},
+Topology \textbf{34} (1995), no.~3, 731--758.
+\doi{10.1016/0040-9383(94)00033-H}.
+
+\bibitem[Gle52]{Gle52}
+A. M. Gleason,
+\emph{Groups without small subgroups},
+Ann. of Math. (2) \textbf{56} (1952), no.~2, 193--212.
+\doi{10.2307/1969795}.
+
+\bibitem[Hat02]{Hat02}
+A. Hatcher,
+\emph{Algebraic Topology},
+Cambridge University Press, Cambridge, 2002.
+
+\bibitem[Mar99]{Mar99}
+G. J. Martin,
+\emph{The Hilbert--Smith conjecture for quasiconformal actions},
+Electron. Res. Announc. Amer. Math. Soc. \textbf{5} (1999), 66--70.
+\doi{10.1090/S1079-6762-99-00062-1}.
+
+\bibitem[Pa13]{Pa13}
+J. Pardon,
+\emph{The Hilbert--Smith conjecture for three-manifolds},
+J. Amer. Math. Soc. \textbf{26} (2013), no.~3, 879--899.
+\doi{10.1090/S0894-0347-2013-00766-3}.
+
+\bibitem[Pa19]{Pa19}
+J. Pardon,
+\emph{Totally disconnected groups (not) acting on two-manifolds},
+in \emph{Breadth in Contemporary Topology}, D. T. Gay and W. Wu (eds.),
+Proc. Sympos. Pure Math. \textbf{102}, American Mathematical Society,
+Providence, RI, 2019, 187--193.
+\doi{10.1090/pspum/102/01809}.
+
+\bibitem[Ran80I]{Ran80I}
+A. A. Ranicki,
+\emph{The algebraic theory of surgery. I. Foundations},
+Proc. London Math. Soc. (3) \textbf{40} (1980), no.~1, 87--192.
+\doi{10.1112/plms/s3-40.1.87}.
+
+\bibitem[Ran80II]{Ran80II}
+A. A. Ranicki,
+\emph{The algebraic theory of surgery. II. Applications to topology},
+Proc. London Math. Soc. (3) \textbf{40} (1980), no.~2, 193--283.
+\doi{10.1112/plms/s3-40.2.193}.
+
+\bibitem[Ran89]{Ran89}
+A. A. Ranicki,
+\emph{Additive $L$-theory},
+$K$-Theory \textbf{3} (1989), no.~2, 163--195.
+\doi{10.1007/BF00533377}.
+
+\bibitem[Ran92]{Ran92}
+A. A. Ranicki,
+\emph{Lower $K$- and $L$-Theory},
+London Math. Soc. Lecture Note Ser. \textbf{178},
+Cambridge University Press, Cambridge, 1992.
+
+\bibitem[Ran99]{Ran99}
+A. A. Ranicki,
+\emph{Singularities, double points, controlled topology and chain duality},
+Doc. Math. \textbf{4} (1999), 1--59.
+\doi{10.4171/DM/52}.
+
+\bibitem[Rob75]{Rob75}
+J. W. Roberts,
+\emph{Pointwise finite families of mappings},
+Canad. Math. Bull. \textbf{18} (1975), no.~5, 767--768.
+\doi{10.4153/CMB-1975-134-x}.
+
+\bibitem[RS97]{RS97}
+D. Repov\v{s} and E. V. \v{S}\v{c}epin,
+\emph{A proof of the Hilbert--Smith conjecture for actions by Lipschitz maps},
+Math. Ann. \textbf{308} (1997), no.~2, 361--364.
+\doi{10.1007/s002080050080}.
+
+\bibitem[Wei13]{Wei13}
+C. A. Weibel,
+\emph{The $K$-Book: An Introduction to Algebraic $K$-Theory},
+Grad. Stud. Math. \textbf{145}, American Mathematical Society,
+Providence, RI, 2013.
+
+\bibitem[Yam53]{Yam53}
+H. Yamabe,
+\emph{A generalization of a theorem of Gleason},
+Ann. of Math. (2) \textbf{58} (1953), no.~2, 351--365.
+\doi{10.2307/1969792}.
+
+% Keep the author address with the final bibliography entries.
+\enlargethispage{2\baselineskip}
+\end{thebibliography}
+\end{document}

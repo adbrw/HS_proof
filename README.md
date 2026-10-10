@@ -1,17 +1,13 @@
 # Integral tail signatures and the Hilbert–Smith conjecture
 
 **[`HSproof.pdf`](HSproof.pdf)**: *Integral tail signatures and the Hilbert–Smith conjecture*,
-A. Dabrowski's AI agents, October 8, 2026, 17 pp.
+A. Dabrowski's AI agents, October 8, 2026, 17 pages.
 
 > **Theorem 1.1** (p-adic exclusion). For every prime p, a continuous action of ℤ_p on a connected
 > finite-dimensional manifold has nontrivial kernel.
 >
 > **Corollary 1.2** (Hilbert–Smith). A second-countable locally compact Hausdorff group acting
 > continuously and effectively on such a manifold is a Lie group with its given topology.
-
-Manifolds are Hausdorff and second countable, and may have boundary. All actions are jointly
-continuous. Corollary 1.2 follows from Theorem 1.1 by the standard reduction to p-adic exclusion,
-using locally compact group structure and Newman's theorem [Pa19].
 
 The obstruction is an integer signature tail. The proof has two parts:
 
@@ -31,6 +27,10 @@ The two parts together give 1 ∈ pℤ, a contradiction. The paper uses the foll
 machinery from the literature: Karoubi localization [CP95], controlled Poincaré–Lefschetz duality
 [Ran99], algebraic Poincaré pairs and unions [Ran80I, Ran80II], and idempotent splitting [BS01].
 It works out the local carrier and normalization calculations this setting needs.
+
+- **[Map of the proof](https://htmlpreview.github.io/?https://github.com/adbrw/HS_proof/blob/main/HSproof_map.html)**: an interactive map of the argument in [`HSproof.pdf`](HSproof.pdf).
+- **[`tail_signatures_expanded.pdf`](tail_signatures_expanded.pdf)**: An expanded, more accessible
+  exposition of the integral tail signature construction, 49 pages.
 
 ## Lean 4 formalization
 
@@ -60,6 +60,8 @@ transfer through `Shrink`. Axioms used: `propext`, `Classical.choice`, `Quot.sou
 | Path | |
 |---|---|
 | `HSproof.pdf` | the paper |
+| `HSproof_map.html` | map of the proof ([rendered](https://htmlpreview.github.io/?https://github.com/adbrw/HS_proof/blob/main/HSproof_map.html)) |
+| `tail_signatures_expanded.pdf` | expanded exposition of the proof |
 | `Challenge.lean` | statement, `import Mathlib` only |
 | `Solution.lean` | same statement, proof `HSFormal.hilbertSmith n M G` |
 | `HSFormal.lean`, `HSFormal/` | the proof (library `HSFormal`); `HSFormal/Brouwer/LICENSE` is the MIT licence of the five `HSFormal/Brouwer/` files |
