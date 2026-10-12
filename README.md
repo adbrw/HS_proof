@@ -32,6 +32,14 @@ machinery from the literature: Karoubi localization [CP95], controlled Poincaré
 [Ran99], algebraic Poincaré pairs and unions [Ran80I, Ran80II], and idempotent splitting [BS01].
 It works out the local carrier and normalization calculations this setting needs.
 
+## Companion material
+
+- **[Map of the proof](https://htmlpreview.github.io/?https://github.com/adbrw/HS_proof/blob/main/HSproof_map.html)**
+  ([source](HSproof_map.html)): an interactive map of the argument in `HSproof.pdf`.
+- **[`tail_signatures_expanded.pdf`](tail_signatures_expanded.pdf)**: *Integral tail signatures and
+  the Hilbert–Smith conjecture: an expanded exposition*, 49 pages. A detailed account of the
+  construction, using controlled L-theory and integral signature tails.
+
 ## Lean 4 formalization
 
 The rest of the repository is a Lean 4 / Mathlib formalization of Corollary 1.2, together with
@@ -60,6 +68,8 @@ transfer through `Shrink`. Axioms used: `propext`, `Classical.choice`, `Quot.sou
 | Path | |
 |---|---|
 | `HSproof.pdf` | the paper |
+| `HSproof_map.html` | map of the proof ([rendered](https://htmlpreview.github.io/?https://github.com/adbrw/HS_proof/blob/main/HSproof_map.html)) |
+| `tail_signatures_expanded.pdf` | expanded exposition of the proof |
 | `Challenge.lean` | statement, `import Mathlib` only |
 | `Solution.lean` | same statement, proof `HSFormal.hilbertSmith n M G` |
 | `HSFormal.lean`, `HSFormal/` | the proof (library `HSFormal`); `HSFormal/Brouwer/LICENSE` is the MIT licence of the five `HSFormal/Brouwer/` files |
