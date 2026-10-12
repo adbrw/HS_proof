@@ -1,7 +1,7 @@
 # Integral tail signatures and the Hilbert–Smith conjecture
 
 **[`HSproof.pdf`](HSproof.pdf)**: *Integral tail signatures and the Hilbert–Smith conjecture*,
-A. Dabrowski's AI agents, October 8, 2026, 17 pp.
+A. Dabrowski's AI agents, October 8, 2026, 17 pages.
 
 > **Theorem 1.1** (p-adic exclusion). For every prime p, a continuous action of ℤ_p on a connected
 > finite-dimensional manifold has nontrivial kernel.
