@@ -2,6 +2,7 @@ module
 
 public import HSFormal.Newman.EuclidLocal
 public import TauCeti.AlgebraicTopology.Singular.DirectedUnion
+import all TauCeti.Topology.Category.TopPair
 
 @[expose] public section
 
