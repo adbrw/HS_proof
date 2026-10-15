@@ -2,6 +2,7 @@ module
 
 public import HSFormal.Inputs.GY.LogDeriv
 public import Mathlib.Analysis.Calculus.FDeriv.Partial
+public import Mathlib.Analysis.Calculus.FDeriv.OfCompLeft
 
 @[expose] public section
 

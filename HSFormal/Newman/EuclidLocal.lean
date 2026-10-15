@@ -6,6 +6,8 @@ public import TauCeti.AlgebraicTopology.Singular.Contractible
 public import TauCeti.AlgebraicTopology.Singular.Sphere
 public import Mathlib.Analysis.Convex.Contractible
 public import Mathlib.Analysis.InnerProductSpace.PiL2
+import all TauCeti.AlgebraicTopology.Singular.Reduced
+import all TauCeti.Topology.Category.TopPair
 
 @[expose] public section
 
@@ -216,7 +218,7 @@ lemma relHSuccIsoReduced_naturality {L L' : Set 𝔼} (h : L' ⊆ L) (k : ℕ) :
 
 lemma hom_snd_ofSubsetMap_id {X : TopCat.{0}} {L L' : Set X} (h : L' ⊆ L) :
     TopPair.Hom.snd (TopPair.ofSubsetMap (𝟙 X) (mapsTo_compl_of _ fun _ hx => h hx)) =
-      complIncl h := rfl
+      complIncl h := (rfl)
 
 lemma compl_nonempty_of_isBounded {L : Set 𝔼} (hL : Bornology.IsBounded L) : Lᶜ.Nonempty := by
   by_contra h
@@ -235,7 +237,7 @@ lemma reducedSphereComplIso_hom {C : Set 𝔼} (hC : Convex ℝ C) {x : 𝔼} (h
     {ρ : ℝ} (hCb : C ⊆ ball x ρ) (k : ℕ) :
     (reducedSphereComplIso R hC hx hCb k).hom =
       (TauCeti.reducedSingularHomologyFunctor (coef R) k).map
-        (TopCat.ofHom (sphereToCompl C x ρ hCb)) := rfl
+        (TopCat.ofHom (sphereToCompl C x ρ hCb)) := (rfl)
 
 /-- For convex `C' ⊆ C` sharing a point `x`, with `C ⊆ ball x ρ`, the inclusion
 `𝔼 ∖ C ⟶ 𝔼 ∖ C'` induces isomorphisms on reduced homology. -/
