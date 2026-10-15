@@ -1,5 +1,9 @@
-import HSFormal.LTheory.ConeEquiv
-import HSFormal.LTheory.Union
+module
+
+public import HSFormal.LTheory.ConeEquiv
+public import HSFormal.LTheory.Union
+
+@[expose] public section
 
 /-!
 # The boundary of a Poincaré pair is Poincaré (R1)

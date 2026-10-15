@@ -1,8 +1,12 @@
-import Mathlib.Order.SupIndep
-import Mathlib.Data.Int.Interval
-import Mathlib.LinearAlgebra.DFinsupp
-import Mathlib.LinearAlgebra.Projection
-import Mathlib.RingTheory.SimpleModule.Basic
+module
+
+public import Mathlib.Order.SupIndep
+public import Mathlib.Data.Int.Interval
+public import Mathlib.LinearAlgebra.DFinsupp
+public import Mathlib.LinearAlgebra.Projection
+public import Mathlib.RingTheory.SimpleModule.Basic
+
+@[expose] public section
 
 /-!
 # The interval decomposition lemma (NegK level 1, module 2)

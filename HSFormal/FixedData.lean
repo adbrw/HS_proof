@@ -1,4 +1,8 @@
-import HSFormal.ChartData
+module
+
+public import HSFormal.ChartData
+
+@[expose] public section
 
 /-!
 # Section 7: the fixed geometric data from a hypothetical effective action

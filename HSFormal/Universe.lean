@@ -1,8 +1,12 @@
-import Mathlib.Geometry.Manifold.ContMDiff.Atlas
-import Mathlib.Topology.Instances.Shrink
-import Mathlib.Algebra.Group.Shrink
-import Mathlib.Algebra.Group.Action.TransferInstance
-import HSFormal.HilbertSmithNegK
+module
+
+public import Mathlib.Geometry.Manifold.ContMDiff.Atlas
+public import Mathlib.Topology.Instances.Shrink
+public import Mathlib.Algebra.Group.Shrink
+public import Mathlib.Algebra.Group.Action.TransferInstance
+public import HSFormal.HilbertSmithNegK
+
+@[expose] public section
 
 /-!
 # Universe-polymorphic forms of the main theorems

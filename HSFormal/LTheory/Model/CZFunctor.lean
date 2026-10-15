@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.CZ
+module
+
+public import HSFormal.LTheory.Model.CZ
+
+@[expose] public section
 
 /-!
 # Functoriality of the bounded category `C_ℤ(A)` (lower L-theory model, module 2)

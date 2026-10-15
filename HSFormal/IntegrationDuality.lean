@@ -1,6 +1,10 @@
-import HSFormal.GraphType
-import HSFormal.TensorTriviality
-import HSFormal.LTheory.KaroubiFiltration
+module
+
+public import HSFormal.GraphType
+public import HSFormal.TensorTriviality
+public import HSFormal.LTheory.KaroubiFiltration
+
+@[expose] public section
 
 /-!
 # Duality-preserving structure of the asymptotic categories

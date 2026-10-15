@@ -1,7 +1,11 @@
-import Mathlib.Topology.Covering.Quotient
-import Mathlib.Topology.OpenPartialHomeomorph.Basic
-import Mathlib.Topology.MetricSpace.Basic
-import Mathlib.Data.ZMod.QuotientGroup
+module
+
+public import Mathlib.Topology.Covering.Quotient
+public import Mathlib.Topology.OpenPartialHomeomorph.Basic
+public import Mathlib.Topology.MetricSpace.Basic
+public import Mathlib.Data.ZMod.QuotientGroup
+
+@[expose] public section
 
 /-!
 # N6. The orbit space of a free periodic map

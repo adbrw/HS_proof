@@ -1,5 +1,9 @@
-import HSFormal.IntegrationControl
-import Mathlib.Algebra.Group.Pi.Units
+module
+
+public import HSFormal.IntegrationControl
+public import Mathlib.Algebra.Group.Pi.Units
+
+@[expose] public section
 
 /-!
 # Section 7: the finite groups `G_i = H/K_i`

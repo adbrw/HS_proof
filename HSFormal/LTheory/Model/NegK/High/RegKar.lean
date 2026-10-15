@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.NegK.High.RegKarFib
-import HSFormal.LTheory.Model.NegK.High.RegKarStatement
-import HSFormal.LTheory.Model.NegK.FreeQGMat
+module
+
+public import HSFormal.LTheory.Model.NegK.High.RegKarFib
+public import HSFormal.LTheory.Model.NegK.High.RegKarStatement
+public import HSFormal.LTheory.Model.NegK.FreeQGMat
+
+@[expose] public section
 
 /-!
 # Theorem R, Karoubi form (NegKHigh module N13, `RegKar`)

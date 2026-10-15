@@ -1,4 +1,8 @@
-import HSFormal.Cubical.CubeEnd
+module
+
+public import HSFormal.Cubical.CubeEnd
+
+@[expose] public section
 
 /-!
 # The cut steps of the cube flag and `PinchSignature` (cubical module C8, Lemma 11.2)

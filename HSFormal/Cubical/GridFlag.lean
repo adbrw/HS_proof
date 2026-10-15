@@ -1,4 +1,8 @@
-import HSFormal.Cubical.GridSeam
+module
+
+public import HSFormal.Cubical.GridSeam
+
+@[expose] public section
 
 /-!
 # Cuts and face flags of cubical grids (cubical module C4, for C8)

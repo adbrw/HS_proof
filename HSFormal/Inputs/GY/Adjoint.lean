@@ -1,7 +1,12 @@
-import HSFormal.Inputs.GY.Defs
-import TauCeti.Geometry.Lie.Exponential.Classification
-import TauCeti.Geometry.Lie.Exponential.Trotter
-import TauCeti.Geometry.Lie.Exponential.Units.Compatibility
+module
+
+public import HSFormal.Inputs.GY.Defs
+public import TauCeti.Geometry.Lie.Exponential.Classification
+public import TauCeti.Geometry.Lie.Exponential.Trotter
+public import TauCeti.Geometry.Lie.Exponential.Units.Compatibility
+import all TauCeti.Geometry.Lie.Exponential.Basic
+
+@[expose] public section
 
 /-!
 # The adjoint action of a local exponential structure (blueprint C1)

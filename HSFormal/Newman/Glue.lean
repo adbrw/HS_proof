@@ -1,5 +1,9 @@
-import HSFormal.Newman.RelHom
-import Mathlib.Topology.OpenPartialHomeomorph.Basic
+module
+
+public import HSFormal.Newman.RelHom
+public import Mathlib.Topology.OpenPartialHomeomorph.Basic
+
+@[expose] public section
 
 /-!
 # N2. The gluing lemma (GL) and chart transport (CT) (Newman blueprint, module N2)

@@ -1,6 +1,10 @@
-import HSFormal.Assembly
-import HSFormal.Cubical.CylinderInvariance
-import HSFormal.Cubical.GridSeam
+module
+
+public import HSFormal.Assembly
+public import HSFormal.Cubical.CylinderInvariance
+public import HSFormal.Cubical.GridSeam
+
+@[expose] public section
 
 /-!
 # The manifold germ `Tⁿ_{m_i} ⊗ CPcell` and its homotopy invariance (cubical modules C5, C7)

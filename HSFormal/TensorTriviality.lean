@@ -1,6 +1,10 @@
-import HSFormal.AsymptoticRelabel
-import HSFormal.LTheory.Isometry
-import Mathlib.LinearAlgebra.Matrix.Kronecker
+module
+
+public import HSFormal.AsymptoticRelabel
+public import HSFormal.LTheory.Isometry
+public import Mathlib.LinearAlgebra.Matrix.Kronecker
+
+@[expose] public section
 
 /-!
 # The functor `τ ⊗ −` and local tensor triviality (manuscript §6, Lemma 6.1)

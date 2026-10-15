@@ -1,4 +1,8 @@
-import HSFormal.Cubical.Contraction
+module
+
+public import HSFormal.Cubical.Contraction
+
+@[expose] public section
 
 /-!
 # Acyclic carriers: chain maps and homotopies by residual filling (module C1)

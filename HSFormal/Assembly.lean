@@ -1,10 +1,14 @@
-import HSFormal.AlgebraicReduction
-import HSFormal.BoundaryReduction
-import HSFormal.Integration
-import HSFormal.LTheory.ConcreteL
-import HSFormal.Montgomery
-import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
-import Mathlib.GroupTheory.PGroup
+module
+
+public import HSFormal.AlgebraicReduction
+public import HSFormal.BoundaryReduction
+public import HSFormal.Integration
+public import HSFormal.LTheory.ConcreteL
+public import HSFormal.Montgomery
+public import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+public import Mathlib.GroupTheory.PGroup
+
+@[expose] public section
 
 /-!
 # Assembly: the top-down skeleton of the proof of `PadicExclusion`

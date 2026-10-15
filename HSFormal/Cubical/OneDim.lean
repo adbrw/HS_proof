@@ -1,5 +1,9 @@
-import HSFormal.Cubical.DualLadder
-import HSFormal.EquivariantSignature
+module
+
+public import HSFormal.Cubical.DualLadder
+public import HSFormal.EquivariantSignature
+
+@[expose] public section
 
 /-!
 # One-dimensional dualities: graphs, circles, interval pairs (cubical module C3)

@@ -1,6 +1,10 @@
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Roots
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Eval
-import Mathlib.Order.Filter.AtTopBot.Basic
+module
+
+public import Mathlib.RingTheory.Polynomial.Cyclotomic.Roots
+public import Mathlib.RingTheory.Polynomial.Cyclotomic.Eval
+public import Mathlib.Order.Filter.AtTopBot.Basic
+
+@[expose] public section
 
 /-!
 # Integer arithmetic in the proposed Hilbert–Smith proof

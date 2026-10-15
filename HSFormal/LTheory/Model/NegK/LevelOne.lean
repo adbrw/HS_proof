@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.NegK.KarSwindle
-import HSFormal.LTheory.Model.NegK.KarDiagStatement
+module
+
+public import HSFormal.LTheory.Model.NegK.KarSwindle
+public import HSFormal.LTheory.Model.NegK.KarDiagStatement
+
+@[expose] public section
 
 /-!
 # `NegK` at level `1`, and the split `NegK = NegKHigh + level 1` (NegK, module 7)

@@ -1,4 +1,8 @@
-import HSFormal.LTheory.KaroubiFiltration
+module
+
+public import HSFormal.LTheory.KaroubiFiltration
+
+@[expose] public section
 
 /-!
 # Cascades of Karoubi splittings (lower L-theory model, module 12)

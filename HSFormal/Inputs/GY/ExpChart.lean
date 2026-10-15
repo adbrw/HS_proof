@@ -1,4 +1,8 @@
-import HSFormal.Inputs.GY.OneParamNorm
+module
+
+public import HSFormal.Inputs.GY.OneParamNorm
+
+@[expose] public section
 
 /-!
 # The exponential chart (B5)

@@ -1,4 +1,8 @@
-import HSFormal.Cubical.CubeLevels
+module
+
+public import HSFormal.Cubical.CubeLevels
+
+@[expose] public section
 
 /-!
 # The hemisphere cuts of the cube flag (cubical module C8, Lemma 11.2)

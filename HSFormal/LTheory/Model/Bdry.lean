@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.LiftingPairLine
-import HSFormal.LTheory.Model.Colim
-import HSFormal.LTheory.Model.Cobordism
+module
+
+public import HSFormal.LTheory.Model.LiftingPairLine
+public import HSFormal.LTheory.Model.Colim
+public import HSFormal.LTheory.Model.Cobordism
+
+@[expose] public section
 
 /-!
 # The boundary map `∂` of the colimit model (lower L-theory model, module 18)

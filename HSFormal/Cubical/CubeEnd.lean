@@ -1,5 +1,9 @@
-import HSFormal.Cubical.CubeExt
-import HSFormal.Cubical.EndClass
+module
+
+public import HSFormal.Cubical.CubeExt
+public import HSFormal.Cubical.EndClass
+
+@[expose] public section
 
 /-!
 # The last stage of the cube flag: `∂Φ₁ ⊗ CPcell` and the positive end point

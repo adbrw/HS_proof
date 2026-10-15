@@ -1,7 +1,11 @@
-import Mathlib.Geometry.Manifold.Algebra.LieGroup
-import Mathlib.Geometry.Manifold.Instances.Real
-import Mathlib.NumberTheory.Padics.PadicIntegers
-import Mathlib.Topology.Algebra.MulAction
+module
+
+public import Mathlib.Geometry.Manifold.Algebra.LieGroup
+public import Mathlib.Geometry.Manifold.Instances.Real
+public import Mathlib.NumberTheory.Padics.PadicIntegers
+public import Mathlib.Topology.Algebra.MulAction
+
+@[expose] public section
 
 /-!
 # The Hilbert–Smith statement and the external inputs of Section 12

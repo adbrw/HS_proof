@@ -1,5 +1,9 @@
-import HSFormal.Cubical.Filling
-import HSFormal.TailGroups
+module
+
+public import HSFormal.Cubical.Filling
+public import HSFormal.TailGroups
+
+@[expose] public section
 
 /-!
 # The completed maps `ĥ` on the torus (cubical module C6, part 1)

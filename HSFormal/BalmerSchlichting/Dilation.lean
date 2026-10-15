@@ -1,4 +1,8 @@
-import HSFormal.BalmerSchlichting.SplitCone
+module
+
+public import HSFormal.BalmerSchlichting.SplitCone
+
+@[expose] public section
 
 /-!
 # Killing one component of the homotopy of a homotopy idempotent

@@ -1,5 +1,9 @@
-import HSFormal.AsymptoticSupport
-import Mathlib.Data.Matrix.Basic
+module
+
+public import HSFormal.AsymptoticSupport
+public import Mathlib.Data.Matrix.Basic
+
+@[expose] public section
 
 /-!
 # Graph type and the free-sheet translation (manuscript §§5, 8–10)

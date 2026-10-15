@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # [Tao11, Lemma 7], part 2: a copy of `ℤ_p` from separating circle characters

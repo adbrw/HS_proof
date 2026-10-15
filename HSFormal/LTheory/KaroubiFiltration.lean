@@ -1,8 +1,12 @@
-import HSFormal.LTheory.Isometry
-import HSFormal.AsymptoticKaroubi
-import Mathlib.CategoryTheory.ObjectProperty.ContainsZero
-import Mathlib.CategoryTheory.ObjectProperty.Retract
-import Mathlib.CategoryTheory.Limits.Constructions.FiniteProductsOfBinaryProducts
+module
+
+public import HSFormal.LTheory.Isometry
+public import HSFormal.AsymptoticKaroubi
+public import Mathlib.CategoryTheory.ObjectProperty.ContainsZero
+public import Mathlib.CategoryTheory.ObjectProperty.Retract
+public import Mathlib.CategoryTheory.Limits.Constructions.FiniteProductsOfBinaryProducts
+
+@[expose] public section
 
 /-!
 # Additive categories with involution and Karoubi filtrations (L-theory module M4)

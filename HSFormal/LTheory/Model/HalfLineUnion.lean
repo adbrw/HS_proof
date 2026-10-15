@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.HalfLineCZ
-import HSFormal.LTheory.Model.CutSurj
+module
+
+public import HSFormal.LTheory.Model.HalfLineCZ
+public import HSFormal.LTheory.Model.CutSurj
+
+@[expose] public section
 
 /-!
 # The union of the two half-line pairs is the line complex (half-line splitting, part 5)

@@ -1,5 +1,10 @@
-import HSFormal.Inputs.GY.LogDeriv
-import Mathlib.Analysis.Calculus.FDeriv.Partial
+module
+
+public import HSFormal.Inputs.GY.LogDeriv
+public import Mathlib.Analysis.Calculus.FDeriv.Partial
+public import Mathlib.Analysis.Calculus.FDeriv.OfCompLeft
+
+@[expose] public section
 
 /-!
 # Smoothness of the multiplication in exponential coordinates (blueprint C3, §5 H2 steps 5–7)

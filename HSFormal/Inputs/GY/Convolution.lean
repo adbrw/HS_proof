@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Convolution on a non-abelian group (Gleason–Yamabe, module A2)

@@ -1,5 +1,9 @@
-import HSFormal.Cubical.CutStep
-import HSFormal.Cubical.CutLift
+module
+
+public import HSFormal.Cubical.CutStep
+public import HSFormal.Cubical.CutLift
+
+@[expose] public section
 
 /-!
 # Supports of realized controlled sequences (cubical module C8)

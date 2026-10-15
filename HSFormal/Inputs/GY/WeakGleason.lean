@@ -1,4 +1,8 @@
-import HSFormal.Inputs.GY.GleasonLemma
+module
+
+public import HSFormal.Inputs.GY.GleasonLemma
+
+@[expose] public section
 
 /-!
 # NSS ⇒ weak Gleason norm (module A4)

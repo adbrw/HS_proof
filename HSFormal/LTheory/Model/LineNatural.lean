@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.LinePairs
-import HSFormal.LTheory.Model.CZFiltration
+module
+
+public import HSFormal.LTheory.Model.LinePairs
+public import HSFormal.LTheory.Model.CZFiltration
+
+@[expose] public section
 
 /-!
 # Naturality of the line construction (lower L-theory model, module 5)

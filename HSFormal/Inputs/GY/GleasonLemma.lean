@@ -1,5 +1,9 @@
-import HSFormal.Inputs.GY.Escape
-import HSFormal.Inputs.GY.Convolution
+module
+
+public import HSFormal.Inputs.GY.Escape
+public import HSFormal.Inputs.GY.Convolution
+
+@[expose] public section
 
 /-!
 # Gleason's lemma: the approximate triangle inequality for the escape norm (module A3)

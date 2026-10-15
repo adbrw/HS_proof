@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.NegK.KarDiag
-import HSFormal.LTheory.Model.NegK.LevelOne
+module
+
+public import HSFormal.LTheory.Model.NegK.KarDiag
+public import HSFormal.LTheory.Model.NegK.LevelOne
+
+@[expose] public section
 
 /-!
 # `NegK` at level `1`, unconditionally

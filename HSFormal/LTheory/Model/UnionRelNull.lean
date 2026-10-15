@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.UnionRelLadder
+module
+
+public import HSFormal.LTheory.Model.UnionRelLadder
+
+@[expose] public section
 
 /-!
 # The U-turn null-cobordism

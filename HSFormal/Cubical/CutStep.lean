@@ -1,4 +1,8 @@
-import HSFormal.Cubical.CutRealize
+module
+
+public import HSFormal.Cubical.CutRealize
+
+@[expose] public section
 
 /-!
 # A single cut of a controlled Poincaré complex (cubical module C8, the step of Lemma 11.2)

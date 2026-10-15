@@ -1,4 +1,8 @@
-import HSFormal.Inputs.GY.Defs
+module
+
+public import HSFormal.Inputs.GY.Defs
+
+@[expose] public section
 
 /-!
 # Gleason norms: conjugation, commutation and power estimates (B1)

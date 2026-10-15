@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.Cobordism
-import HSFormal.LTheory.Model.Transport
+module
+
+public import HSFormal.LTheory.Model.Cobordism
+public import HSFormal.LTheory.Model.Transport
+
+@[expose] public section
 
 /-!
 # Pushing union structures forward (lower L-theory model, module 22, `cutUnion ≃ ±P`, general part)

@@ -1,6 +1,10 @@
-import HSFormal.Cubical.OneDim
-import HSFormal.Cubical.Bridge
-import HSFormal.LTheory.SymmetricComplex
+module
+
+public import HSFormal.Cubical.OneDim
+public import HSFormal.Cubical.Bridge
+public import HSFormal.LTheory.SymmetricComplex
+
+@[expose] public section
 
 /-!
 # From based symmetric dualities to `SymPoincare` (cubical module C2, bridge to M1)

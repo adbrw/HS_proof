@@ -1,5 +1,10 @@
-import HSFormal.Newman.EuclidLocal
-import TauCeti.AlgebraicTopology.Singular.DirectedUnion
+module
+
+public import HSFormal.Newman.EuclidLocal
+public import TauCeti.AlgebraicTopology.Singular.DirectedUnion
+import all TauCeti.Topology.Category.TopPair
+
+@[expose] public section
 
 /-!
 # N4. Compact supports (Newman blueprint, module N4)

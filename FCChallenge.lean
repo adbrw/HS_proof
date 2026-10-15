@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 /-!
 # Challenge: the Formal Conjectures variants of the Hilbert–Smith conjecture

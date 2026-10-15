@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.NegK.High.Laurent
-import HSFormal.LTheory.Model.NegK.High.StablyIso
-import HSFormal.LTheory.Interface
+module
+
+public import HSFormal.LTheory.Model.NegK.High.Laurent
+public import HSFormal.LTheory.Model.NegK.High.StablyIso
+public import HSFormal.LTheory.Interface
+
+@[expose] public section
 
 /-!
 # Theorem R, Karoubi form: the statement (NegKHigh module N13, `RegKarStatement`)

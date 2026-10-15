@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.NegK.High.Laurent
-import HSFormal.LTheory.Model.NegK.High.StablyIso
+module
+
+public import HSFormal.LTheory.Model.NegK.High.Laurent
+public import HSFormal.LTheory.Model.NegK.High.StablyIso
+
+@[expose] public section
 
 /-!
 # Supports and half-line absorption in `L^l(C_ℤ Y)` (NegKHigh, module N3)

@@ -1,5 +1,9 @@
-import HSFormal.Inputs.GY.GleasonEstimates
-import HSFormal.Inputs.GY.LocalHom
+module
+
+public import HSFormal.Inputs.GY.GleasonEstimates
+public import HSFormal.Inputs.GY.LocalHom
+
+@[expose] public section
 
 /-!
 # Addition of one-parameter subgroups: the Trotter limit (B3a)

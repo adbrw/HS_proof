@@ -1,6 +1,10 @@
-import HSFormal.Cubical.PinchReduction
-import HSFormal.Cubical.PinchFlag
-import HSFormal.Cubical.PinchControl
+module
+
+public import HSFormal.Cubical.PinchReduction
+public import HSFormal.Cubical.PinchFlag
+public import HSFormal.Cubical.PinchControl
+
+@[expose] public section
 
 /-!
 # The box of the cube cut and the labels of its faces (cubical module C8, geometry)

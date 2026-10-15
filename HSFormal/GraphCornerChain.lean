@@ -1,6 +1,10 @@
-import HSFormal.Compression
-import HSFormal.GraphCorner
-import Mathlib.Algebra.Homology.HomotopyCategory
+module
+
+public import HSFormal.Compression
+public import HSFormal.GraphCorner
+public import Mathlib.Algebra.Homology.HomotopyCategory
+
+@[expose] public section
 
 /-!
 # The graph corner for chain complexes up to homotopy

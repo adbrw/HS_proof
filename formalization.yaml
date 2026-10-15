@@ -1,0 +1,186 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+# REVIEW DRAFT. Confirm human attribution and review the root licence before submission.
+version: "v0.4"
+
+project:
+  name: "Hilbert–Smith and p-adic exclusion with second countability"
+  description: >-
+    A Lean formalization of the Hilbert–Smith statement for a second-countable
+    locally compact Hausdorff topological group acting continuously and
+    faithfully on a connected, Hausdorff, second-countable, finite-dimensional
+    topological manifold. The conclusion gives a smooth real Lie-group
+    structure for the group's existing topology. The development also proves
+    p-adic exclusion for second-countable manifolds and provides
+    universe-polymorphic versions. No second-countability hypothesis is dropped.
+  # Repository pseudonym, from the repository owner and commit history.
+  # Confirm this human attribution before publication; AI roles are below.
+  authors: ["adbrw"]
+  responsible_maintainers: ["adbrw"]
+  license: "Apache-2.0"
+
+classification:
+  arxiv: ["math.GT", "math.GR"]
+  msc2020: ["57S10", "22E15", "57N65"]
+
+sources:
+  - title: "Integral tail signatures and the Hilbert–Smith conjecture"
+    authors: ["A. Dabrowski's AI agents"]
+    id: "https://github.com/adbrw/HS_proof/blob/5dee3407a627f35a2cdeb0a34ac9e0f1ee98f862/HSproof.pdf"
+    type: "paper"
+    location: "Theorem 1.1 (p-adic exclusion), Corollary 1.2 (Hilbert–Smith); AI disclosure"
+    relationship: "formalizes"
+    note: >-
+      Bibliographic authorship is transcribed from the paper, not assigned as
+      human project authorship. The paper's AI disclosure states that the Lean
+      formalization was completed by Opus 5.5 under human guidance and verified
+      with Comparator and SafeVerify. The formal statements retain explicit
+      second-countability assumptions; the paper's informal statements must
+      not be read as changing these hypotheses.
+
+related_formalizations:
+  - id: "https://github.com/harfe/fixed-point-theorems-lean4/tree/770940d"
+    relationship: "adapts"
+    note: >-
+      Five HSFormal/Brouwer modules port the cubical-Sperner proof of Brouwer's
+      fixed-point theorem. The existing MIT copyright and licence at
+      HSFormal/Brouwer/LICENSE are retained.
+  - id: "https://github.com/TauCetiProject/TauCeti/tree/c7af81f021f76fa11afcd61c894e5fc861ab6e78"
+    relationship: "builds-on"
+    note: >-
+      Pinned Lean dependency used by the proof development. Its revision and
+      dependency closure remain recorded in lake-manifest.json.
+  - id: "https://github.com/google-deepmind/formal-conjectures/issues/6914"
+    relationship: "other"
+    note: >-
+      The repository describes FCChallenge and FCSolution as the proposed
+      second-countable Hilbert–Smith and p-adic variants for this discussion.
+      This is a statement-interface relationship, not a claim to reuse a proof
+      of those variants.
+
+status:
+  scope: >-
+    The proof library is HSFormal. Challenge.lean and FCChallenge.lean are
+    deliberate Comparator statement templates; their sorry placeholders are
+    not proof results and are excluded from the proof-development counts.
+    Solution.lean proves hilbert_smith; FCSolution.lean proves the two
+    second-countable Formal Conjectures variants. The Hilbert–Smith conclusion
+    is for the given group topology. Hausdorffness, connectedness, finite
+    dimension, second countability of both the manifold and group, local
+    compactness and topological-group structure, continuous action, and
+    faithfulness are retained exactly where present in the original statements.
+    The p-adic statement retains second countability of the manifold, primeness,
+    and continuity of the additive action, and concludes that it is not faithful.
+    The proof library additionally contains with-boundary forms; the curated
+    Comparator entry points listed here are the original boundaryless forms.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+  main_results:
+    - declaration: "hilbert_smith"
+      file: "Solution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator.json"
+    - declaration: "Hilbert5.hilbert_smith_conjecture.variants.second_countable_smooth"
+      file: "FCSolution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator_fc.json"
+    - declaration: "Hilbert5.hilbert_smith_padic_formulation.variants.second_countable"
+      file: "FCSolution.lean"
+      sorry_count: 0
+      axioms: ["propext", "Classical.choice", "Quot.sound"]
+      comparator_config: "comparator_fc.json"
+
+automation:
+  methods:
+    - method: "agent"
+      models: ["Opus 5.5"]
+      tool_setup: >-
+        Lean 4 and Mathlib formalization under human guidance; the paper's AI
+        disclosure credits Opus 5.5 for the Lean development. Comparator and
+        SafeVerify were used for historical verification. More detailed harness
+        information for that formalization run is not established here.
+    - method: "agent"
+      models: ["Opus 5.5", "GPT 6.1"]
+      tool_setup: >-
+        The source paper reports human-guided use of LLMs from Anthropic,
+        OpenAI, and open-source projects at nearly every research and writing
+        stage, a custom orchestration framework for research, and joint work
+        by these two named models on critical construction steps.
+    - method: "agent"
+      framework: "OpenAI Codex"
+      tool_setup: >-
+        Human-directed parallel agents prepare the existing development for
+        Palomar: module visibility migration, explicit imports of existing
+        dependencies, visibility promotion of existing helper lemmas,
+        provenance metadata, workflow setup, and assumption-preservation checks.
+        This packaging work does not replace the original proof or remove
+        theorem assumptions.
+  notes: >-
+    The first two entries transcribe HSproof.tex, AI disclosure. Model versions
+    are reported as that source spells them; unreported costs, timing, prompts,
+    and hardware are not reconstructed. This metadata and the Palomar packaging
+    changes await the repository owner's review before any public submission.
+
+fidelity:
+  divergences: >-
+    The formalization explicitly assumes second countability of the manifold
+    and, for Hilbert–Smith, of the acting group. These hypotheses must remain
+    visible even where informal exposition states a broader claim. The manifold
+    is Hausdorff, connected and finite-dimensional, without boundary at the
+    selected Comparator entry points; no smoothness of the manifold is assumed.
+    The Lie-group conclusion is smooth and compatible with the existing
+    topology. Universe-polymorphic variants transfer through Shrink. No claim
+    is made here that the formal development follows every informal proof step
+    verbatim or that every paper result is a selected registration result.
+
+review:
+  status: "unchecked"
+  reviewers: []
+  notes: >-
+    No independent human mathematical review or source-author endorsement is
+    asserted. Historical checker records at cd3b476c4e64d1f1f7d5fba4724179c26af51646
+    describe the original c51a2d5da2d2264372908b1284bb6b655948a38f development;
+    retained detailed logs are under verify/results/fc-c51a2d5. Those runs are
+    supporting evidence for unchanged original inputs, not validation of the
+    subsequent module-system migration. Fresh migration validation and Palomar
+    verification remain distinct checks, and Palomar review has not occurred.
+    A local agent audit checks the module headers, public and private imports
+    of existing pinned dependencies, visibility sections, and visibility
+    promotion of existing helper lemmas. It checks preservation of the selected
+    theorem signatures and absence of sorry or admit in the proof development.
+    That mechanical audit does not establish alignment with the informal
+    mathematical paper or replace a fresh Lean build.
+
+alignment:
+  namespace: "HSFormal"
+  statements:
+    - source: "Corollary 1.2, with the explicit formal second-countability hypotheses"
+      lean: "hilbert_smith"
+      module: "Solution"
+      status: "proved"
+      note: >-
+        Original proof entry point, invoking HSFormal.hilbertSmith. Both the
+        manifold and acting group have SecondCountableTopology instances.
+    - source: "Corollary 1.2, universe-polymorphic second-countable smooth variant"
+      lean: "Hilbert5.hilbert_smith_conjecture.variants.second_countable_smooth"
+      module: "FCSolution"
+      status: "proved"
+      note: >-
+        Invokes HSFormal.Universe.hilbertSmith_univ; the original manifold,
+        group, topology, and action hypotheses are retained.
+    - source: "Theorem 1.1, universe-polymorphic second-countable boundaryless variant"
+      lean: "Hilbert5.hilbert_smith_padic_formulation.variants.second_countable"
+      module: "FCSolution"
+      status: "proved"
+      note: >-
+        Invokes HSFormal.Universe.padicExclusion_univ. For a prime p, a
+        continuous additive action of the p-adic integers on the specified
+        manifold is not faithful.
+
+acknowledgements: >-
+  Lean, Mathlib, TauCeti, harfe's fixed-point-theorems-lean4 development,
+  Comparator, lean4export, nanoda, landrun, and SafeVerify. Original imported
+  copyright and licence notices remain in place. Source bibliography and
+  mathematical exposition are in HSproof.tex, HSproof.pdf, and README.md.

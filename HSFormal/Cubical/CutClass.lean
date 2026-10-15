@@ -1,5 +1,9 @@
-import HSFormal.Cubical.CutSupport
-import HSFormal.LTheory.Theorem63
+module
+
+public import HSFormal.Cubical.CutSupport
+public import HSFormal.LTheory.Theorem63
+
+@[expose] public section
 
 /-!
 # The L-class equations of a cut (cubical module C8, the step of Lemma 11.2)

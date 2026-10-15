@@ -1,3 +1,5 @@
+module
+
 /-
 Copyright (c) 2026 harfe. Released under the MIT license; see `HSFormal/Brouwer/LICENSE`.
 
@@ -8,9 +10,11 @@ project. Changes: module paths renamed, all declarations placed in the namespace
 `Fin.mk.inj_iff` rewrite replaced by `Fin.ext_iff`, deprecated lemma names updated.
 -/
 
-import Mathlib.Combinatorics.Enumerative.DoubleCounting
-import Mathlib.Algebra.BigOperators.Ring.Nat
-import Mathlib.Tactic
+public import Mathlib.Combinatorics.Enumerative.DoubleCounting
+public import Mathlib.Algebra.BigOperators.Ring.Nat
+public import Mathlib.Tactic
+
+@[expose] public section
 
 namespace HSFormal.Brouwer
 

@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.HalfLinePair
-import HSFormal.LTheory.Model.CutWindow
+module
+
+public import HSFormal.LTheory.Model.HalfLinePair
+public import HSFormal.LTheory.Model.CutWindow
+
+@[expose] public section
 
 /-!
 # The two half-lines of `C_ℤ(A)` (half-line splitting, part 4)

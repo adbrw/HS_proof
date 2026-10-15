@@ -1,6 +1,10 @@
-import HSFormal.AsymptoticCategory
-import Mathlib.Topology.MetricSpace.HausdorffDistance
-import Mathlib.CategoryTheory.ObjectProperty.FullSubcategory
+module
+
+public import HSFormal.AsymptoticCategory
+public import Mathlib.Topology.MetricSpace.HausdorffDistance
+public import Mathlib.CategoryTheory.ObjectProperty.FullSubcategory
+
+@[expose] public section
 
 /-!
 # Supports in `𝒜_G(X)`: `𝒜_S(X)`, `I_S`, `ℬ_Z(X)` and Lemmas 2.2, 2.3

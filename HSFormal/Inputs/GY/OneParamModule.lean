@@ -1,4 +1,8 @@
-import HSFormal.Inputs.GY.OneParamAdd
+module
+
+public import HSFormal.Inputs.GY.OneParamAdd
+
+@[expose] public section
 
 /-!
 # `L(G)` is a real vector space (B3b)

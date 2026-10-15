@@ -1,8 +1,12 @@
-import HSFormal.Inputs.GY.WeakGleason
-import HSFormal.Inputs.GY.Gleason
-import HSFormal.Inputs.GY.ExpChart
-import HSFormal.Inputs.GY.SmoothMul
-import HSFormal.Inputs.GY.LieStructure
+module
+
+public import HSFormal.Inputs.GY.WeakGleason
+public import HSFormal.Inputs.GY.Gleason
+public import HSFormal.Inputs.GY.ExpChart
+public import HSFormal.Inputs.GY.SmoothMul
+public import HSFormal.Inputs.GY.LieStructure
+
+@[expose] public section
 
 /-!
 # The Gleason–Yamabe theorem: `HSFormal.NSSIsLie` (final assembly)

@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.LineComplex
+module
+
+public import HSFormal.LTheory.Model.LineComplex
+
+@[expose] public section
 
 /-!
 # Poincaré pairs over the line and the transfer (lower L-theory model, module 5)

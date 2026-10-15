@@ -1,7 +1,11 @@
-import HSFormal.LTheory.Model.Cascade
-import HSFormal.LTheory.Model.Transport
-import HSFormal.LTheory.Model.BoundaryConstruction
-import HSFormal.CornerClass
+module
+
+public import HSFormal.LTheory.Model.Cascade
+public import HSFormal.LTheory.Model.Transport
+public import HSFormal.LTheory.Model.BoundaryConstruction
+public import HSFormal.CornerClass
+
+@[expose] public section
 
 /-!
 # Domination and Kar(U) models (lower L-theory model, module 14)

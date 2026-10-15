@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.CutBoundary
+module
+
+public import HSFormal.LTheory.Model.CutBoundary
+
+@[expose] public section
 
 /-!
 # The complement of the lower cut pair: chain level (lower L-theory model, module 22, part 5)

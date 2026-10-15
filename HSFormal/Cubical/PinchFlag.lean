@@ -1,4 +1,8 @@
-import HSFormal.Cubical.GridPair
+module
+
+public import HSFormal.Cubical.GridPair
+
+@[expose] public section
 
 /-!
 # The pinch flag: box-cut B-pairs as tensor products (cubical module C8, part 1)

@@ -1,4 +1,8 @@
-import HSFormal.Newman.TransferStatement
+module
+
+public import HSFormal.Newman.TransferStatement
+
+@[expose] public section
 
 /-!
 # N7. Transfer vanishing (Newman blueprint, module N7; §2.4, §5)

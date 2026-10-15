@@ -1,9 +1,16 @@
-import Mathlib.Algebra.Category.ModuleCat.Abelian
-import Mathlib.Algebra.Category.ModuleCat.Colimits
-import Mathlib.Algebra.Homology.ShortComplex.ModuleCat
-import TauCeti.AlgebraicTopology.Singular.Excision
-import TauCeti.AlgebraicTopology.Singular.Triple
-import TauCeti.AlgebraicTopology.Singular.Homotopy.Invariance
+module
+
+public import Mathlib.Algebra.Category.ModuleCat.Abelian
+public import Mathlib.Algebra.Category.ModuleCat.Colimits
+public import Mathlib.Algebra.Homology.ShortComplex.ModuleCat
+public import TauCeti.AlgebraicTopology.Singular.Excision
+public import TauCeti.AlgebraicTopology.Singular.Triple
+public import TauCeti.AlgebraicTopology.Singular.Homotopy.Invariance
+import all Mathlib.AlgebraicTopology.SimplicialSet.Homology.Relative
+import all TauCeti.Topology.Category.TopPair
+import all TauCeti.Topology.Category.TopTriple
+
+@[expose] public section
 
 /-!
 # N1. Local relative homology `H_i(X | L)` (Newman blueprint, module N1)

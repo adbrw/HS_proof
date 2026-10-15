@@ -1,7 +1,11 @@
-import HSFormal.LTheory.Cylinder
-import HSFormal.LTheory.KaroubiFiltration
-import Mathlib.GroupTheory.FreeAbelianGroup
-import Mathlib.GroupTheory.QuotientGroup.Defs
+module
+
+public import HSFormal.LTheory.Cylinder
+public import HSFormal.LTheory.KaroubiFiltration
+public import Mathlib.GroupTheory.FreeAbelianGroup
+public import Mathlib.GroupTheory.QuotientGroup.Defs
+
+@[expose] public section
 
 /-!
 # The concrete L-group `Lconc` (L-theory module M5)

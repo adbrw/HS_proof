@@ -1,5 +1,9 @@
-import HSFormal.LTheory.ConcreteL
-import HSFormal.LTheory.Model.GlueKar
+module
+
+public import HSFormal.LTheory.ConcreteL
+public import HSFormal.LTheory.Model.GlueKar
+
+@[expose] public section
 
 /-!
 # Transport of Poincaré complexes and pairs along Kar homotopy equivalences (L-model 11)
@@ -329,7 +333,7 @@ def truncIdem (lo hi : ℤ) (hs : SupportedIn p lo hi) : C' ⟶ C' :=
 
 variable (lo hi : ℤ) (hs : SupportedIn p lo hi)
 
-private lemma hx_lo : ∀ r, r < lo → ((e.cutHi hp' hi fun r hr ↦ hs r (Or.inr hr)).g ≫
+lemma hx_lo : ∀ r, r < lo → ((e.cutHi hp' hi fun r hr ↦ hs r (Or.inr hr)).g ≫
     (e.cutHi hp' hi fun r hr ↦ hs r (Or.inr hr)).f).f r = 0 :=
   fun r hr ↦ KarHtpyEquiv.gf_f_eq_zero _ (hs r (Or.inl hr))
 

@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Interface
-import Mathlib.RepresentationTheory.Maschke
+module
+
+public import HSFormal.LTheory.Interface
+public import Mathlib.RepresentationTheory.Maschke
+
+@[expose] public section
 
 /-!
 # Morphisms of `finSuppFreeQG G T` as `ℚ[Gᵢ]`-linear maps (NegK level 1, module 1)

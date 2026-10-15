@@ -1,6 +1,10 @@
-import HSFormal.Compression
-import Mathlib.Algebra.Homology.Linear
-import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Biproducts
+module
+
+public import HSFormal.Compression
+public import Mathlib.Algebra.Homology.Linear
+public import Mathlib.CategoryTheory.Limits.Preserves.Shapes.Biproducts
+
+@[expose] public section
 
 /-!
 # Strictly symmetric Poincaré complexes (L-theory module M1)

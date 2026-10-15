@@ -1,5 +1,9 @@
-import HSFormal.Inputs.GY.Defs
-import HSFormal.Inputs.GY.Convolution
+module
+
+public import HSFormal.Inputs.GY.Defs
+public import HSFormal.Inputs.GY.Convolution
+
+@[expose] public section
 
 /-!
 # Weak Gleason norm ⇒ Gleason norm (module A5)

@@ -1,7 +1,11 @@
-import HSFormal.HilbertSmithFinal
-import HSFormal.LTheory.Model.NegK.High.Induction
-import HSFormal.LTheory.Model.NegK.High.RegKar
-import HSFormal.LTheory.Model.NegK.High.BassSplitting
+module
+
+public import HSFormal.HilbertSmithFinal
+public import HSFormal.LTheory.Model.NegK.High.Induction
+public import HSFormal.LTheory.Model.NegK.High.RegKar
+public import HSFormal.LTheory.Model.NegK.High.BassSplitting
+
+@[expose] public section
 
 /-!
 # The Hilbert–Smith theorem

@@ -1,4 +1,8 @@
-import HSFormal.Cubical.PinchPair
+module
+
+public import HSFormal.Cubical.PinchPair
+
+@[expose] public section
 
 /-!
 # The flag iterates on structures: cube pair tops and their boundaries (cubical module C8)

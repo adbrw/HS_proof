@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.Exact
-import HSFormal.LTheory.Model.BoundaryConstructionRel
-import HSFormal.LTheory.Model.CutTrunc
+module
+
+public import HSFormal.LTheory.Model.Exact
+public import HSFormal.LTheory.Model.BoundaryConstructionRel
+public import HSFormal.LTheory.Model.CutTrunc
+
+@[expose] public section
 
 /-!
 # Raw closed complexes and the trace cobordism in general degrees (for `LiftingClosedSub`)

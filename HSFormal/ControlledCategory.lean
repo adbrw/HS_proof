@@ -1,6 +1,10 @@
-import HSFormal.ControlledMatrices
-import Mathlib.Algebra.Module.Submodule.Basic
-import Mathlib.CategoryTheory.Quotient.Preadditive
+module
+
+public import HSFormal.ControlledMatrices
+public import Mathlib.Algebra.Module.Submodule.Basic
+public import Mathlib.CategoryTheory.Quotient.Preadditive
+
+@[expose] public section
 
 /-!
 # A scalar category of asymptotically controlled rational matrices

@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.LiftingPair
-import HSFormal.LTheory.Model.LineNatural
-import HSFormal.LTheory.Model.FreeLine
+module
+
+public import HSFormal.LTheory.Model.LiftingPair
+public import HSFormal.LTheory.Model.LineNatural
+public import HSFormal.LTheory.Model.FreeLine
+
+@[expose] public section
 
 /-!
 # Lifting pairs and the line transitions (lower L-theory model, module 16, end)

@@ -1,11 +1,15 @@
-import HSFormal.Statement
-import HSFormal.FreePoint
-import Mathlib.Topology.Baire.Lemmas
-import Mathlib.Topology.Baire.LocallyCompactRegular
-import Mathlib.Topology.Piecewise
-import Mathlib.Topology.Metrizable.Urysohn
-import Mathlib.Data.ZMod.QuotientGroup
-import Mathlib.Topology.Algebra.Group.Basic
+module
+
+public import HSFormal.Statement
+public import HSFormal.FreePoint
+public import Mathlib.Topology.Baire.Lemmas
+public import Mathlib.Topology.Baire.LocallyCompactRegular
+public import Mathlib.Topology.Piecewise
+public import Mathlib.Topology.Metrizable.Urysohn
+public import Mathlib.Data.ZMod.QuotientGroup
+public import Mathlib.Topology.Algebra.Group.Basic
+
+@[expose] public section
 
 /-!
 # Montgomery's theorem on pointwise periodic homeomorphisms, from Newman's theorem

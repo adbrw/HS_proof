@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.UnionRelTrans
+module
+
+public import HSFormal.LTheory.Model.UnionRelTrans
+
+@[expose] public section
 
 /-!
 # The U-turn: unions with `Z ⊕ -Z` and with the cylinder are cobordant

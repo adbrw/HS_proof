@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.LiftingPairAux
+module
+
+public import HSFormal.LTheory.Model.LiftingPairAux
+
+@[expose] public section
 
 /-!
 # Lifting pairs (lower L-theory model, module 16, core)

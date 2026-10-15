@@ -109,3 +109,28 @@ comparator then compiles `Challenge`, then `Solution` with the `HSFormal` module
 To only compile the proof: `lake build` (builds `HSFormal`), then
 `lake env lean --stdin <<< 'import HSFormal.HilbertSmithNegK
 #print axioms HSFormal.hilbertSmith'`.
+
+## Palomar verification
+
+The source files use Lean's module system (`module`, public imports, and an exposed
+public section). The migration preserves every original declaration and proof;
+in particular, the second-countability assumptions on the manifold and group
+remain part of the Hilbert–Smith statement. Lean, Mathlib, and TauCeti remain at
+the revisions listed above.
+
+`formalization.yaml` describes the selected results, provenance, automation, and
+limitations. Review its human attribution and repository license before submitting.
+Existing notices in `HSFormal/Brouwer/LICENSE` continue to cover the adapted files.
+
+The manually dispatched workflow `.github/workflows/palomar-preflight.yml` runs
+Palomar's full mechanical verification against an exact public GitHub commit.
+It defaults to `comparator.json`; `comparator_fc.json` is available for the two
+Formal Conjectures variants. The reusable workflow and its pipeline revision are
+pinned together. Run it after reviewing the changes and making the selected
+commit available on GitHub. Historical checker logs do not substitute for this
+fresh verification of the migrated files.
+
+The workflow does not submit to Palomar or register a result. Review the full
+mechanical report and any subsequent Palomar review before requesting permanent
+registration. Verification runs and their inputs are public; registration is a
+separate action.

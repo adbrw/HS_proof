@@ -1,7 +1,11 @@
-import HSFormal.Cubical.DualBridge
-import HSFormal.Cubical.GraphBridge
-import HSFormal.Cubical.GridSeam
-import HSFormal.LTheory.KaroubiFiltration
+module
+
+public import HSFormal.Cubical.DualBridge
+public import HSFormal.Cubical.GraphBridge
+public import HSFormal.Cubical.GridSeam
+public import HSFormal.LTheory.KaroubiFiltration
+
+@[expose] public section
 
 /-!
 # Duals of controlled sequences (cubical module C2 over `𝒜_G(X)`)

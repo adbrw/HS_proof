@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.Swindle
+module
+
+public import HSFormal.LTheory.Model.Swindle
+
+@[expose] public section
 
 /-!
 # Bounded objects of `C_ℤ(B)` and the window equivalence `C_ℤ^{bdd}(B) ≃ B`

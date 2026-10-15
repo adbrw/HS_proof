@@ -1,10 +1,15 @@
-import Mathlib.Algebra.Category.ModuleCat.ProjectiveDimension
-import Mathlib.RingTheory.LocalProperties.ProjectiveDimension
-import Mathlib.Algebra.Polynomial.Module.TensorProduct
-import Mathlib.RepresentationTheory.Maschke
-import Mathlib.Algebra.Polynomial.Laurent
-import Mathlib.RingTheory.Flat.Basic
-import Mathlib.Algebra.Category.Ring.Basic
+module
+
+public import Mathlib.Algebra.Category.ModuleCat.Projective
+public import Mathlib.Algebra.Category.ModuleCat.ProjectiveDimension
+public import Mathlib.RingTheory.LocalProperties.ProjectiveDimension
+public import Mathlib.Algebra.Polynomial.Module.TensorProduct
+public import Mathlib.RepresentationTheory.Maschke
+public import Mathlib.Algebra.Polynomial.Laurent
+public import Mathlib.RingTheory.Flat.Basic
+public import Mathlib.Algebra.Category.Ring.Basic
+
+@[expose] public section
 
 /-!
 # Theorem R, part 1: projective dimension bounds (NegKHigh module N9, `RegPd`)

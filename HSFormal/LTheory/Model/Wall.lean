@@ -1,7 +1,11 @@
-import HSFormal.LTheory.ConcreteL
-import HSFormal.LTheory.Model.BoundaryConstruction
-import HSFormal.LTheory.Model.NegK
-import HSFormal.LTheory.Model.Transport
+module
+
+public import HSFormal.LTheory.ConcreteL
+public import HSFormal.LTheory.Model.BoundaryConstruction
+public import HSFormal.LTheory.Model.NegK
+public import HSFormal.LTheory.Model.Transport
+
+@[expose] public section
 
 /-!
 # The symmetric Wall trick under `NegK` (lower L-theory model, module 21)

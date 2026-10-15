@@ -1,5 +1,9 @@
-import HSFormal.Newman.Claims
-import HSFormal.WeakInputs
+module
+
+public import HSFormal.Newman.Claims
+public import HSFormal.WeakInputs
+
+@[expose] public section
 
 /-!
 # N9. Newman's theorem for prime order (Newman blueprint, module N9)

@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.CutInj
-import HSFormal.LTheory.Model.Instance
-import HSFormal.LTheory.Model.NegK.LevelOne
+module
+
+public import HSFormal.LTheory.Model.CutInj
+public import HSFormal.LTheory.Model.Instance
+public import HSFormal.LTheory.Model.NegK.LevelOne
+
+@[expose] public section
 
 /-!
 # `DecBijModel` from relation (R) and the half-line splitting (lower L-theory model, module 22)

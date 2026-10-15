@@ -1,6 +1,10 @@
-import HSFormal.BoundedKaroubi
-import HSFormal.BalmerSchlichting.Dilation
-import HSFormal.BalmerSchlichting.Improve
+module
+
+public import HSFormal.BoundedKaroubi
+public import HSFormal.BalmerSchlichting.Dilation
+public import HSFormal.BalmerSchlichting.Improve
+
+@[expose] public section
 
 /-!
 # `K^b(P)` is idempotent complete ([BS01, Thm 2.8], split exact case)

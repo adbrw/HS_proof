@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.NegK.High.RegPd
-import Mathlib.RingTheory.Polynomial.Basic
-import Mathlib.RingTheory.Localization.Submodule
+module
+
+public import HSFormal.LTheory.Model.NegK.High.RegPd
+public import Mathlib.RingTheory.Polynomial.Basic
+public import Mathlib.RingTheory.Localization.Submodule
+
+@[expose] public section
 
 /-!
 # Theorem R, part 2: noetherianity and finite resolutions (NegKHigh module N10, `RegNoeth`)

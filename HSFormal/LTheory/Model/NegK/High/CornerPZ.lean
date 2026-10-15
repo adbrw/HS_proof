@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.NegK.High.BassStatement
-import HSFormal.LTheory.Model.CutWindow
+module
+
+public import HSFormal.LTheory.Model.NegK.High.BassStatement
+public import HSFormal.LTheory.Model.CutWindow
+
+@[expose] public section
 
 /-!
 # Theorem B, part 1: the window corner (NegKHigh)

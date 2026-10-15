@@ -1,6 +1,10 @@
-import HSFormal.Cubical.CubeGeom
-import HSFormal.Cubical.CubeFaceBased
-import HSFormal.Cubical.CutClass
+module
+
+public import HSFormal.Cubical.CubeGeom
+public import HSFormal.Cubical.CubeFaceBased
+public import HSFormal.Cubical.CutClass
+
+@[expose] public section
 
 /-!
 # The levels of the cube cut flag as controlled Poincaré complexes (cubical module C8)

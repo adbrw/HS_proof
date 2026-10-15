@@ -1,4 +1,8 @@
-import HSFormal.Cubical.Based
+module
+
+public import HSFormal.Cubical.Based
+
+@[expose] public section
 
 /-!
 # Contractions of based complexes and cubical boxes (module C1)

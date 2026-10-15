@@ -1,7 +1,11 @@
-import HSFormal.LTheory.Model.NegK.KarDiagStatement
-import HSFormal.LTheory.Model.NegK.FreeQGMat
-import HSFormal.LTheory.Model.NegK.TwoFlag
-import HSFormal.LTheory.Model.Swindle
+module
+
+public import HSFormal.LTheory.Model.NegK.KarDiagStatement
+public import HSFormal.LTheory.Model.NegK.FreeQGMat
+public import HSFormal.LTheory.Model.NegK.TwoFlag
+public import HSFormal.LTheory.Model.Swindle
+
+@[expose] public section
 
 /-!
 # Theorem A: bounded idempotents of `C_ℤ(finSuppFreeQG G T)` are diagonal (NegK level 1, module 5)

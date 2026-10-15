@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.UnionRelDouble
+module
+
+public import HSFormal.LTheory.Model.UnionRelDouble
+
+@[expose] public section
 
 /-!
 # The transposed union structure

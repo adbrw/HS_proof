@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.HalfLineRel
-import HSFormal.LTheory.Model.LinePairs
+module
+
+public import HSFormal.LTheory.Model.HalfLineRel
+public import HSFormal.LTheory.Model.LinePairs
+
+@[expose] public section
 
 /-!
 # Abstract half-line data (half-line splitting of the line complex, part 2)

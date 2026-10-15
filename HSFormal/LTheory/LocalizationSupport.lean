@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Localization
+module
+
+public import HSFormal.LTheory.Localization
+
+@[expose] public section
 
 /-!
 # Localization for support categories: excision, exterior cuts, Mayer–Vietoris, Lemma 6.2

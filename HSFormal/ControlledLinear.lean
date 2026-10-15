@@ -1,5 +1,9 @@
-import HSFormal.ControlledCategory
-import Mathlib.CategoryTheory.Quotient.Linear
+module
+
+public import HSFormal.ControlledCategory
+public import Mathlib.CategoryTheory.Quotient.Linear
+
+@[expose] public section
 
 /-!
 # Rational linearity of the scalar controlled category

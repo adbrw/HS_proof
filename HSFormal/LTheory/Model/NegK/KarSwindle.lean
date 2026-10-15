@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.Wall
-import HSFormal.LTheory.Model.Swindle
+module
+
+public import HSFormal.LTheory.Model.Wall
+public import HSFormal.LTheory.Model.Swindle
+
+@[expose] public section
 
 /-!
 # Swindle absorption of diagonal Kar objects (NegK, module 6)

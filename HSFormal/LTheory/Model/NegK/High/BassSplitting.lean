@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.NegK.High.CornerPZ
+module
+
+public import HSFormal.LTheory.Model.NegK.High.CornerPZ
+
+@[expose] public section
 
 /-!
 # Theorem B, part 2: the controlled Bass splitting (NegKHigh, N8)

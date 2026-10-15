@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.UnionRelCone
-import HSFormal.LTheory.Model.Cobordism
+module
+
+public import HSFormal.LTheory.Model.UnionRelCone
+public import HSFormal.LTheory.Model.Cobordism
+
+@[expose] public section
 
 /-!
 # The double of a Poincaré pair is null-cobordant

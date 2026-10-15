@@ -1,6 +1,10 @@
-import Mathlib.Algebra.Group.Action.End
-import Mathlib.NumberTheory.Padics.RingHoms
-import Mathlib.Topology.Algebra.MulAction
+module
+
+public import Mathlib.Algebra.Group.Action.End
+public import Mathlib.NumberTheory.Padics.RingHoms
+public import Mathlib.Topology.Algebra.MulAction
+
+@[expose] public section
 
 /-!
 # Closed additive subgroups of the p-adic integers

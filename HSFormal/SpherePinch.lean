@@ -1,6 +1,10 @@
-import Mathlib.Topology.Compactification.OnePoint.Sphere
-import Mathlib.Topology.Homotopy.Basic
-import Mathlib.Analysis.InnerProductSpace.PiL2
+module
+
+public import Mathlib.Topology.Compactification.OnePoint.Sphere
+public import Mathlib.Topology.Homotopy.Basic
+public import Mathlib.Analysis.InnerProductSpace.PiL2
+
+@[expose] public section
 
 /-!
 # The oriented pinch and the round target sphere (Section 7, L492–524)

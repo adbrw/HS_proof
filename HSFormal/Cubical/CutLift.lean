@@ -1,5 +1,9 @@
-import HSFormal.LTheory.BoundaryPoincare
-import HSFormal.LTheory.LocalizationSupport
+module
+
+public import HSFormal.LTheory.BoundaryPoincare
+public import HSFormal.LTheory.LocalizationSupport
+
+@[expose] public section
 
 /-!
 # Lifting Poincaré pairs to full subcategories (cubical module C8, support categories)

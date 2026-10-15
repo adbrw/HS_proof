@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.CZFunctor
-import Mathlib.CategoryTheory.Idempotents.Biproducts
+module
+
+public import HSFormal.LTheory.Model.CZFunctor
+public import Mathlib.CategoryTheory.Idempotents.Biproducts
+
+@[expose] public section
 
 /-!
 # `NegK`: vanishing of `K₋ₖ(B)` for `k ≥ 1` (input of lower-L modules 21–23)

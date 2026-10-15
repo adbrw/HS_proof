@@ -1,8 +1,12 @@
-import HSFormal.Assembly
-import HSFormal.TailGroups
-import HSFormal.Cubical.DualBridge
-import HSFormal.LTheory.SignatureCobordism
-import HSFormal.LTheory.PointCategory
+module
+
+public import HSFormal.Assembly
+public import HSFormal.TailGroups
+public import HSFormal.Cubical.DualBridge
+public import HSFormal.LTheory.SignatureCobordism
+public import HSFormal.LTheory.PointCategory
+
+@[expose] public section
 
 /-!
 # Bridges between committed modules
@@ -305,21 +309,21 @@ private lemma toLin_e_e (he : e ≫ e = e) (x : (E.X r).Sp) :
     toLin (e.f r) (toLin (e.f r) x) = toLin (e.f r) x := by
   rw [← toLin_comp, ← HomologicalComplex.comp_f, he]
 
-private lemma e_mem_imCycles {x : (E.X r).Sp} (hx : x ∈ cycles E r) :
+lemma e_mem_imCycles {x : (E.X r).Sp} (hx : x ∈ cycles E r) :
     toLin (e.f r) x ∈ imCycles E e r := by
   refine ⟨⟨x, rfl⟩, ?_⟩
   rw [cycles, LinearMap.mem_ker] at hx
   change toLin (E.d r (r - 1)) (toLin (e.f r) x) = 0
   rw [toLin_d_e, hx, map_zero]
 
-private lemma e_mem_imBoundaries {x : (E.X r).Sp} (hx : x ∈ karBoundaries E e r) :
+lemma e_mem_imBoundaries {x : (E.X r).Sp} (hx : x ∈ karBoundaries E e r) :
     toLin (e.f r) x ∈ imBoundaries E e r := by
   obtain ⟨_, ⟨w, rfl⟩, z, hz, rfl⟩ := Submodule.mem_sup.mp hx
   rw [LinearMap.mem_ker] at hz
   rw [map_add, hz, add_zero, ← toLin_d_e]
   exact ⟨w, rfl⟩
 
-private lemma imBoundaries_le : imBoundaries E e r ≤ karBoundaries E e r := by
+lemma imBoundaries_le : imBoundaries E e r ≤ karBoundaries E e r := by
   rintro _ ⟨w, rfl⟩
   exact Submodule.mem_sup_left ⟨_, rfl⟩
 

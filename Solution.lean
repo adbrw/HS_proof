@@ -1,5 +1,9 @@
-import Mathlib
-import HSFormal.HilbertSmithNegK
+module
+
+public import Mathlib
+public import HSFormal.HilbertSmithNegK
+
+@[expose] public section
 
 /-!
 # Solution to `Challenge.lean`

@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.UnionRelTurn
+module
+
+public import HSFormal.LTheory.Model.UnionRelTurn
+
+@[expose] public section
 
 /-!
 # The U-turn: the kernel of the boundary map

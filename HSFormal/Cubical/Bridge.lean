@@ -1,6 +1,10 @@
-import HSFormal.Cubical.Carrier
-import HSFormal.GraphType
-import Mathlib.Algebra.Homology.Homotopy
+module
+
+public import HSFormal.Cubical.Carrier
+public import HSFormal.GraphType
+public import Mathlib.Algebra.Homology.Homotopy
+
+@[expose] public section
 
 /-!
 # Bridges from based complexes to `𝒜_G(X)` (module C1)

@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.CZFunctor
-import HSFormal.LTheory.Interface
+module
+
+public import HSFormal.LTheory.Model.CZFunctor
+public import HSFormal.LTheory.Interface
+
+@[expose] public section
 
 /-!
 # Theorem A (two-flag bounded splitting): the statement

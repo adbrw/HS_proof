@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.Transport
+module
+
+public import HSFormal.LTheory.Model.Transport
+
+@[expose] public section
 
 /-!
 # Free-ification of Kar complexes: chain-level tools (lower L-theory model, module 15)

@@ -1,4 +1,8 @@
-import HSFormal.Cubical.DualBridge
+module
+
+public import HSFormal.Cubical.DualBridge
+
+@[expose] public section
 
 /-!
 # Cubical grids: tori, cube pairs and `W = Tⁿ ⊗ CPcell` (cubical module C4)

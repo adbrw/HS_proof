@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.HalfLineUnion
+module
+
+public import HSFormal.LTheory.Model.HalfLineUnion
+
+@[expose] public section
 
 /-!
 # The half-line splitting (half-line splitting, part 6)

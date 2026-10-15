@@ -1,8 +1,12 @@
-import HSFormal.Cubical.SeqDual
-import HSFormal.LTheory.ConcreteL
-import Mathlib.Topology.Homotopy.Basic
-import Mathlib.Topology.UniformSpace.Equicontinuity
-import Mathlib.Topology.UniformSpace.HeineCantor
+module
+
+public import HSFormal.Cubical.SeqDual
+public import HSFormal.LTheory.ConcreteL
+public import Mathlib.Topology.Homotopy.Basic
+public import Mathlib.Topology.UniformSpace.Equicontinuity
+public import Mathlib.Topology.UniformSpace.HeineCantor
+
+@[expose] public section
 
 /-!
 # Homotopy invariance of controlled Poincaré complexes (cubical module C7, Lemma 11.1)

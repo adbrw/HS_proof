@@ -1,6 +1,10 @@
-import HSFormal.Inputs.GY.Defs
-import Mathlib.Geometry.Manifold.Algebra.LieGroup
-import Mathlib.Geometry.Manifold.Instances.Real
+module
+
+public import HSFormal.Inputs.GY.Defs
+public import Mathlib.Geometry.Manifold.Algebra.LieGroup
+public import Mathlib.Geometry.Manifold.Instances.Real
+
+@[expose] public section
 
 /-!
 # A Lie group structure from a local exponential structure (blueprint C4)

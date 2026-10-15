@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.Bdry
-import HSFormal.LTheory.Model.Triads
+module
+
+public import HSFormal.LTheory.Model.Bdry
+public import HSFormal.LTheory.Model.Triads
+
+@[expose] public section
 
 /-!
 # Exactness of the localization sequence of the colimit model (lower L-theory model, module 19)

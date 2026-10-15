@@ -1,6 +1,10 @@
-import HSFormal.Cubical.SeqDual
-import HSFormal.Cubical.PinchFace
-import HSFormal.LTheory.BoundaryPoincare
+module
+
+public import HSFormal.Cubical.SeqDual
+public import HSFormal.Cubical.PinchFace
+public import HSFormal.LTheory.BoundaryPoincare
+
+@[expose] public section
 
 /-!
 # Realized cut pairs of controlled sequences (cubical module C8, the pairs of Lemma 11.2)

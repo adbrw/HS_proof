@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.NegK.KarSwindle
-import Mathlib.CategoryTheory.Idempotents.Biproducts
+module
+
+public import HSFormal.LTheory.Model.NegK.KarSwindle
+public import Mathlib.CategoryTheory.Idempotents.Biproducts
+
+@[expose] public section
 
 /-!
 # Stable isomorphism of Kar objects (NegKHigh, module N2)

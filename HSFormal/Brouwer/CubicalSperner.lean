@@ -1,3 +1,5 @@
+module
+
 /-
 Copyright (c) 2026 harfe. Released under the MIT license; see `HSFormal/Brouwer/LICENSE`.
 
@@ -9,7 +11,9 @@ project. Changes: module paths renamed, all declarations placed in the namespace
 `DecidablePred` instance for two `Finset.mem_filter` steps, deprecated lemma names updated.
 -/
 
-import HSFormal.Brouwer.CubicalSpernerPrep
+public import HSFormal.Brouwer.CubicalSpernerPrep
+
+@[expose] public section
 
 namespace HSFormal.Brouwer
 

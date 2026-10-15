@@ -1,6 +1,10 @@
-import HSFormal.PadicStabilizers
-import Mathlib.Geometry.Manifold.ChartedSpace
-import Mathlib.Analysis.InnerProductSpace.PiL2
+module
+
+public import HSFormal.PadicStabilizers
+public import Mathlib.Geometry.Manifold.ChartedSpace
+public import Mathlib.Analysis.InnerProductSpace.PiL2
+
+@[expose] public section
 
 /-!
 # Section 7, first step: a free point of an effective p-adic action

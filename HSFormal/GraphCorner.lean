@@ -1,10 +1,14 @@
-import Mathlib.CategoryTheory.Preadditive.Biproducts
-import Mathlib.CategoryTheory.Preadditive.Opposite
-import Mathlib.CategoryTheory.Linear.LinearFunctor
-import Mathlib.CategoryTheory.Idempotents.Basic
-import Mathlib.CategoryTheory.Retract
-import Mathlib.Algebra.Module.Rat
-import Mathlib.Algebra.Field.Rat
+module
+
+public import Mathlib.CategoryTheory.Preadditive.Biproducts
+public import Mathlib.CategoryTheory.Preadditive.Opposite
+public import Mathlib.CategoryTheory.Linear.LinearFunctor
+public import Mathlib.CategoryTheory.Idempotents.Basic
+public import Mathlib.CategoryTheory.Retract
+public import Mathlib.Algebra.Module.Rat
+public import Mathlib.Algebra.Field.Rat
+
+@[expose] public section
 
 /-!
 # The support-correct graph corner (manuscript §5)

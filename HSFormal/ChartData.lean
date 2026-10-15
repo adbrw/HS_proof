@@ -1,10 +1,14 @@
-import HSFormal.FreePoint
-import HSFormal.SpherePinch
-import HSFormal.CharacterDetector
-import HSFormal.PadicDisplacement
-import Mathlib.NumberTheory.Padics.ProperSpace
-import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
-import Mathlib.Topology.Metrizable.Urysohn
+module
+
+public import HSFormal.FreePoint
+public import HSFormal.SpherePinch
+public import HSFormal.CharacterDetector
+public import HSFormal.PadicDisplacement
+public import Mathlib.NumberTheory.Padics.ProperSpace
+public import Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar
+public import Mathlib.Topology.Metrizable.Urysohn
+
+@[expose] public section
 
 /-!
 # Section 7: the chart, the subgroup `H`, the averaged coordinate and the sphere map

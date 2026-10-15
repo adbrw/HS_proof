@@ -1,4 +1,8 @@
-import Mathlib.Data.Matrix.Mul
+module
+
+public import Mathlib.Data.Matrix.Mul
+
+@[expose] public section
 
 /-!
 # Exact finite-matrix support algebra

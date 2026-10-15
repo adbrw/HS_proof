@@ -1,5 +1,9 @@
-import HSFormal.Reduction
-import Mathlib.Analysis.Convex.Topology
+module
+
+public import HSFormal.Reduction
+public import Mathlib.Analysis.Convex.Topology
+
+@[expose] public section
 
 /-!
 # Section 12, last paragraph: manifolds with boundary

@@ -1,5 +1,9 @@
-import HSFormal.Cubical.Grid
-import HSFormal.IntegrationControl
+module
+
+public import HSFormal.Cubical.Grid
+public import HSFormal.IntegrationControl
+
+@[expose] public section
 
 /-!
 # The seam: the torus grid on `(ℝ/Lℤ)ⁿ` and control labels (cubical module C4)
