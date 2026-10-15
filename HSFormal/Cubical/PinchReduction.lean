@@ -1,4 +1,8 @@
-import HSFormal.Cubical.PinchSignature
+module
+
+public import HSFormal.Cubical.PinchSignature
+
+@[expose] public section
 
 /-!
 # The corrected reduction of `PinchSignature` to cut steps (cubical module C8)

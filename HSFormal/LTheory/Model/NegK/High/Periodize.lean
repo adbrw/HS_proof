@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.NegK.High.Germ
+module
+
+public import HSFormal.LTheory.Model.NegK.High.Germ
+
+@[expose] public section
 
 /-!
 # Periodization and Lemma F (NegKHigh, module N5)

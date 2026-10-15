@@ -1,6 +1,10 @@
-import HSFormal.Reduction
-import HSFormal.BoundaryReduction
-import HSFormal.Montgomery
+module
+
+public import HSFormal.Reduction
+public import HSFormal.BoundaryReduction
+public import HSFormal.Montgomery
+
+@[expose] public section
 
 /-!
 # Weakened published inputs: no Lee theorem, Newman only for prime order

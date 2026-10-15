@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.NegK.High.RegLocal
+module
+
+public import HSFormal.LTheory.Model.NegK.High.RegLocal
+
+@[expose] public section
 
 /-!
 # Theorem R, part 4: matrices and the concrete rings (NegKHigh module N12, `RegMatrix`)

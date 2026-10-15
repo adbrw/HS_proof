@@ -1,4 +1,8 @@
-import HSFormal.Cubical.ChainModelMaps
+module
+
+public import HSFormal.Cubical.ChainModelMaps
+
+@[expose] public section
 
 /-!
 # The chain models: `a_g`, `B_{g,h}`, `U_g` on the torus grid (cubical module C6, part 2)

@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Interface
-import HSFormal.Integration
+module
+
+public import HSFormal.LTheory.Interface
+public import HSFormal.Integration
+
+@[expose] public section
 
 /-!
 # The point category `V_G = ∏ᵢ Free(ℚ[Gᵢ]) / ⊕ᵢ Free(ℚ[Gᵢ])` (manuscript (3.3)–(3.5))

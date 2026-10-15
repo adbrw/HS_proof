@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.CZFunctor
-import HSFormal.LTheory.BoundaryPoincare
-import HSFormal.LTheory.ConcreteL
+module
+
+public import HSFormal.LTheory.Model.CZFunctor
+public import HSFormal.LTheory.BoundaryPoincare
+public import HSFormal.LTheory.ConcreteL
+
+@[expose] public section
 
 /-!
 # Tensoring with the cellular real line (lower L-theory model, module 4)

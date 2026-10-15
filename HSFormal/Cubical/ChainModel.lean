@@ -1,5 +1,9 @@
-import HSFormal.Cubical.ChainModelBounds
-import HSFormal.SphereNonContractible
+module
+
+public import HSFormal.Cubical.ChainModelBounds
+public import HSFormal.SphereNonContractible
+
+@[expose] public section
 
 /-!
 # The chain-model data of §8 (cubical module C6, part 4): `ChainModelData`

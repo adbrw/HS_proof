@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.NegK.High.BassStatement
-import HSFormal.LTheory.Model.NegK.High.RegKarStatement
-import HSFormal.LTheory.Model.NegK.Final
+module
+
+public import HSFormal.LTheory.Model.NegK.High.BassStatement
+public import HSFormal.LTheory.Model.NegK.High.RegKarStatement
+public import HSFormal.LTheory.Model.NegK.Final
+
+@[expose] public section
 
 /-!
 # The final induction (NegKHigh, module N14)

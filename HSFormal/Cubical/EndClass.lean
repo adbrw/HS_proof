@@ -1,7 +1,11 @@
-import HSFormal.Bridges
-import HSFormal.Cubical.SeqDual
-import HSFormal.Cubical.PinchCut
-import HSFormal.LTheory.TailSignature
+module
+
+public import HSFormal.Bridges
+public import HSFormal.Cubical.SeqDual
+public import HSFormal.Cubical.PinchCut
+public import HSFormal.LTheory.TailSignature
+
+@[expose] public section
 
 /-!
 # The end class `[pt ⊗ CPcell]` and `σ_tail = 1` (manuscript (11.5), §12; S12a)

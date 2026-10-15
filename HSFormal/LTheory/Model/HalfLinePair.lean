@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.HalfLineData
+module
+
+public import HSFormal.LTheory.Model.HalfLineData
+
+@[expose] public section
 
 /-!
 # The half-line Poincaré pair (half-line splitting, part 3)

@@ -1,6 +1,10 @@
-import HSFormal.Cubical.Bridge
-import HSFormal.Compression
-import HSFormal.IntegrationDuality
+module
+
+public import HSFormal.Cubical.Bridge
+public import HSFormal.Compression
+public import HSFormal.IntegrationDuality
+
+@[expose] public section
 
 /-!
 # Graph-type families of controlled sequences (manuscript §§8–10)

@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Cylinder
-import HSFormal.LTheory.KaroubiFiltration
+module
+
+public import HSFormal.LTheory.Cylinder
+public import HSFormal.LTheory.KaroubiFiltration
+
+@[expose] public section
 
 /-!
 # Pairs with boundary in `U` become closed in `A/U`; excision (L-theory module M3)

@@ -1,9 +1,13 @@
-import Mathlib.LinearAlgebra.BilinearForm.Orthogonal
-import Mathlib.LinearAlgebra.QuadraticForm.Basic
-import Mathlib.LinearAlgebra.TensorProduct.Basis
-import Mathlib.LinearAlgebra.TensorProduct.Prod
-import Mathlib.RingTheory.Flat.Basic
-import HSFormal.EquivariantSignature
+module
+
+public import Mathlib.LinearAlgebra.BilinearForm.Orthogonal
+public import Mathlib.LinearAlgebra.QuadraticForm.Basic
+public import Mathlib.LinearAlgebra.TensorProduct.Basis
+public import Mathlib.LinearAlgebra.TensorProduct.Prod
+public import Mathlib.RingTheory.Flat.Basic
+public import HSFormal.EquivariantSignature
+
+@[expose] public section
 
 /-!
 # Algebraic laws of the equivariant signature (manuscript §3, §6)

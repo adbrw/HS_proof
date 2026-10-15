@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.CutInjQuot
+module
+
+public import HSFormal.LTheory.Model.CutInjQuot
+
+@[expose] public section
 
 /-!
 # Injectivity of the line transitions (lower L-theory model, module 22)

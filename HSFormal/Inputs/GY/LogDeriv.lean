@@ -1,5 +1,9 @@
-import HSFormal.Inputs.GY.Adjoint
-import TauCeti.Analysis.Calculus.ParametricIntegral
+module
+
+public import HSFormal.Inputs.GY.Adjoint
+public import TauCeti.Analysis.Calculus.ParametricIntegral
+
+@[expose] public section
 
 /-!
 # The derivative of `μ (-W, W + K)` at `K = 0` (blueprint C2, §5 H2 steps 2–4)

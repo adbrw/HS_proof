@@ -1,12 +1,16 @@
-import HSFormal.ControlledMatrices
-import Mathlib.Algebra.Module.Submodule.Basic
-import Mathlib.CategoryTheory.Quotient.Linear
-import Mathlib.CategoryTheory.Quotient.Preadditive
-import Mathlib.CategoryTheory.Preadditive.Biproducts
-import Mathlib.CategoryTheory.Preadditive.Opposite
-import Mathlib.CategoryTheory.Idempotents.Biproducts
-import Mathlib.Topology.Instances.ENNReal.Lemmas
-import Mathlib.SetTheory.Cardinal.NatCard
+module
+
+public import HSFormal.ControlledMatrices
+public import Mathlib.Algebra.Module.Submodule.Basic
+public import Mathlib.CategoryTheory.Quotient.Linear
+public import Mathlib.CategoryTheory.Quotient.Preadditive
+public import Mathlib.CategoryTheory.Preadditive.Biproducts
+public import Mathlib.CategoryTheory.Preadditive.Opposite
+public import Mathlib.CategoryTheory.Idempotents.Biproducts
+public import Mathlib.Topology.Instances.ENNReal.Lemmas
+public import Mathlib.SetTheory.Cardinal.NatCard
+
+@[expose] public section
 
 /-!
 # The asymptotic category `𝒜_G(X)` of manuscript §2

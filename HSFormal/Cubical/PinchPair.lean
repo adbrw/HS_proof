@@ -1,4 +1,8 @@
-import HSFormal.Cubical.PinchFlag
+module
+
+public import HSFormal.Cubical.PinchFlag
+
+@[expose] public section
 
 /-!
 # Cut pairs of a local symmetric duality (cubical module C8, part 2)

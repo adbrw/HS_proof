@@ -1,7 +1,11 @@
-import HSFormal.LTheory.ConcreteL
-import HSFormal.LTheory.Union
-import HSFormal.AsymptoticCategory
-import Mathlib.Algebra.Exact
+module
+
+public import HSFormal.LTheory.ConcreteL
+public import HSFormal.LTheory.Union
+public import HSFormal.AsymptoticCategory
+public import Mathlib.Algebra.Exact
+
+@[expose] public section
 
 /-!
 # The hypothesis interface `LowerLTheory` (L-theory module M6)

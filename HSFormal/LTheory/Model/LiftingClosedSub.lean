@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.LiftingClosedSubTrace
-import HSFormal.LTheory.Model.LiftingPairNull
+module
+
+public import HSFormal.LTheory.Model.LiftingClosedSubTrace
+public import HSFormal.LTheory.Model.LiftingPairNull
+
+@[expose] public section
 
 /-!
 # (L2) for closed lifting pairs: `LiftingClosedSubAll`

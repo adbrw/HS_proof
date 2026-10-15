@@ -1,7 +1,11 @@
-import HSFormal.LTheory.Model.CutWindow
-import HSFormal.LTheory.Model.BoundaryConstruction
-import HSFormal.LTheory.Model.Transport
-import HSFormal.LTheory.Model.Cascade
+module
+
+public import HSFormal.LTheory.Model.CutWindow
+public import HSFormal.LTheory.Model.BoundaryConstruction
+public import HSFormal.LTheory.Model.Transport
+public import HSFormal.LTheory.Model.Cascade
+
+@[expose] public section
 
 /-!
 # Threshold cuts of free Poincaré complexes over `C_ℤ(A)` and their Thom complexes

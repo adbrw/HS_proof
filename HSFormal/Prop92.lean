@@ -1,9 +1,13 @@
-import HSFormal.Assembly
-import HSFormal.Cubical.SeqDual
-import HSFormal.Cubical.CylinderInvariance
-import HSFormal.InducedClassUniform
-import HSFormal.Bridges
-import HSFormal.Cubical.ChainModel
+module
+
+public import HSFormal.Assembly
+public import HSFormal.Cubical.SeqDual
+public import HSFormal.Cubical.CylinderInvariance
+public import HSFormal.InducedClassUniform
+public import HSFormal.Bridges
+public import HSFormal.Cubical.ChainModel
+
+@[expose] public section
 
 /-!
 # Proposition 9.2 (realization) from the chain-model data of §8

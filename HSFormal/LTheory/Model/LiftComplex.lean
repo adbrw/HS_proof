@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.Cascade
-import HSFormal.LTheory.Pairs
+module
+
+public import HSFormal.LTheory.Model.Cascade
+public import HSFormal.LTheory.Pairs
+
+@[expose] public section
 
 /-!
 # Honest strict lifts of Kar complexes and pairs (lower L-theory model, module 13)

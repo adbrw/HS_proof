@@ -1,3 +1,5 @@
+module
+
 /-
 Copyright (c) 2026 harfe. Released under the MIT license; see `HSFormal/Brouwer/LICENSE`.
 
@@ -7,8 +9,10 @@ project. Changes: module paths renamed, all declarations placed in the namespace
 `HSFormal.Brouwer`.
 -/
 
-import Mathlib.Analysis.Convex.Intrinsic
-import Mathlib.Analysis.Convex.GaugeRescale
+public import Mathlib.Analysis.Convex.Intrinsic
+public import Mathlib.Analysis.Convex.GaugeRescale
+
+@[expose] public section
 
 namespace HSFormal.Brouwer
 

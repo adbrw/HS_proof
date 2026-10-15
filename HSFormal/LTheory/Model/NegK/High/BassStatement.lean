@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.NegK.High.Periodize
+module
+
+public import HSFormal.LTheory.Model.NegK.High.Periodize
+
+@[expose] public section
 
 /-!
 # Theorem B: the statement (NegKHigh, controlled Bass splitting)

@@ -1,6 +1,10 @@
-import HSFormal.Inputs.GY.Defs
-import Mathlib.Topology.Algebra.Order.Field
-import Mathlib.Algebra.Order.Floor.Ring
+module
+
+public import HSFormal.Inputs.GY.Defs
+public import Mathlib.Topology.Algebra.Order.Field
+public import Mathlib.Algebra.Order.Floor.Ring
+
+@[expose] public section
 
 /-!
 # Local homomorphisms, Lipschitz bounds and ultralimits of one-parameter subgroups (B2)

@@ -1,4 +1,8 @@
-import HSFormal.LTheory.BoundaryPoincare
+module
+
+public import HSFormal.LTheory.BoundaryPoincare
+
+@[expose] public section
 
 /-!
 # The boundary construction ([Ran80I, Prop. 3.4], absolute case; L-model module 9)

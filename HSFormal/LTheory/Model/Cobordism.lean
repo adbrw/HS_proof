@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.Glue
-import HSFormal.LTheory.ConcreteL
+module
+
+public import HSFormal.LTheory.Model.Glue
+public import HSFormal.LTheory.ConcreteL
+
+@[expose] public section
 
 /-!
 # Sums, unions and transitivity of cobordism; `Lconc` is the cobordism group

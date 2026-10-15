@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Theorem63
-import HSFormal.Germ
-import HSFormal.Cubical.PinchCut
+module
+
+public import HSFormal.LTheory.Theorem63
+public import HSFormal.Germ
+public import HSFormal.Cubical.PinchCut
+
+@[expose] public section
 
 /-!
 # The cube flag and the reduction of `PinchSignature` to single cuts (cubical module C8)

@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.CutUpper
+module
+
+public import HSFormal.LTheory.Model.CutUpper
+
+@[expose] public section
 
 /-!
 # The two cut pairs with a common window boundary, and half-line vanishing

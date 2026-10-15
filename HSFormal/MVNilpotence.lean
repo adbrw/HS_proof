@@ -1,5 +1,9 @@
-import Mathlib.Algebra.Exact.Basic
-import Mathlib.Data.Finset.Lattice.Fold
+module
+
+public import Mathlib.Algebra.Exact.Basic
+public import Mathlib.Data.Finset.Lattice.Fold
+
+@[expose] public section
 
 /-!
 # Mayer–Vietoris nilpotence (manuscript §4 and Lemma 6.2)

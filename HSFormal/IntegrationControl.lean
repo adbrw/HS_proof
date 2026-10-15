@@ -1,5 +1,9 @@
-import HSFormal.FixedData
-import Mathlib.Topology.MetricSpace.IsometricSMul
+module
+
+public import HSFormal.FixedData
+public import Mathlib.Topology.MetricSpace.IsometricSMul
+
+@[expose] public section
 
 /-!
 # The control target of Section 7 as a compact metric `C_p`-space

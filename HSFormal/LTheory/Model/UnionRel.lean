@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.UnionRelNull
-import HSFormal.LTheory.Model.UnionRelSum
-import HSFormal.LTheory.Model.UnionRelStatement
+module
+
+public import HSFormal.LTheory.Model.UnionRelNull
+public import HSFormal.LTheory.Model.UnionRelSum
+public import HSFormal.LTheory.Model.UnionRelStatement
+
+@[expose] public section
 
 /-!
 # The union relation (R)

@@ -1,5 +1,9 @@
-import HSFormal.WeakInputs
-import HSFormal.Montgomery
+module
+
+public import HSFormal.WeakInputs
+public import HSFormal.Montgomery
+
+@[expose] public section
 
 /-!
 # Montgomery's theorem from Newman's theorem for prime order

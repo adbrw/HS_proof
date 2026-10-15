@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Pairs
+module
+
+public import HSFormal.LTheory.Pairs
+
+@[expose] public section
 
 /-!
 # The algebraic cylinder (L-theory module M2)

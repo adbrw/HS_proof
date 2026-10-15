@@ -1,5 +1,9 @@
-import HSFormal.Assembly
-import HSFormal.CornerClass
+module
+
+public import HSFormal.Assembly
+public import HSFormal.CornerClass
+
+@[expose] public section
 
 /-!
 # Uniform sheet sums from sequencewise equations (manuscript §10, (10.1)–(10.4))

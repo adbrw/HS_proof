@@ -1,9 +1,13 @@
-import HSFormal.Newman.Glue
-import TauCeti.AlgebraicTopology.Singular.ReducedRelative
-import TauCeti.AlgebraicTopology.Singular.Contractible
-import TauCeti.AlgebraicTopology.Singular.Sphere
-import Mathlib.Analysis.Convex.Contractible
-import Mathlib.Analysis.InnerProductSpace.PiL2
+module
+
+public import HSFormal.Newman.Glue
+public import TauCeti.AlgebraicTopology.Singular.ReducedRelative
+public import TauCeti.AlgebraicTopology.Singular.Contractible
+public import TauCeti.AlgebraicTopology.Singular.Sphere
+public import Mathlib.Analysis.Convex.Contractible
+public import Mathlib.Analysis.InnerProductSpace.PiL2
+
+@[expose] public section
 
 /-!
 # N3. Local homology of `𝔼 = ℝ^{m+1}` at bounded convex sets (Newman blueprint, module N3)

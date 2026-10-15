@@ -1,6 +1,10 @@
-import Mathlib.LinearAlgebra.Matrix.Kronecker
-import Mathlib.Algebra.GroupWithZero.Basic
-import Mathlib.Algebra.Order.Ring.Int
+module
+
+public import Mathlib.LinearAlgebra.Matrix.Kronecker
+public import Mathlib.Algebra.GroupWithZero.Basic
+public import Mathlib.Algebra.Order.Ring.Int
+
+@[expose] public section
 
 /-!
 # Based rational chain complexes (cubical chain model, module C1)

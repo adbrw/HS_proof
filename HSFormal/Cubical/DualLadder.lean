@@ -1,4 +1,8 @@
-import HSFormal.Cubical.Dual
+module
+
+public import HSFormal.Cubical.Dual
+
+@[expose] public section
 
 /-!
 # Relative caps and the strict excision ladder (cubical module C2)

@@ -1,5 +1,9 @@
-import HSFormal.Newman.Degree
-import HSFormal.Newman.OrbitQuotient
+module
+
+public import HSFormal.Newman.Degree
+public import HSFormal.Newman.OrbitQuotient
+
+@[expose] public section
 
 /-!
 # N7 statement: transfer vanishing (frozen)

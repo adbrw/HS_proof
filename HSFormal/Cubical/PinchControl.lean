@@ -1,5 +1,9 @@
-import HSFormal.Cubical.PinchLocal
-import HSFormal.Cubical.GridSeam
+module
+
+public import HSFormal.Cubical.PinchLocal
+public import HSFormal.Cubical.GridSeam
+
+@[expose] public section
 
 /-!
 # Propagation of the local cube pair dualities (cubical module C8, controlled B-pairs)

@@ -1,7 +1,11 @@
-import HSFormal.LTheory.Model.CutComplex
-import HSFormal.LTheory.Model.CutTrunc
-import HSFormal.LTheory.Model.Domination
-import HSFormal.LTheory.Model.FreeLineAux
+module
+
+public import HSFormal.LTheory.Model.CutComplex
+public import HSFormal.LTheory.Model.CutTrunc
+public import HSFormal.LTheory.Model.Domination
+public import HSFormal.LTheory.Model.FreeLineAux
+
+@[expose] public section
 
 /-!
 # The lower cut pair of a free Poincaré complex over `C_ℤ(A)`, with window boundary

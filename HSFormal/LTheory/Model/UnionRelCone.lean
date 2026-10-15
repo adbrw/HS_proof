@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.Transport
-import HSFormal.LTheory.Model.GlueHomotopy
+module
+
+public import HSFormal.LTheory.Model.Transport
+public import HSFormal.LTheory.Model.GlueHomotopy
+
+@[expose] public section
 
 /-!
 # Cones of degreewise split surjections and pairs with vanishing relative structure

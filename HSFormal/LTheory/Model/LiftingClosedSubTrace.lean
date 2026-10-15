@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.LiftingClosedSubAux
+module
+
+public import HSFormal.LTheory.Model.LiftingClosedSubAux
+
+@[expose] public section
 
 /-!
 # The trace cobordism of the relative boundary construction on a closed complex

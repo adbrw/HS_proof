@@ -1,4 +1,8 @@
-import HSFormal.Cubical.GridFlag
+module
+
+public import HSFormal.Cubical.GridFlag
+
+@[expose] public section
 
 /-!
 # Symmetric pair dualities of cubes (cubical module C4, for the B-pairs of C8)

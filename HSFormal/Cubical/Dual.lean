@@ -1,6 +1,10 @@
-import HSFormal.Cubical.Contraction
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Tactic.LinearCombination
+module
+
+public import HSFormal.Cubical.Contraction
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Tactic.LinearCombination
+
+@[expose] public section
 
 /-!
 # Shifted duals, transposition and symmetric dualities (cubical module C2)

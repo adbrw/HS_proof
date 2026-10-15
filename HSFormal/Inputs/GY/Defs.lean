@@ -1,9 +1,13 @@
-import HSFormal.Statement
-import Mathlib.Topology.Algebra.Group.Basic
-import Mathlib.Topology.Algebra.Group.Pointwise
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Analysis.Calculus.ContDiff.Operations
+module
+
+public import HSFormal.Statement
+public import Mathlib.Topology.Algebra.Group.Basic
+public import Mathlib.Topology.Algebra.Group.Pointwise
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.Analysis.SpecificLimits.Basic
+public import Mathlib.Analysis.Calculus.ContDiff.Operations
+
+@[expose] public section
 
 /-!
 # Gleason–Yamabe (`HSFormal.NSSIsLie`): frozen interfaces

@@ -1,4 +1,8 @@
-import HSFormal.LTheory.KaroubiFiltration
+module
+
+public import HSFormal.LTheory.KaroubiFiltration
+
+@[expose] public section
 
 /-!
 # Laurent extensions of additive categories (NegKHigh, module N1)

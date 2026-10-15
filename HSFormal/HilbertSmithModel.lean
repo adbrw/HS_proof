@@ -1,11 +1,15 @@
-import HSFormal.HilbertSmith
-import HSFormal.LTheory.Model.Instance
-import HSFormal.LTheory.Model.LiftingPairNull
-import HSFormal.LTheory.Model.CutInjDecBij
-import HSFormal.LTheory.Model.NegK.Final
-import HSFormal.LTheory.Model.LiftingClosedSub
-import HSFormal.LTheory.Model.UnionRel
-import HSFormal.LTheory.Model.HalfLineSplit
+module
+
+public import HSFormal.HilbertSmith
+public import HSFormal.LTheory.Model.Instance
+public import HSFormal.LTheory.Model.LiftingPairNull
+public import HSFormal.LTheory.Model.CutInjDecBij
+public import HSFormal.LTheory.Model.NegK.Final
+public import HSFormal.LTheory.Model.LiftingClosedSub
+public import HSFormal.LTheory.Model.UnionRel
+public import HSFormal.LTheory.Model.HalfLineSplit
+
+@[expose] public section
 
 /-!
 # The Hilbert–Smith theorem with the concrete lower L-theory model

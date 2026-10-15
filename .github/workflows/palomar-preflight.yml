@@ -1,0 +1,46 @@
+name: Palomar full mechanical preflight
+
+# This checks an immutable public commit. It neither submits to Palomar nor
+# registers or publishes a review. Review branches run the primary Comparator
+# configuration automatically; local uncommitted changes are not included.
+on:
+  push:
+    branches:
+      - 'palomar-review/**'
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: Full 40-character public commit (blank uses the selected workflow ref)
+        required: false
+        type: string
+      comparator_config_path:
+        description: Comparator configuration to verify
+        required: true
+        default: comparator.json
+        type: choice
+        options:
+          - comparator.json
+          - comparator_fc.json
+      authorization_relationship:
+        description: Select the relationship that accurately describes the person running this check
+        required: true
+        type: choice
+        options:
+          - I am a responsible author or maintainer
+          - I have approval from a responsible author or maintainer
+
+permissions:
+  contents: read
+
+jobs:
+  palomar-preflight:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@d4e41c1d5b0d114c4859e6e5831dc6d3ad1d0d44
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ inputs.commit || github.sha }}
+      pipeline_commit: d4e41c1d5b0d114c4859e6e5831dc6d3ad1d0d44
+      request_id: hsproofcheck
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: >-
+        {"comparator_config_path":"${{ inputs.comparator_config_path || 'comparator.json' }}","formalization_metadata_path":"formalization.yaml","authorization_relationship":"${{ inputs.authorization_relationship || 'I am a responsible author or maintainer' }}"}

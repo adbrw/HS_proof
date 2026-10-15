@@ -1,3 +1,5 @@
+module
+
 /-
 Copyright (c) 2026 harfe. Released under the MIT license; see `HSFormal/Brouwer/LICENSE`.
 
@@ -7,9 +9,11 @@ project. Changes: module paths renamed, all declarations placed in the namespace
 `HSFormal.Brouwer`.
 -/
 
-import HSFormal.Brouwer.ApplyCubicalSperner
-import HSFormal.Brouwer.ConvexHomeos
-import Mathlib.Dynamics.FixedPoints.Basic
+public import HSFormal.Brouwer.ApplyCubicalSperner
+public import HSFormal.Brouwer.ConvexHomeos
+public import Mathlib.Dynamics.FixedPoints.Basic
+
+@[expose] public section
 
 namespace HSFormal.Brouwer
 

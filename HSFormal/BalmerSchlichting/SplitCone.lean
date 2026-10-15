@@ -1,5 +1,9 @@
-import Mathlib.Algebra.Homology.HomotopyCategory
-import Mathlib.Algebra.Homology.HomologicalComplexBiprod
+module
+
+public import Mathlib.Algebra.Homology.HomotopyCategory
+public import Mathlib.Algebra.Homology.HomologicalComplexBiprod
+
+@[expose] public section
 
 /-!
 # A split contractible complex

@@ -1,4 +1,8 @@
-import HSFormal.BalmerSchlichting.SplitCone
+module
+
+public import HSFormal.BalmerSchlichting.SplitCone
+
+@[expose] public section
 
 /-!
 # Improving a homotopy idempotent

@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.UnionRelSplit
+module
+
+public import HSFormal.LTheory.Model.UnionRelSplit
+
+@[expose] public section
 
 /-!
 # The U-turn: the two rows of the `λ`-ladder

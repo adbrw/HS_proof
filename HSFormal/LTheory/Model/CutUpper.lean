@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.CutComplement
-import HSFormal.LTheory.Model.Cobordism
+module
+
+public import HSFormal.LTheory.Model.CutComplement
+public import HSFormal.LTheory.Model.Cobordism
+
+@[expose] public section
 
 /-!
 # The upper cut pair (lower L-theory model, module 22, part 6)

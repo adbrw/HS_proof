@@ -1,6 +1,10 @@
-import HSFormal.LTheory.KaroubiFiltration
-import Mathlib.Algebra.BigOperators.Finprod
-import Mathlib.Data.Int.Interval
+module
+
+public import HSFormal.LTheory.KaroubiFiltration
+public import Mathlib.Algebra.BigOperators.Finprod
+public import Mathlib.Data.Int.Interval
+
+@[expose] public section
 
 /-!
 # The bounded category `C_ℤ(A)` (lower L-theory model, module 1)

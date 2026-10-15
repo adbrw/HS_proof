@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Interface
-import HSFormal.GraphCornerChain
-import HSFormal.BalmerSchlichting
+module
+
+public import HSFormal.LTheory.Interface
+public import HSFormal.GraphCornerChain
+public import HSFormal.BalmerSchlichting
+
+@[expose] public section
 
 /-!
 # The corner class of a homotopy action (manuscript §5, Lemmas 5.1 and 5.2)

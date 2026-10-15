@@ -1,6 +1,10 @@
-import HSFormal.LTheory.SignatureCobordism
-import HSFormal.LTheory.PointCategory
-import HSFormal.TailGroups
+module
+
+public import HSFormal.LTheory.SignatureCobordism
+public import HSFormal.LTheory.PointCategory
+public import HSFormal.TailGroups
+
+@[expose] public section
 
 /-!
 # The tail signature (L-theory module M10)

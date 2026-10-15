@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.NegK.LineModule
-import HSFormal.LTheory.Model.NegK.IntervalDecomp
+module
+
+public import HSFormal.LTheory.Model.NegK.LineModule
+public import HSFormal.LTheory.Model.NegK.IntervalDecomp
+
+@[expose] public section
 
 /-!
 # The two-flag splitting of a bounded idempotent (NegK level 1, module 4)

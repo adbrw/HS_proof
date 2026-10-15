@@ -1,3 +1,5 @@
+module
+
 /-
 Copyright (c) 2026 harfe. Released under the MIT license; see `HSFormal/Brouwer/LICENSE`.
 
@@ -7,9 +9,11 @@ project. Changes: module paths renamed, all declarations placed in the namespace
 `HSFormal.Brouwer`; for Lean v4.35: deprecated lemma names updated.
 -/
 
-import Mathlib.Analysis.Convex.Intrinsic
-import Mathlib.Topology.Defs.Basic
-import HSFormal.Brouwer.CubicalSperner
+public import Mathlib.Analysis.Convex.Intrinsic
+public import Mathlib.Topology.Defs.Basic
+public import HSFormal.Brouwer.CubicalSperner
+
+@[expose] public section
 
 namespace HSFormal.Brouwer
 

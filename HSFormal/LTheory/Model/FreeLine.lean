@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.LineComplex
-import HSFormal.LTheory.Model.FreeLineAux
+module
+
+public import HSFormal.LTheory.Model.LineComplex
+public import HSFormal.LTheory.Model.FreeLineAux
+
+@[expose] public section
 
 /-!
 # Free-ification of `P ⊗ ℝ` (lower L-theory model, module 15)

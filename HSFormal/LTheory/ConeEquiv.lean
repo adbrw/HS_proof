@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Pairs
+module
+
+public import HSFormal.LTheory.Pairs
+
+@[expose] public section
 
 /-!
 # Mapping cones, homotopy equivalences and two-out-of-three (R2)

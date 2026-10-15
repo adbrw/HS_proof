@@ -1,5 +1,9 @@
-import HSFormal.Inputs.Lemma7Characters
-import HSFormal.Inputs.Lemma7Padic
+module
+
+public import HSFormal.Inputs.Lemma7Characters
+public import HSFormal.Inputs.Lemma7Padic
+
+@[expose] public section
 
 /-!
 # [Tao11, Lemma 7]: a compact torsion-free group contains `ℤ_p`

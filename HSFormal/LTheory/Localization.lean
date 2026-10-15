@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Interface
-import HSFormal.MVNilpotence
-import HSFormal.IntegrationDuality
+module
+
+public import HSFormal.LTheory.Interface
+public import HSFormal.MVNilpotence
+public import HSFormal.IntegrationDuality
+
+@[expose] public section
 
 /-!
 # Localization sequences, Mayer–Vietoris and boundary cuts (L-theory module M7, general part)

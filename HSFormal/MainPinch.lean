@@ -1,5 +1,9 @@
-import HSFormal.Main
-import HSFormal.Prop92
+module
+
+public import HSFormal.Main
+public import HSFormal.Prop92
+
+@[expose] public section
 
 /-!
 Remaining hypotheses of the Hilbert–Smith theorem: the published inputs `NSSIsLie`, `CompactNonLieContainsPadic`,

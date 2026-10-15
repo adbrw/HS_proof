@@ -1,5 +1,9 @@
-import HSFormal.Cubical.CutStep
-import HSFormal.Cubical.PinchControl
+module
+
+public import HSFormal.Cubical.CutStep
+public import HSFormal.Cubical.PinchControl
+
+@[expose] public section
 
 /-!
 # Based cube-face pairs (cubical module C8, the faces of Lemma 11.2)

@@ -1,5 +1,9 @@
-import HSFormal.Assembly
-import HSFormal.LTheory.Localization
+module
+
+public import HSFormal.Assembly
+public import HSFormal.LTheory.Localization
+
+@[expose] public section
 
 /-!
 # Iterated cuts with sign relations (cubical module C8, part 3: the L-level skeleton)

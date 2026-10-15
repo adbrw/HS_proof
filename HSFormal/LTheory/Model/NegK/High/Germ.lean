@@ -1,7 +1,11 @@
-import HSFormal.LTheory.Model.NegK.High.LaurentCZ
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.LinearAlgebra.Matrix.Notation
-import Mathlib.Tactic.NoncommRing
+module
+
+public import HSFormal.LTheory.Model.NegK.High.LaurentCZ
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.LinearAlgebra.Matrix.Notation
+public import Mathlib.Tactic.NoncommRing
+
+@[expose] public section
 
 /-!
 # The germ lemma (NegKHigh, module N4)

@@ -1,6 +1,10 @@
-import HSFormal.Cubical.ChainModelCore
-import HSFormal.Cubical.GraphBridge
-import HSFormal.Germ
+module
+
+public import HSFormal.Cubical.ChainModelCore
+public import HSFormal.Cubical.GraphBridge
+public import HSFormal.Germ
+
+@[expose] public section
 
 /-!
 # The chain models along the index: meshes and `f`-control (cubical module C6, part 3)

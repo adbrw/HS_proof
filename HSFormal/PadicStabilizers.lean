@@ -1,4 +1,8 @@
-import HSFormal.PadicSubgroups
+module
+
+public import HSFormal.PadicSubgroups
+
+@[expose] public section
 
 /-!
 # Stabilizers of points moved by a p-adic tail

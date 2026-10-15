@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.CutSurj
-import HSFormal.LTheory.Model.BoundaryConstructionRel
+module
+
+public import HSFormal.LTheory.Model.CutSurj
+public import HSFormal.LTheory.Model.BoundaryConstructionRel
+
+@[expose] public section
 
 /-!
 # The germ at `-∞` modulo bounded objects (lower L-theory model, module 22, injectivity of

@@ -1,6 +1,10 @@
-import Mathlib.Algebra.Homology.HomotopyCategory
-import Mathlib.CategoryTheory.Idempotents.HomologicalComplex
-import Mathlib.CategoryTheory.ObjectProperty.FullSubcategory
+module
+
+public import Mathlib.Algebra.Homology.HomotopyCategory
+public import Mathlib.CategoryTheory.Idempotents.HomologicalComplex
+public import Mathlib.CategoryTheory.ObjectProperty.FullSubcategory
+
+@[expose] public section
 
 /-!
 # Homotopy idempotent completeness of `K^b(P)` (manuscript §1, input 2)

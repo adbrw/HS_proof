@@ -1,7 +1,11 @@
-import HSFormal.LTheory.Model.CutIso
-import HSFormal.LTheory.Model.UnionRelStatement
-import HSFormal.LTheory.Model.Wall
-import HSFormal.LTheory.Model.LinePairs
+module
+
+public import HSFormal.LTheory.Model.CutIso
+public import HSFormal.LTheory.Model.UnionRelStatement
+public import HSFormal.LTheory.Model.Wall
+public import HSFormal.LTheory.Model.LinePairs
+
+@[expose] public section
 
 /-!
 # Surjectivity of the line transitions from relation (R) (lower L-theory model, module 22)

@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.CZFiltration
-import HSFormal.LTheory.Interface
+module
+
+public import HSFormal.LTheory.Model.CZFiltration
+public import HSFormal.LTheory.Interface
+
+@[expose] public section
 
 /-!
 # Half-line categories and the Eilenberg swindle (lower L-theory model, module 20)

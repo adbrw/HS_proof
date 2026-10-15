@@ -1,5 +1,9 @@
-import HSFormal.Newman.Transfer
-import HSFormal.Newman.Main
+module
+
+public import HSFormal.Newman.Transfer
+public import HSFormal.Newman.Main
+
+@[expose] public section
 
 /-!
 # Newman's theorem for prime-order periodic homeomorphisms

@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.Transport
-import HSFormal.LTheory.Model.BoundaryConstruction
+module
+
+public import HSFormal.LTheory.Model.Transport
+public import HSFormal.LTheory.Model.BoundaryConstruction
+
+@[expose] public section
 
 /-!
 # Degree truncation of Kar complexes and the boundary pair of non-connected complexes

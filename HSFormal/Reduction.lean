@@ -1,9 +1,13 @@
-import HSFormal.Statement
-import HSFormal.TopologicalReduction
-import Mathlib.Topology.Algebra.Group.Basic
-import Mathlib.NumberTheory.Padics.ProperSpace
-import Mathlib.Topology.Metrizable.Urysohn
-import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+module
+
+public import HSFormal.Statement
+public import HSFormal.TopologicalReduction
+public import Mathlib.Topology.Algebra.Group.Basic
+public import Mathlib.NumberTheory.Padics.ProperSpace
+public import Mathlib.Topology.Metrizable.Urysohn
+public import Mathlib.Topology.MetricSpace.Ultra.TotallySeparated
+
+@[expose] public section
 
 /-!
 # Section 12: Hilbert–Smith from the p-adic exclusion

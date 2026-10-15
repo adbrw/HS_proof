@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.NegK.High.RegNoeth
-import Mathlib.RingTheory.Finiteness.Prod
+module
+
+public import HSFormal.LTheory.Model.NegK.High.RegNoeth
+public import Mathlib.RingTheory.Finiteness.Prod
+
+@[expose] public section
 
 /-!
 # Theorem R, part 3: localization at a central element and Theorem R (N11, `RegLocal`)

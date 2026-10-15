@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.GlueHomotopy
+module
+
+public import HSFormal.LTheory.Model.GlueHomotopy
+
+@[expose] public section
 
 /-!
 # Gluing symmetric Poincaré pairs along a boundary component (Ran80I §3)

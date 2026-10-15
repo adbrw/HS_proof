@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.CZFunctor
+module
+
+public import HSFormal.LTheory.Model.CZFunctor
+
+@[expose] public section
 
 /-!
 # Karoubi filtrations of `C_ℤ(A)` (lower L-theory model, module 3)

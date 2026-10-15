@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.CutHalf
-import HSFormal.LTheory.Model.CutIsoGen
+module
+
+public import HSFormal.LTheory.Model.CutHalf
+public import HSFormal.LTheory.Model.CutIsoGen
+
+@[expose] public section
 
 /-!
 # The cut union is homotopy isometric to `(-1)^N P` (lower L-theory model, module 22)

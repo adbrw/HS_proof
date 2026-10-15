@@ -1,4 +1,8 @@
-import HSFormal.LTheory.SymmetricComplex
+module
+
+public import HSFormal.LTheory.SymmetricComplex
+
+@[expose] public section
 
 /-!
 # Functoriality and homotopy isometries of symmetric Poincaré complexes (L-theory module M1)

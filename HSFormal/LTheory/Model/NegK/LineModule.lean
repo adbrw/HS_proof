@@ -1,6 +1,11 @@
-import Mathlib.LinearAlgebra.Pi
-import Mathlib.Data.Int.Interval
-import Mathlib.Algebra.Order.Group.Abs
+module
+
+public import Mathlib.LinearAlgebra.Pi
+public import Mathlib.Data.Int.Interval
+public import Mathlib.Algebra.Order.Group.Abs
+public import Mathlib.Algebra.BigOperators.Group.Finset.Sigma
+
+@[expose] public section
 
 /-!
 # The line module of a bounded matrix (NegK level 1, module 3)

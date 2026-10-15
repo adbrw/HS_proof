@@ -1,7 +1,11 @@
-import HSFormal.FiniteMatrixSupport
-import Mathlib.Topology.MetricSpace.Pseudo.Defs
-import Mathlib.Topology.Algebra.Ring.Real
-import Mathlib.Order.Filter.AtTopBot.Basic
+module
+
+public import HSFormal.FiniteMatrixSupport
+public import Mathlib.Topology.MetricSpace.Pseudo.Defs
+public import Mathlib.Topology.Algebra.Ring.Real
+public import Mathlib.Order.Filter.AtTopBot.Basic
+
+@[expose] public section
 
 /-!
 # Propagation and reachable-band factorizations for labelled rational matrices

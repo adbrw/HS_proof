@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.Cobordism
+module
+
+public import HSFormal.LTheory.Model.Cobordism
+
+@[expose] public section
 
 /-!
 # Statement of the union relation (R) (lower L-theory model, module 22)

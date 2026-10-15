@@ -1,5 +1,9 @@
-import HSFormal.Newman.CompactSupport
-import Mathlib.Topology.LocallyConstant.Basic
+module
+
+public import HSFormal.Newman.CompactSupport
+public import Mathlib.Topology.LocallyConstant.Basic
+
+@[expose] public section
 
 /-!
 # N5. Local degree (Newman blueprint, module N5)

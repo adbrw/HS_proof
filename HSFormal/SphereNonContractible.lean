@@ -1,5 +1,9 @@
-import HSFormal.SpherePinch
-import HSFormal.Brouwer.FixedPoint
+module
+
+public import HSFormal.SpherePinch
+public import HSFormal.Brouwer.FixedPoint
+
+@[expose] public section
 
 /-!
 # Non-contractibility of spheres: discharging `SphereSelfMapSurjective`

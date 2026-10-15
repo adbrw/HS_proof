@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Isometry
-import HSFormal.SignatureRing
+module
+
+public import HSFormal.LTheory.Isometry
+public import HSFormal.SignatureRing
+
+@[expose] public section
 
 /-!
 # The middle form and `Sign_G` of a symmetric Poincaré complex (L-theory module M9a)

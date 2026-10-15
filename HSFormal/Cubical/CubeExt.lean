@@ -1,4 +1,8 @@
-import HSFormal.Cubical.CubeMV
+module
+
+public import HSFormal.Cubical.CubeMV
+
+@[expose] public section
 
 /-!
 # The exterior cut of the germ along the box (cubical module C8, Lemma 11.2)

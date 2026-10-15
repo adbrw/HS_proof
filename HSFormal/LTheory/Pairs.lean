@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Isometry
-import Mathlib.Algebra.Homology.HomotopyCofiber
+module
+
+public import HSFormal.LTheory.Isometry
+public import Mathlib.Algebra.Homology.HomotopyCofiber
+
+@[expose] public section
 
 /-!
 # Symmetric Poincaré pairs and cobordism (L-theory module M2)

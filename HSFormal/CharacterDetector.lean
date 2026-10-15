@@ -1,9 +1,13 @@
-import Mathlib.Analysis.Complex.Circle
-import Mathlib.MeasureTheory.Group.Integral
-import Mathlib.MeasureTheory.Integral.Bochner.Set
-import Mathlib.MeasureTheory.Measure.Haar.Basic
-import Mathlib.Topology.Algebra.MulAction
-import Mathlib.Topology.TietzeExtension
+module
+
+public import Mathlib.Analysis.Complex.Circle
+public import Mathlib.MeasureTheory.Group.Integral
+public import Mathlib.MeasureTheory.Integral.Bochner.Set
+public import Mathlib.MeasureTheory.Measure.Haar.Basic
+public import Mathlib.Topology.Algebra.MulAction
+public import Mathlib.Topology.TietzeExtension
+
+@[expose] public section
 
 /-!
 # Character averages and continuous orbit detectors

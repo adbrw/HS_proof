@@ -1,6 +1,10 @@
-import Mathlib.Topology.Algebra.MulAction
-import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
-import Mathlib.Topology.MetricSpace.Defs
+module
+
+public import Mathlib.Topology.Algebra.MulAction
+public import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+public import Mathlib.Topology.MetricSpace.Defs
+
+@[expose] public section
 
 /-!
 # Uniform displacement on compact sets

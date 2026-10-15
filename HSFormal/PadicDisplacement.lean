@@ -1,5 +1,9 @@
-import HSFormal.TopologicalReduction
-import Mathlib.NumberTheory.Padics.PadicIntegers
+module
+
+public import HSFormal.TopologicalReduction
+public import Mathlib.NumberTheory.Padics.PadicIntegers
+
+@[expose] public section
 
 /-!
 # Uniform displacement of actual p-adic power subgroups

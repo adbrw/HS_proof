@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.LiftComplex
-import HSFormal.LTheory.Model.Domination
-import HSFormal.LTheory.Union
+module
+
+public import HSFormal.LTheory.Model.LiftComplex
+public import HSFormal.LTheory.Model.Domination
+public import HSFormal.LTheory.Union
+
+@[expose] public section
 
 /-!
 # Lifting pairs: technical lemmas (lower L-theory model, module 16)

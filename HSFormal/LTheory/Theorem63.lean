@@ -1,6 +1,10 @@
-import HSFormal.LTheory.LocalizationSupport
-import HSFormal.LTheory.TailSignature
-import HSFormal.Bridges
+module
+
+public import HSFormal.LTheory.LocalizationSupport
+public import HSFormal.LTheory.TailSignature
+public import HSFormal.Bridges
+
+@[expose] public section
 
 /-!
 # Theorem 6.3 on `L`, the iterated boundaries `Δ_T`, `Δ_1` and `TransferDivisibility`

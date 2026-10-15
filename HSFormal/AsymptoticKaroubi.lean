@@ -1,4 +1,8 @@
-import HSFormal.AsymptoticSupport
+module
+
+public import HSFormal.AsymptoticSupport
+
+@[expose] public section
 
 /-!
 # Karoubi filtrations and Lemma 2.1

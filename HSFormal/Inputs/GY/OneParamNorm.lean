@@ -1,5 +1,9 @@
-import HSFormal.Inputs.GY.OneParamModule
-import Mathlib.Analysis.Normed.Module.FiniteDimension
+module
+
+public import HSFormal.Inputs.GY.OneParamModule
+public import Mathlib.Analysis.Normed.Module.FiniteDimension
+
+@[expose] public section
 
 /-!
 # The norm on `L(G)`, bilipschitz estimates and finite dimension (B4)

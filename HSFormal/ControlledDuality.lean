@@ -1,7 +1,11 @@
-import HSFormal.ControlledLinear
-import Mathlib.CategoryTheory.Preadditive.Opposite
-import Mathlib.Algebra.Module.TransferInstance
-import Mathlib.Combinatorics.Quiver.Symmetric
+module
+
+public import HSFormal.ControlledLinear
+public import Mathlib.CategoryTheory.Preadditive.Opposite
+public import Mathlib.Algebra.Module.TransferInstance
+public import Mathlib.Combinatorics.Quiver.Symmetric
+
+@[expose] public section
 
 /-!
 # Transpose duality for the scalar controlled category

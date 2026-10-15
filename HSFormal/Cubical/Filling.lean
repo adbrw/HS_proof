@@ -1,4 +1,8 @@
-import HSFormal.Cubical.GridFlag
+module
+
+public import HSFormal.Cubical.GridFlag
+
+@[expose] public section
 
 /-!
 # Filling: cellular approximations and carrier homotopies on the torus grid (cubical module C5)

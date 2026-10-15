@@ -1,5 +1,9 @@
-import HSFormal.MainPinch
-import HSFormal.MontgomeryPrime
+module
+
+public import HSFormal.MainPinch
+public import HSFormal.MontgomeryPrime
+
+@[expose] public section
 
 /-!
 # Main theorem with weakened published inputs

@@ -1,4 +1,8 @@
-import HSFormal.Cubical.PinchFace
+module
+
+public import HSFormal.Cubical.PinchFace
+
+@[expose] public section
 
 /-!
 # Local inverses of the cube pair dualities (cubical module C8, controlled B-pairs)

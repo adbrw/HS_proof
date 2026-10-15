@@ -1,9 +1,13 @@
-import HSFormal.MainWeak
-import HSFormal.MainPinch
-import HSFormal.Cubical.CubeCutSteps
-import HSFormal.Inputs.Lemma7
-import HSFormal.Inputs.GY.NSSIsLie
-import HSFormal.Newman.Newman
+module
+
+public import HSFormal.MainWeak
+public import HSFormal.MainPinch
+public import HSFormal.Cubical.CubeCutSteps
+public import HSFormal.Inputs.Lemma7
+public import HSFormal.Inputs.GY.NSSIsLie
+public import HSFormal.Newman.Newman
+
+@[expose] public section
 
 /-!
 The Hilbert–Smith theorem of the manuscript, with every step of its proof formalized.

@@ -1,6 +1,10 @@
-import HSFormal.InducedClass
-import HSFormal.Germ
-import HSFormal.LTheory.Theorem63
+module
+
+public import HSFormal.InducedClass
+public import HSFormal.Germ
+public import HSFormal.LTheory.Theorem63
+
+@[expose] public section
 
 /-!
 # Main theorem: Hilbert–Smith from the remaining hypotheses

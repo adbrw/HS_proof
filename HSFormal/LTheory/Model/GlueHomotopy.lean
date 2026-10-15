@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.GlueKar
-import Mathlib.Tactic.Module
+module
+
+public import HSFormal.LTheory.Model.GlueKar
+public import Mathlib.Tactic.Module
+
+@[expose] public section
 
 /-!
 # Homotopy lemmas for gluing Poincaré pairs

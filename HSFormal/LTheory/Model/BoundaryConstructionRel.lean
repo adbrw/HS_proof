@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Model.Triads
-import HSFormal.LTheory.Model.LiftingPairAux
+module
+
+public import HSFormal.LTheory.Model.Triads
+public import HSFormal.LTheory.Model.LiftingPairAux
+
+@[expose] public section
 
 /-!
 # The relative boundary construction (L-model module 10)

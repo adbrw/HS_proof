@@ -1,5 +1,9 @@
-import HSFormal.LTheory.MiddleForm
-import HSFormal.LTheory.ConcreteL
+module
+
+public import HSFormal.LTheory.MiddleForm
+public import HSFormal.LTheory.ConcreteL
+
+@[expose] public section
 
 /-!
 # Cobordism invariance of `Sign_G` (L-theory module M9b)

@@ -1,4 +1,8 @@
-import HSFormal.Newman.TransferStatement
+module
+
+public import HSFormal.Newman.TransferStatement
+
+@[expose] public section
 
 /-!
 # N8. Claims 1 and 2′ (Newman blueprint, module N8)

@@ -1,11 +1,15 @@
-import Mathlib.Analysis.InnerProductSpace.Spectrum
-import Mathlib.Analysis.Complex.Polynomial.Basic
-import Mathlib.FieldTheory.IsAlgClosed.Spectrum
-import Mathlib.LinearAlgebra.BilinearForm.TensorProduct
-import Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs
-import Mathlib.RepresentationTheory.Basic
-import Mathlib.RingTheory.RootsOfUnity.Complex
-import HSFormal.AlgebraicReduction
+module
+
+public import Mathlib.Analysis.InnerProductSpace.Spectrum
+public import Mathlib.Analysis.Complex.Polynomial.Basic
+public import Mathlib.FieldTheory.IsAlgClosed.Spectrum
+public import Mathlib.LinearAlgebra.BilinearForm.TensorProduct
+public import Mathlib.LinearAlgebra.Matrix.Charpoly.Eigs
+public import Mathlib.RepresentationTheory.Basic
+public import Mathlib.RingTheory.RootsOfUnity.Complex
+public import HSFormal.AlgebraicReduction
+
+@[expose] public section
 
 /-!
 # Equivariant signatures (manuscript §3, Lemma 3.1)

@@ -1,7 +1,11 @@
-import HSFormal.HilbertSmithModel
-import HSFormal.Inputs.GY.NSSIsLie
-import HSFormal.Inputs.Lemma7
-import HSFormal.Newman.Newman
+module
+
+public import HSFormal.HilbertSmithModel
+public import HSFormal.Inputs.GY.NSSIsLie
+public import HSFormal.Inputs.Lemma7
+public import HSFormal.Newman.Newman
+
+@[expose] public section
 
 /-!
 # The Hilbert–Smith theorem from the concrete model, with the published inputs proved

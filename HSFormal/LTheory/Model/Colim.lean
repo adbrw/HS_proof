@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.LineNatural
-import HSFormal.LTheory.Model.Swindle
-import Mathlib.Algebra.Colimit.Module
+module
+
+public import HSFormal.LTheory.Model.LineNatural
+public import HSFormal.LTheory.Model.Swindle
+public import Mathlib.Algebra.Colimit.Module
+
+@[expose] public section
 
 /-!
 # The colimit model `Lmodel` (lower L-theory model, module 6)

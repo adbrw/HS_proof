@@ -1,7 +1,11 @@
-import Mathlib.Algebra.Homology.Homotopy
-import Mathlib.Algebra.Ring.NegOnePow
-import Mathlib.CategoryTheory.Retract
-import HSFormal.ControlledDuality
+module
+
+public import Mathlib.Algebra.Homology.Homotopy
+public import Mathlib.Algebra.Ring.NegOnePow
+public import Mathlib.CategoryTheory.Retract
+public import HSFormal.ControlledDuality
+
+@[expose] public section
 
 /-!
 # Compression through the near part (manuscript §9)

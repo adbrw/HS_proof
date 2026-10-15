@@ -1,5 +1,9 @@
-import Mathlib
-import HSFormal.Universe
+module
+
+public import Mathlib
+public import HSFormal.Universe
+
+@[expose] public section
 
 /-!
 # Solution to `FCChallenge.lean`

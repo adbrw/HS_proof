@@ -1,5 +1,9 @@
-import HSFormal.AsymptoticSupport
-import Mathlib.GroupTheory.GroupAction.SubMulAction
+module
+
+public import HSFormal.AsymptoticSupport
+public import Mathlib.GroupTheory.GroupAction.SubMulAction
+
+@[expose] public section
 
 /-!
 # Lemma 2.4: relabeling onto a support

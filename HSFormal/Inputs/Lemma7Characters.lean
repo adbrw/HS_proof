@@ -1,6 +1,11 @@
-import Mathlib
-import TauCeti.RepresentationTheory.Compact.RepresentativeDensity
-import TauCeti.RepresentationTheory.Compact.UnitaryModel
+module
+
+public import Mathlib
+public import TauCeti.RepresentationTheory.Compact.RepresentativeDensity
+public import TauCeti.RepresentationTheory.Compact.UnitaryModel
+import all TauCeti.RepresentationTheory.Continuous.Unitary.Basic
+
+@[expose] public section
 
 /-!
 # [Tao11, Lemma 7], part 1: circle characters of a compact monothetic group

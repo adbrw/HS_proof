@@ -1,5 +1,9 @@
-import HSFormal.IntegrationControl
-import HSFormal.IntegrationDuality
+module
+
+public import HSFormal.IntegrationControl
+public import HSFormal.IntegrationDuality
+
+@[expose] public section
 
 /-!
 # Integration: forgetting the action, push-forward, and the functor `U`

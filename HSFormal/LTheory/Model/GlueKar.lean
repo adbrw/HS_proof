@@ -1,5 +1,9 @@
-import HSFormal.LTheory.BoundaryPoincare
-import Mathlib.CategoryTheory.Idempotents.Biproducts
+module
+
+public import HSFormal.LTheory.BoundaryPoincare
+public import Mathlib.CategoryTheory.Idempotents.Biproducts
+
+@[expose] public section
 
 /-!
 # Two-out-of-three in the middle, and Kar complexes as complexes in `Karoubi V`

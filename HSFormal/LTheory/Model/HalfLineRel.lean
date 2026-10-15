@@ -1,4 +1,8 @@
-import HSFormal.LTheory.Model.CutIsoGen
+module
+
+public import HSFormal.LTheory.Model.CutIsoGen
+
+@[expose] public section
 
 /-!
 # Relative duality maps with different source and target pairs (half-line splitting, part 1)

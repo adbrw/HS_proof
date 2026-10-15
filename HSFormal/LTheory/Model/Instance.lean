@@ -1,5 +1,9 @@
-import HSFormal.LTheory.Interface
-import HSFormal.LTheory.Model.Exact
+module
+
+public import HSFormal.LTheory.Interface
+public import HSFormal.LTheory.Model.Exact
+
+@[expose] public section
 
 /-!
 # The colimit model as a `LowerLTheory` (lower L-theory model, module 23)

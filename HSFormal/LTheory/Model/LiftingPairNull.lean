@@ -1,6 +1,10 @@
-import HSFormal.LTheory.Model.Bdry
-import HSFormal.LTheory.Model.BoundaryConstructionRel
-import HSFormal.LTheory.Model.CutIsoGen
+module
+
+public import HSFormal.LTheory.Model.Bdry
+public import HSFormal.LTheory.Model.BoundaryConstructionRel
+public import HSFormal.LTheory.Model.CutIsoGen
+
+@[expose] public section
 
 /-!
 # (L2): lifting pairs of null-cobordant complexes have null-cobordant boundaries

@@ -1,4 +1,8 @@
-import HSFormal.InducedClassUniform
+module
+
+public import HSFormal.InducedClassUniform
+
+@[expose] public section
 
 /-!
 # The induced class `𝔡` and `Res 𝔡 = [C]` (manuscript §10, (10.1)–(10.4), Lemmas 5.1–5.2)
